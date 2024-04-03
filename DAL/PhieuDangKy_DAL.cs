@@ -20,7 +20,7 @@ namespace DAL
             {
                 string strTruyVan = @"SELECT DISTINCT KH.MaKH ,KH.TenKH,PDK.MaPhieuDK,PDK.NgayDen,PDK.GioDen,PDK.NgayDi,PDK.GioDi,PDK.SoLuongNguoiLon,PDK.SoLuongTreEm,PDK.TienDatCoc,PDK.MaNV,PDK.MaKH,KH.NgaySinh,KH.GioiTinh,KH.CMND,KH.QuocTich,KH.DiaChi,KH.SDT
               FROM PhieuDangKy as PDK, KhachHang as KH
-            WHERE PDK.MaKH = KH.MaKH AND KH.DaXacNhan = 1";
+            WHERE PDK.MaKH = KH.MaKH ";//AND KH.DaXacNhan = 1
                 DataTable _dt = new DataTable();
                 _dt = DataProvider.fillDataTable(strTruyVan);
                 if (_dt != null)
@@ -35,6 +35,7 @@ namespace DAL
                         pdkDTO = new PhieuDangKy_DTO();
                         pdkDTO.TenKH = _dt.Rows[index]["TenKH"].ToString();
                         pdkDTO.MaPhieuDK = _dt.Rows[index]["MaPhieuDK"].ToString();
+                        pdkDTO.NgayDi = Convert.ToDateTime(_dt.Rows[index]["NgayDi"].ToString());
                         pdkDTO.NgayDen = Convert.ToDateTime(_dt.Rows[index]["NgayDen"].ToString());
                         DateTime dtGioDen = Convert.ToDateTime(_dt.Rows[index]["GioDen"].ToString());
                         string strGioDen = String.Format("{0:00}:{1:00}:{2:00}", dtGioDen.Hour, dtGioDen.Minute, dtGioDen.Second);
@@ -44,7 +45,6 @@ namespace DAL
                         pdkDTO.GioDen = strGioDen;
                         pdkDTO.GioDi = strGioDi;
 
-                        pdkDTO.NgayDi = Convert.ToDateTime(_dt.Rows[index]["NgayDi"].ToString());
                         pdkDTO.SoLuongNguoiLon = int.Parse(_dt.Rows[index]["SoLuongNguoiLon"].ToString());
                         pdkDTO.SoLuongTreEm = int.Parse(_dt.Rows[index]["SoLuongTreEm"].ToString());
                         pdkDTO.TienDatCoc = double.Parse(_dt.Rows[index]["TienDatCoc"].ToString());

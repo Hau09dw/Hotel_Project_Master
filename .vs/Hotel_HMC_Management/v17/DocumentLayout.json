@@ -1,0 +1,134 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "B:\\netbean\\Winform_Project-master\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{584872E8-283D-4291-BEDD-F9B35B9F4B30}|DAL\\DAL.csproj|b:\\netbean\\winform_project-master\\dal\\phieudangky_dal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{584872E8-283D-4291-BEDD-F9B35B9F4B30}|DAL\\DAL.csproj|solutionrelative:dal\\phieudangky_dal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20A3789B-B361-4888-9ECD-0BEBB9B4C7D8}|QuanLyKhachSan\\QuanLyKhachSan.csproj|b:\\netbean\\winform_project-master\\quanlykhachsan\\views\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{20A3789B-B361-4888-9ECD-0BEBB9B4C7D8}|QuanLyKhachSan\\QuanLyKhachSan.csproj|solutionrelative:quanlykhachsan\\views\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20A3789B-B361-4888-9ECD-0BEBB9B4C7D8}|QuanLyKhachSan\\QuanLyKhachSan.csproj|b:\\netbean\\winform_project-master\\quanlykhachsan\\views\\frmdangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{20A3789B-B361-4888-9ECD-0BEBB9B4C7D8}|QuanLyKhachSan\\QuanLyKhachSan.csproj|solutionrelative:quanlykhachsan\\views\\frmdangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20A3789B-B361-4888-9ECD-0BEBB9B4C7D8}|QuanLyKhachSan\\QuanLyKhachSan.csproj|b:\\netbean\\winform_project-master\\quanlykhachsan\\views\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20A3789B-B361-4888-9ECD-0BEBB9B4C7D8}|QuanLyKhachSan\\QuanLyKhachSan.csproj|solutionrelative:quanlykhachsan\\views\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6211F750-15BD-4C0D-A18E-EA97676BF845}|BLL\\BLL.csproj|b:\\netbean\\winform_project-master\\bll\\phieudangky_bll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6211F750-15BD-4C0D-A18E-EA97676BF845}|BLL\\BLL.csproj|solutionrelative:bll\\phieudangky_bll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20A3789B-B361-4888-9ECD-0BEBB9B4C7D8}|QuanLyKhachSan\\QuanLyKhachSan.csproj|b:\\netbean\\winform_project-master\\quanlykhachsan\\views\\frmphieudangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20A3789B-B361-4888-9ECD-0BEBB9B4C7D8}|QuanLyKhachSan\\QuanLyKhachSan.csproj|solutionrelative:quanlykhachsan\\views\\frmphieudangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmDangNhap.cs [Design]",
+              "DocumentMoniker": "B:\\netbean\\Winform_Project-master\\QuanLyKhachSan\\Views\\frmDangNhap.cs",
+              "RelativeDocumentMoniker": "QuanLyKhachSan\\Views\\frmDangNhap.cs",
+              "ToolTip": "B:\\netbean\\Winform_Project-master\\QuanLyKhachSan\\Views\\frmDangNhap.cs [Design]",
+              "RelativeToolTip": "QuanLyKhachSan\\Views\\frmDangNhap.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-03T05:14:18.105Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmMain.cs",
+              "DocumentMoniker": "B:\\netbean\\Winform_Project-master\\QuanLyKhachSan\\Views\\frmMain.cs",
+              "RelativeDocumentMoniker": "QuanLyKhachSan\\Views\\frmMain.cs",
+              "ToolTip": "B:\\netbean\\Winform_Project-master\\QuanLyKhachSan\\Views\\frmMain.cs",
+              "RelativeToolTip": "QuanLyKhachSan\\Views\\frmMain.cs",
+              "ViewState": "AQIAAF8BAAAAAAAAAAAnwH8BAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-03T05:07:01.279Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmMain.cs [Design]",
+              "DocumentMoniker": "B:\\netbean\\Winform_Project-master\\QuanLyKhachSan\\Views\\frmMain.cs",
+              "RelativeDocumentMoniker": "QuanLyKhachSan\\Views\\frmMain.cs",
+              "ToolTip": "B:\\netbean\\Winform_Project-master\\QuanLyKhachSan\\Views\\frmMain.cs [Design]",
+              "RelativeToolTip": "QuanLyKhachSan\\Views\\frmMain.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-03T05:06:51.202Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PhieuDangKy_DAL.cs",
+              "DocumentMoniker": "B:\\netbean\\Winform_Project-master\\DAL\\PhieuDangKy_DAL.cs",
+              "RelativeDocumentMoniker": "DAL\\PhieuDangKy_DAL.cs",
+              "ToolTip": "B:\\netbean\\Winform_Project-master\\DAL\\PhieuDangKy_DAL.cs",
+              "RelativeToolTip": "DAL\\PhieuDangKy_DAL.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAawDYAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-03T04:40:34.023Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PhieuDangKy_BLL.cs",
+              "DocumentMoniker": "B:\\netbean\\Winform_Project-master\\BLL\\PhieuDangKy_BLL.cs",
+              "RelativeDocumentMoniker": "BLL\\PhieuDangKy_BLL.cs",
+              "ToolTip": "B:\\netbean\\Winform_Project-master\\BLL\\PhieuDangKy_BLL.cs",
+              "RelativeToolTip": "BLL\\PhieuDangKy_BLL.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAA4AAABbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-03T04:40:03.461Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frmPhieuDangKy.cs",
+              "DocumentMoniker": "B:\\netbean\\Winform_Project-master\\QuanLyKhachSan\\Views\\frmPhieuDangKy.cs",
+              "RelativeDocumentMoniker": "QuanLyKhachSan\\Views\\frmPhieuDangKy.cs",
+              "ToolTip": "B:\\netbean\\Winform_Project-master\\QuanLyKhachSan\\Views\\frmPhieuDangKy.cs",
+              "RelativeToolTip": "QuanLyKhachSan\\Views\\frmPhieuDangKy.cs",
+              "ViewState": "AQIAACYAAAAAAAAAAEBCwDUAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-03T04:14:55.048Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

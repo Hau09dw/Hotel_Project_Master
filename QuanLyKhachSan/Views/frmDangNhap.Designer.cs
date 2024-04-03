@@ -56,7 +56,7 @@
             this.groupControl1.Controls.Add(this.labelControl2);
             this.groupControl1.Controls.Add(this.labelControl1);
             this.groupControl1.Location = new System.Drawing.Point(14, 15);
-            this.groupControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(593, 220);
             this.groupControl1.TabIndex = 0;
@@ -68,7 +68,7 @@
             this.hpLinkTextRegister.Appearance.Options.UseFont = true;
             this.hpLinkTextRegister.Cursor = System.Windows.Forms.Cursors.Hand;
             this.hpLinkTextRegister.Location = new System.Drawing.Point(282, 155);
-            this.hpLinkTextRegister.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.hpLinkTextRegister.Margin = new System.Windows.Forms.Padding(4);
             this.hpLinkTextRegister.Name = "hpLinkTextRegister";
             this.hpLinkTextRegister.Size = new System.Drawing.Size(57, 21);
             this.hpLinkTextRegister.TabIndex = 4;
@@ -77,7 +77,7 @@
             // ckbGhiNho
             // 
             this.ckbGhiNho.Location = new System.Drawing.Point(401, 154);
-            this.ckbGhiNho.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ckbGhiNho.Margin = new System.Windows.Forms.Padding(4);
             this.ckbGhiNho.Name = "ckbGhiNho";
             this.ckbGhiNho.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ckbGhiNho.Properties.Appearance.Options.UseFont = true;
@@ -90,7 +90,7 @@
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.Options.UseFont = true;
             this.labelControl3.Location = new System.Drawing.Point(110, 155);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(188, 23);
             this.labelControl3.TabIndex = 2;
@@ -98,8 +98,9 @@
             // 
             // txtTaiKhoan
             // 
+            this.txtTaiKhoan.EditValue = "NV01";
             this.txtTaiKhoan.Location = new System.Drawing.Point(232, 54);
-            this.txtTaiKhoan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTaiKhoan.Margin = new System.Windows.Forms.Padding(4);
             this.txtTaiKhoan.Name = "txtTaiKhoan";
             this.txtTaiKhoan.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTaiKhoan.Properties.Appearance.Options.UseFont = true;
@@ -108,8 +109,9 @@
             // 
             // txtMatKhau
             // 
+            this.txtMatKhau.EditValue = "1";
             this.txtMatKhau.Location = new System.Drawing.Point(232, 97);
-            this.txtMatKhau.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMatKhau.Margin = new System.Windows.Forms.Padding(4);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMatKhau.Properties.Appearance.Options.UseFont = true;
@@ -121,7 +123,7 @@
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Location = new System.Drawing.Point(110, 101);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(86, 23);
             this.labelControl2.TabIndex = 0;
@@ -132,7 +134,7 @@
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Location = new System.Drawing.Point(110, 54);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(86, 23);
             this.labelControl1.TabIndex = 0;
@@ -144,7 +146,7 @@
             this.btnDangNhap.Appearance.Options.UseFont = true;
             this.btnDangNhap.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnDangNhap.Location = new System.Drawing.Point(188, 242);
-            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(4);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(102, 36);
             this.btnDangNhap.TabIndex = 1;
@@ -156,7 +158,7 @@
             this.btnCancel.Appearance.Options.UseFont = true;
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Location = new System.Drawing.Point(355, 242);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(102, 36);
             this.btnCancel.TabIndex = 1;
@@ -170,7 +172,7 @@
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.groupControl1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ĐĂNG NHẬP";

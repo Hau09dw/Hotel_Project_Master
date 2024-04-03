@@ -384,7 +384,7 @@ namespace QuanLyKhachSan.Views
             if (MaNV.Trim() != "")
             {
 
-                XtraMessageBox.Show("Đăng nhập thành công!!!", "Thông báo");
+                //XtraMessageBox.Show("Đăng nhập thành công!!!", "Thông báo");
 
                 XtraMessageBox.Show("Xin chào User có ID là : " + MaNV, "Thông báo");
             }
