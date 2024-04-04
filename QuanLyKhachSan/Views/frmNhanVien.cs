@@ -94,30 +94,6 @@ namespace QuanLyKhachSan.Views
                 {
                     errorS += "Chưa nhập ngày sinh nhân viên!!\n";
                 }
-                if (txtDiaChi.Text.Trim() != "")
-                {
-
-                    nvDTO.DiaChi = txtDiaChi.Text;
-                }
-                else
-                {
-                    errorS += "Chưa nhập địa chỉ nhân viên!!\n";
-                }
-                if (txtCMND.Text.Trim() != "")
-                {
-                    if(IsNumber(txtCMND.Text)==true)
-                    {
-                        nvDTO.CMND = txtCMND.Text;
-                    }
-                    else
-                    {
-                        errorS += "CMND không hợp lệ!!\n";
-                    }
-                }
-                else
-                {
-                    errorS += "Chưa nhập CMND nhân viên!!\n";
-                }
                 if (rdbNam.Checked)
                 {
                     nvDTO.GioiTinh = "Nam";
@@ -212,8 +188,7 @@ namespace QuanLyKhachSan.Views
                 txtMaNV.Text = _row.Cells["MaNV"].Value.ToString();
                 txtTenNV.Text = _row.Cells["TenNhanVien"].Value.ToString();
                 dtpNgaySinh.Text = Convert.ToDateTime(_row.Cells["NgaySinh"].Value.ToString()).ToShortDateString();
-                txtDiaChi.Text = _row.Cells["DiaChi"].Value.ToString();
-                txtCMND.Text = _row.Cells["CMND"].Value.ToString();
+          
                 if (_row.Cells["GioiTinh"].Value.ToString() == "Nam")
                 {
                     rdbNam.Checked = true;
@@ -231,8 +206,6 @@ namespace QuanLyKhachSan.Views
             nvDTO.MaNV = txtMaNV.Text;
             nvDTO.TenNhanVien = txtTenNV.Text;
             nvDTO.NgaySinh = Convert.ToDateTime(dtpNgaySinh.Text);
-            nvDTO.DiaChi = txtDiaChi.Text;
-            nvDTO.CMND = txtCMND.Text;
             if (rdbNam.Checked)
             {
                 nvDTO.GioiTinh = "Nam";
@@ -246,8 +219,6 @@ namespace QuanLyKhachSan.Views
                 nvDTOUpdate.MaNV = nvDTO.MaNV;
                 nvDTOUpdate.TenNhanVien = nvDTO.TenNhanVien;
                 nvDTOUpdate.NgaySinh = nvDTO.NgaySinh;
-                nvDTOUpdate.DiaChi = nvDTO.DiaChi;
-                nvDTOUpdate.CMND = nvDTO.CMND;
                 nvDTOUpdate.GioiTinh = nvDTO.GioiTinh;
                 nvDTOUpdate.SDT = nvDTO.SDT;
                 nvDTOUpdate.MaChucVu = nvDTO.MaChucVu;

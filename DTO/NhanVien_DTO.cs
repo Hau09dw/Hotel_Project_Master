@@ -12,14 +12,10 @@ namespace DTO
         public string TenNhanVien { get; set; }
         public DateTime NgaySinh { get; set; }
         
-        public string DiaChi { get; set; }
-        public string CMND { get; set; }
-
         public string GioiTinh { get; set; }
         public string SDT { get; set; }
         public string MaChucVu { get; set; }
 
-        public string MaQuyenHan { get; set; }
 
 
        

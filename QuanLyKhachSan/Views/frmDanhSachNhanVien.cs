@@ -23,7 +23,6 @@ namespace QuanLyKhachSan.Views
 
         {
             dgvNhanVien.DataSource = NhanVien_BLL.HienThiDanhSachCacNhanVien(pos);
-            dgvNhanVien.Columns[8].Visible = false;
         }
 
         private void frmDanhSachNhanVien_Load(object sender, EventArgs e)

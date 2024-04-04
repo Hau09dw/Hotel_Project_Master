@@ -273,7 +273,7 @@ namespace QuanLyKhachSan.Views
             if(XtraMessageBox.Show("Bạn có muốn đăng xuất?","Thông báo",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 DisEndMenuLogin(true, idLogin);
-                
+                btnLogin.Enabled = true;
             }
         }
 
@@ -383,10 +383,8 @@ namespace QuanLyKhachSan.Views
 
             if (MaNV.Trim() != "")
             {
-
-                //XtraMessageBox.Show("Đăng nhập thành công!!!", "Thông báo");
-
                 XtraMessageBox.Show("Xin chào User có ID là : " + MaNV, "Thông báo");
+                btnLogin.Enabled = false;
             }
             if (MaNV.Trim() == "")
             {

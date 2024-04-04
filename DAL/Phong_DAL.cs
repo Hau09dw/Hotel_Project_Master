@@ -117,7 +117,7 @@ namespace DAL
             List<Phong_DTO> lstTenPhong = null;
             try
             {
-                string strTruyVan = string.Format("select MaPhong,TenPhong, (CASE WHEN TinhTrangPhong='1' THEN N'Phòng có khách' ELSE N'Phòng trống' END) AS TinhTrangPhong,MaLoaiPhong from Phong");
+                string strTruyVan = string.Format("select MaPhong,TenPhong, (CASE WHEN TinhTrangPhong='1' THEN N'Phòng có khách' ELSE N'Phòng trống' END) AS TinhTrangPhong,Phong.MaLoaiPhong, TenLoaiPhong from Phong JOIN LoaiPhong ON Phong.MaLoaiPhong = LoaiPhong.MaLoaiPhong");
                 DataTable _dt = new DataTable();
                 _dt = DataProvider.fillDataTable(strTruyVan);
 
@@ -131,6 +131,7 @@ namespace DAL
                         phgDTO.MaPhong = _dt.Rows[i]["MaPhong"].ToString();
                         phgDTO.TinhTrangPhong = _dt.Rows[i]["TinhTrangPhong"].ToString();                       
                         phgDTO.MaLoaiPhong = _dt.Rows[i]["MaLoaiPhong"].ToString();
+                        phgDTO.TenLoaiPhong = _dt.Rows[i]["TenLoaiPhong"].ToString();
                         lstTenPhong.Add(phgDTO);
                     }
                 }

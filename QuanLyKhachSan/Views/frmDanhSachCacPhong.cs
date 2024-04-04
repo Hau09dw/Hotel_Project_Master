@@ -28,10 +28,17 @@ namespace QuanLyKhachSan.Views
         {
             lstPhong = Phong_BLL.HienThiDanhSachCacPhong();
             dgvDanhSachCacPhong.DataSource = lstPhong;
-            dgvDanhSachCacPhong.Columns[4].Visible = false;
+            
             dgvDanhSachCacPhong.Columns[5].Visible = false;
             dgvDanhSachCacPhong.Columns[6].Visible = false;
+            //change collumn name
 
+            dgvDanhSachCacPhong.Columns[0].HeaderText = "Mã Phòng";
+            dgvDanhSachCacPhong.Columns[1].HeaderText = "Tên Phòng";
+            dgvDanhSachCacPhong.Columns[2].HeaderText = "Tình Trạng";
+            dgvDanhSachCacPhong.Columns[3].HeaderText = "Mã Loại";
+            dgvDanhSachCacPhong.Columns[4].HeaderText = "Loại Phòng";
+            
         }
 
         private void btnIn_Click(object sender, EventArgs e)

@@ -27,8 +27,6 @@ namespace DAL
                         nvDTO.MaNV = _dt.Rows[index]["MaNV"].ToString();
                         nvDTO.TenNhanVien = _dt.Rows[index]["TenNhanVien"].ToString();
                         nvDTO.NgaySinh = Convert.ToDateTime(_dt.Rows[index]["NgaySinh"].ToString());
-                        nvDTO.DiaChi = _dt.Rows[index]["DiaChi"].ToString();
-                        nvDTO.CMND = _dt.Rows[index]["CMND"].ToString();
                         if (nvDTO.GioiTinh == "Nam")
                         {
                             nvDTO.GioiTinh = _dt.Rows[index]["GioiTinh"].ToString();
@@ -108,7 +106,7 @@ namespace DAL
             int count = 0;
             try
             {
-                string strTruyVan = string.Format("INSERT INTO NhanVien(MaNV,TenNhanVien,NgaySinh,DiaChi,CMND,GioiTinh,SDT,MaChucVu) VALUES('{0}',N'{1}', '{2}',N'{3}',N'{4}',N'{5}','{6}',N'{7}')", nvDTO.MaNV, nvDTO.TenNhanVien, nvDTO.NgaySinh, nvDTO.DiaChi, nvDTO.CMND, nvDTO.GioiTinh, nvDTO.SDT, nvDTO.MaChucVu);
+                string strTruyVan = string.Format("INSERT INTO NhanVien(MaNV,TenNhanVien,NgaySinh,GioiTinh,SDT,MaChucVu) VALUES('{0}',N'{1}', '{2}',N'{3}',N'{4}',N'{5}')", nvDTO.MaNV, nvDTO.TenNhanVien, nvDTO.NgaySinh,  nvDTO.GioiTinh, nvDTO.SDT, nvDTO.MaChucVu);
                 count = DataProvider.ExecuteNonQuery(strTruyVan);
             }
             catch (Exception ex)
@@ -125,7 +123,7 @@ namespace DAL
             int count = 0;
             try
             {
-                string strTruyVan = string.Format("UPDATE NhanVien SET TenNhanVien = N'{0}',NgaySinh = '{1}',DiaChi = N'{2}',CMND = '{3}',GioiTinh = N'{4}',SDT = {5}, MaChucVu = '{6}' WHERE MaNV = '{7}'",nvDTO.TenNhanVien,nvDTO.NgaySinh,nvDTO.DiaChi,nvDTO.CMND,nvDTO.GioiTinh,nvDTO.SDT,nvDTO.MaChucVu,nvDTO.MaNV);
+                string strTruyVan = string.Format("UPDATE NhanVien SET TenNhanVien = N'{0}',NgaySinh = '{1}',GioiTinh = N'{4}',SDT = {5}, MaChucVu = '{6}' WHERE MaNV = '{7}'",nvDTO.TenNhanVien,nvDTO.NgaySinh,nvDTO.GioiTinh,nvDTO.SDT,nvDTO.MaChucVu,nvDTO.MaNV);
                 count = DataProvider.ExecuteNonQuery(strTruyVan);
             }
             catch (Exception ex)
