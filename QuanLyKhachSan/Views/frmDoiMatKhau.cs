@@ -46,15 +46,16 @@ namespace QuanLyKhachSan.Views
             }
             else
             {
-                string check = DangNhap_BLL.DoiMatKhau(nvDTO.MaNV, matKhauMoi);
+                string check = DangNhap_BLL.LayTenDangNhap_MatKhau(tenDangNhap, matKhauCu);
                 if (check.Length > 0)
                 {
+                    DangNhap_BLL.DoiMatKhau(tenDangNhap, matKhauMoi);
                     XtraMessageBox.Show("Đổi mật khẩu thành công!!", "Thông báo");
                     this.Close();
                 }
                 else
                 {
-                    XtraMessageBox.Show("Đổi mật khẩu thất bại!!", "Thông báo");
+                    XtraMessageBox.Show("Đổi mật khẩu thất bại!! Vui lòng kiểm tra lại mật khẩu cũ!", "Thông báo");
                     return;
 
                 }
