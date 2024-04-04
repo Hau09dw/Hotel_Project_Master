@@ -32,24 +32,17 @@ namespace QuanLyKhachSan.Views
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            
-            
-            
+
+
+
             if (cmbTimTheo.SelectedIndex == 0)
             {
                 dgvNhanVien.DataSource = NhanVien_BLL.LayMaNV(txtTuKhoa.Text);
-                dgvNhanVien.Columns[8].Visible = false;
-                dgvNhanVien.Columns[9].Visible = false;
-                dgvNhanVien.Columns[10].Visible = false;
-                dgvNhanVien.Columns[11].Visible = false;
+
             }
             else if (cmbTimTheo.SelectedIndex == 1)
             {
                 dgvNhanVien.DataSource = NhanVien_BLL.LayTenNV(txtTuKhoa.Text);
-                dgvNhanVien.Columns[8].Visible = false;
-                dgvNhanVien.Columns[9].Visible = false;
-                dgvNhanVien.Columns[10].Visible = false;
-                dgvNhanVien.Columns[11].Visible = false;
             }
 
         }

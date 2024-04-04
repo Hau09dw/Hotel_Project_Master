@@ -83,11 +83,7 @@ namespace DAL
                 {
                     for (int i = 0; i < dt.Rows.Count; i++)
                     {
-                        //Nếu tài khoản còn được sử dụng thì mới có mã quyền hạn
-                        if(dt.Rows[i]["DinhChi"].ToString() == "False")
-                        {
                             id = dt.Rows[i]["MaQuyenHan"].ToString();
-                        }
                     }
                 }
             }

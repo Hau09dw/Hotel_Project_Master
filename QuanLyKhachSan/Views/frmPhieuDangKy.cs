@@ -308,8 +308,6 @@ namespace QuanLyKhachSan.Views
 
         private void btnXoaPhieuDK_Click(object sender, EventArgs e)
         {
-            if(DangNhap_BLL.LayMaQuyenHan(txtMaNV_TTPDK.Text)== "2")
-            {
                 string MaPhieuDK = txtMaPDK_TTPDK.Text;
                 if (PhieuDangKy_BLL.XoaPhieuDangKy(MaPhieuDK) == 1)
                 {
@@ -322,8 +320,6 @@ namespace QuanLyKhachSan.Views
                 {
                     XtraMessageBox.Show("Xóa phiếu đăng ký thất bại!", "Thông báo");
                 }
-            }
-            
 
         }
 

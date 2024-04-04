@@ -31,7 +31,6 @@ namespace QuanLyKhachSan.Views
         {
             lstNhanVien = NhanVien_BLL.HienThiDanhSachCacNhanVien(index);
             dgvNhanVien.DataSource = lstNhanVien;
-            dgvNhanVien.Columns[8].Visible = false;
         }
         private void HienThiLaiDuLieuTrenGridView()
         {

@@ -17,8 +17,5 @@ namespace DTO
         public string MaChucVu { get; set; }
 
 
-
-       
-
     }
 }

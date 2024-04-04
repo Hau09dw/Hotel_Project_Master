@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNhanVien));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -54,8 +55,6 @@
             this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CMND = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaChucVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -89,9 +88,10 @@
             this.btnXoaNV.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoaNV.Appearance.Options.UseFont = true;
             this.btnXoaNV.Enabled = false;
-            this.btnXoaNV.Location = new System.Drawing.Point(224, 37);
+            this.btnXoaNV.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoaNV.ImageOptions.Image")));
+            this.btnXoaNV.Location = new System.Drawing.Point(302, 37);
             this.btnXoaNV.Name = "btnXoaNV";
-            this.btnXoaNV.Size = new System.Drawing.Size(119, 43);
+            this.btnXoaNV.Size = new System.Drawing.Size(137, 43);
             this.btnXoaNV.TabIndex = 1;
             this.btnXoaNV.Text = "Xóa nhân viên";
             this.btnXoaNV.Click += new System.EventHandler(this.btnXoaNV_Click);
@@ -101,9 +101,10 @@
             this.btmCapNhatNV.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btmCapNhatNV.Appearance.Options.UseFont = true;
             this.btmCapNhatNV.Enabled = false;
+            this.btmCapNhatNV.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btmCapNhatNV.ImageOptions.Image")));
             this.btmCapNhatNV.Location = new System.Drawing.Point(33, 37);
             this.btmCapNhatNV.Name = "btmCapNhatNV";
-            this.btmCapNhatNV.Size = new System.Drawing.Size(127, 43);
+            this.btmCapNhatNV.Size = new System.Drawing.Size(169, 43);
             this.btmCapNhatNV.TabIndex = 0;
             this.btmCapNhatNV.Text = "Cập nhật nhân viên";
             this.btmCapNhatNV.Click += new System.EventHandler(this.btmCapNhatNV_Click);
@@ -112,9 +113,10 @@
             // 
             this.btnThemNV.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemNV.Appearance.Options.UseFont = true;
-            this.btnThemNV.Location = new System.Drawing.Point(62, 327);
+            this.btnThemNV.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThemNV.ImageOptions.Image")));
+            this.btnThemNV.Location = new System.Drawing.Point(111, 317);
             this.btnThemNV.Name = "btnThemNV";
-            this.btnThemNV.Size = new System.Drawing.Size(221, 51);
+            this.btnThemNV.Size = new System.Drawing.Size(165, 51);
             this.btnThemNV.TabIndex = 9;
             this.btnThemNV.Text = "Thêm nhân viên";
             this.btnThemNV.Click += new System.EventHandler(this.btnThemNV_Click);
@@ -313,8 +315,6 @@
             this.MaNV,
             this.TenNhanVien,
             this.NgaySinh,
-            this.CMND,
-            this.DiaChi,
             this.GioiTinh,
             this.SDT,
             this.MaChucVu});
@@ -359,20 +359,6 @@
             this.NgaySinh.HeaderText = "Ngày Sinh";
             this.NgaySinh.Name = "NgaySinh";
             this.NgaySinh.ReadOnly = true;
-            // 
-            // CMND
-            // 
-            this.CMND.DataPropertyName = "CMND";
-            this.CMND.HeaderText = "CMND";
-            this.CMND.Name = "CMND";
-            this.CMND.ReadOnly = true;
-            // 
-            // DiaChi
-            // 
-            this.DiaChi.DataPropertyName = "DiaChi";
-            this.DiaChi.HeaderText = "Địa Chỉ";
-            this.DiaChi.Name = "DiaChi";
-            this.DiaChi.ReadOnly = true;
             // 
             // GioiTinh
             // 
@@ -449,8 +435,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MaNV;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenNhanVien;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgaySinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CMND;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
         private System.Windows.Forms.DataGridViewTextBoxColumn GioiTinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn SDT;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaChucVu;

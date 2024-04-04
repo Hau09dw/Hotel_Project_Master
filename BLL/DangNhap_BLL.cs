@@ -11,7 +11,6 @@ namespace BLL
         public static string LayTenDangNhap_MatKhau(string MaNV, string matkhau) => DangNhap_DAL.LayTenDangNhap_MatKhau(MaNV, matkhau);
 
         public static string DoiMatKhau(string maNV, string matkhau) => DangNhap_DAL.DoiMatKhau(maNV, matkhau);
-        public static string LayMaQuyenHan(string maCanLay) => DangNhap_DAL.LayMaQuyenHan(maCanLay);
 
     }
 }

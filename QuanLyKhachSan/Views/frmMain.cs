@@ -197,10 +197,6 @@ namespace QuanLyKhachSan.Views
 
         private void btnPhanQuyenNguoiDung_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if(DangNhap_BLL.LayMaQuyenHan(MaNV) == "1")
-            {
-                
-            }
         }
 
         private void btnQuanLyDichVu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -219,8 +215,6 @@ namespace QuanLyKhachSan.Views
 
         private void btnQLNV_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (DangNhap_BLL.LayMaQuyenHan(MaNV) == "2")
-            {
                 Form frm = CheckForms(typeof(frmNhanVien));
                 if (frm == null)
                 {
@@ -231,13 +225,11 @@ namespace QuanLyKhachSan.Views
                 {
                     frm.Activate();
                 }
-            }
+            
         }
 
         private void btnQLCV_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (DangNhap_BLL.LayMaQuyenHan(MaNV) == "2")
-            {
                 Form frm = CheckForms(typeof(frmChucVu));
                 if (frm == null)
                 {
@@ -248,7 +240,6 @@ namespace QuanLyKhachSan.Views
                 {
                     frm.Activate();
                 }
-            }
            
         }
 
@@ -342,8 +333,6 @@ namespace QuanLyKhachSan.Views
 
         private void btnTraCuuNV_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if(DangNhap_BLL.LayMaQuyenHan(MaNV) == "2")
-            {
                 Form frm = CheckForms(typeof(frmTimKiem_NV));
                 if (frm == null)
                 {
@@ -354,8 +343,6 @@ namespace QuanLyKhachSan.Views
                 {
                     frm.Activate();
                 }
-            }
-            
         }
 
         private void btnLogin_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -400,8 +387,6 @@ namespace QuanLyKhachSan.Views
 
         private void btnTraCuuHD_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (DangNhap_BLL.LayMaQuyenHan(MaNV) == "2")
-            {
                 Form frm = CheckForms(typeof(frmTimKiem_NV));
                 if (frm == null)
                 {
@@ -412,7 +397,6 @@ namespace QuanLyKhachSan.Views
                 {
                     frm.Activate();
                 }
-            }
         }
 
         private void btnSaoLuu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
