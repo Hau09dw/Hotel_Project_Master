@@ -112,20 +112,20 @@ namespace QuanLyKhachSan.Views
             }
             DichVu_DTO dvDTO = (DichVu_DTO)cmbTenDichVu.SelectedItem;
             cmbGiaDichVu.DataSource = DichVu_BLL.HienThiGiaDichVuLenComboBox(dvDTO.MaDichVu);
-            cmbGiaDichVu.DisplayMember = "DonGia";
+            cmbGiaDichVu.DisplayMember = "GiaDichVu";
             cmbGiaDichVu.ValueMember = "MaDichVu";
         }
 
         private void cmbGiaDichVu_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cmbGiaDichVu.SelectedItem == null)
+            /*if(cmbGiaDichVu.SelectedItem == null)
             {
                 return;
             }
             DichVu_DTO dvDTO = (DichVu_DTO)cmbGiaDichVu.SelectedItem;
             cmbDonViTinh.DataSource = DichVu_BLL.HienThiDonViTinh(dvDTO.MaDichVu);
             cmbDonViTinh.DisplayMember = "TenDonVi";
-            cmbDonViTinh.ValueMember = "MaDonVi";
+            cmbDonViTinh.ValueMember = "MaDonVi";*/
         }
 
       
@@ -195,8 +195,8 @@ namespace QuanLyKhachSan.Views
                     cmbTenDichVu_TTDV.Text = row.Cells["TenDichVu"].Value.ToString();
                     txtTenKH_TTDV.Text = row.Cells["TenKHH"].Value.ToString();
                     txtSoLuong_TTDV.Text = row.Cells["SoLuongTinh"].Value.ToString();
-                    MaDichVu = row.Cells["MaDichVuu"].Value.ToString();
-                    MaPhong = row.Cells["MaaPhong"].Value.ToString();
+                    MaDichVu = row.Cells["MaDichVu"].Value.ToString();
+                    MaPhong = row.Cells["MaPhong"].Value.ToString();
                 }
             }
             catch (Exception)
@@ -227,7 +227,7 @@ namespace QuanLyKhachSan.Views
             }
             DichVu_DTO dvDTO = (DichVu_DTO)cmbTenDichVu_TTDV.SelectedItem;
             cmbGiaDichVu_TTDV.DataSource = DichVu_BLL.HienThiGiaDichVuLenComboBox(dvDTO.MaDichVu);
-            cmbGiaDichVu_TTDV.DisplayMember = "DonGia";
+            cmbGiaDichVu_TTDV.DisplayMember = "GiaDichVu";
             cmbGiaDichVu_TTDV.ValueMember = "MaDichVu";
         }
 
@@ -352,6 +352,11 @@ namespace QuanLyKhachSan.Views
                 return;
             }
             
+        }
+
+        private void labelControl14_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
