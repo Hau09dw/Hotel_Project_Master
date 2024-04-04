@@ -11,7 +11,7 @@ namespace DAL
 
     public class DataProvider
     {
-        public static string strConn = "SERVER = HAUS-LAPTOP0\\MAY1; uid = sa; pwd = hau123; DATABASE = QuanLyKhachSan";
+        public static string strConn = "SERVER = .; integrated security=True; DATABASE = QuanLyKhachSan";
         public static SqlConnection getConnection()
         {
             SqlConnection _conn = new SqlConnection(strConn);
