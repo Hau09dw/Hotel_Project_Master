@@ -76,7 +76,6 @@
             this.btnLogin = new DevExpress.XtraBars.BarButtonItem();
             this.rbHethong = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rbQuanLy = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -104,11 +103,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // barAndDockingController2
-            // 
-            this.barAndDockingController2.PropertiesBar.DefaultGlyphSize = new System.Drawing.Size(16, 16);
-            this.barAndDockingController2.PropertiesBar.DefaultLargeGlyphSize = new System.Drawing.Size(32, 32);
             // 
             // xtraTabbedMdiManager1
             // 
@@ -171,7 +165,7 @@
             this.rbQuanTri,
             this.rbTraCuu,
             this.rbTroGiup});
-            this.ribbonControl1.Size = new System.Drawing.Size(1108, 141);
+            this.ribbonControl1.Size = new System.Drawing.Size(1108, 150);
             // 
             // imageList1
             // 
@@ -238,7 +232,7 @@
             // 
             this.btnDangNhap.Caption = "Đăng nhập";
             this.btnDangNhap.Id = 1;
-            this.btnDangNhap.ImageIndex = 55;
+            this.btnDangNhap.ImageOptions.ImageIndex = 55;
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -248,7 +242,7 @@
             // 
             this.btnQuanLyKhachHang.Caption = "Quản lý khách hàng";
             this.btnQuanLyKhachHang.Id = 2;
-            this.btnQuanLyKhachHang.ImageIndex = 4;
+            this.btnQuanLyKhachHang.ImageOptions.ImageIndex = 4;
             this.btnQuanLyKhachHang.Name = "btnQuanLyKhachHang";
             this.btnQuanLyKhachHang.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -258,7 +252,7 @@
             // 
             this.btnQuanLyPDK.Caption = "Quản lý phiếu đăng ký";
             this.btnQuanLyPDK.Id = 3;
-            this.btnQuanLyPDK.ImageIndex = 40;
+            this.btnQuanLyPDK.ImageOptions.ImageIndex = 40;
             this.btnQuanLyPDK.Name = "btnQuanLyPDK";
             this.btnQuanLyPDK.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -268,7 +262,7 @@
             // 
             this.btnQuanLyDatPhong.Caption = "Quản lý đặt phòng";
             this.btnQuanLyDatPhong.Id = 4;
-            this.btnQuanLyDatPhong.ImageIndex = 2;
+            this.btnQuanLyDatPhong.ImageOptions.ImageIndex = 2;
             this.btnQuanLyDatPhong.Name = "btnQuanLyDatPhong";
             this.btnQuanLyDatPhong.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -278,7 +272,7 @@
             // 
             this.btnQLHD.Caption = "Quản lý hóa đơn";
             this.btnQLHD.Id = 5;
-            this.btnQLHD.ImageIndex = 1;
+            this.btnQLHD.ImageOptions.ImageIndex = 1;
             this.btnQLHD.Name = "btnQLHD";
             this.btnQLHD.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -288,7 +282,7 @@
             // 
             this.btnDangXuat.Caption = "Đăng xuất";
             this.btnDangXuat.Id = 6;
-            this.btnDangXuat.ImageIndex = 48;
+            this.btnDangXuat.ImageOptions.ImageIndex = 48;
             this.btnDangXuat.Name = "btnDangXuat";
             this.btnDangXuat.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -304,7 +298,7 @@
             // 
             this.btnPhanQuyenNguoiDung.Caption = "Phân quyền người dùng";
             this.btnPhanQuyenNguoiDung.Id = 8;
-            this.btnPhanQuyenNguoiDung.ImageIndex = 50;
+            this.btnPhanQuyenNguoiDung.ImageOptions.ImageIndex = 50;
             this.btnPhanQuyenNguoiDung.Name = "btnPhanQuyenNguoiDung";
             this.btnPhanQuyenNguoiDung.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -314,19 +308,21 @@
             // 
             this.btnSaoLuu.Caption = "Sao lưu dữ liệu";
             this.btnSaoLuu.Id = 9;
-            this.btnSaoLuu.ImageIndex = 30;
+            this.btnSaoLuu.ImageOptions.ImageIndex = 30;
             this.btnSaoLuu.Name = "btnSaoLuu";
             this.btnSaoLuu.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.btnSaoLuu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSaoLuu_ItemClick);
             // 
             // btnKhoiPhuc
             // 
             this.btnKhoiPhuc.Caption = "Khôi phục dữ liệu";
             this.btnKhoiPhuc.Id = 10;
-            this.btnKhoiPhuc.ImageIndex = 31;
+            this.btnKhoiPhuc.ImageOptions.ImageIndex = 31;
             this.btnKhoiPhuc.Name = "btnKhoiPhuc";
             this.btnKhoiPhuc.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.btnKhoiPhuc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnKhoiPhuc_ItemClick);
             // 
             // barButtonItem11
             // 
@@ -372,7 +368,7 @@
             // 
             this.btnDanhSachKH.Caption = "Danh sách khách hàng";
             this.btnDanhSachKH.Id = 17;
-            this.btnDanhSachKH.ImageIndex = 25;
+            this.btnDanhSachKH.ImageOptions.ImageIndex = 25;
             this.btnDanhSachKH.Name = "btnDanhSachKH";
             this.btnDanhSachKH.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -382,7 +378,7 @@
             // 
             this.btnDanhSachPhieuDK.Caption = "Danh sách phiếu đăng ký";
             this.btnDanhSachPhieuDK.Id = 18;
-            this.btnDanhSachPhieuDK.ImageIndex = 47;
+            this.btnDanhSachPhieuDK.ImageOptions.ImageIndex = 47;
             this.btnDanhSachPhieuDK.Name = "btnDanhSachPhieuDK";
             this.btnDanhSachPhieuDK.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -392,7 +388,7 @@
             // 
             this.btnDanhSachLoaiPhong.Caption = "Danh sách loại phòng";
             this.btnDanhSachLoaiPhong.Id = 19;
-            this.btnDanhSachLoaiPhong.ImageIndex = 41;
+            this.btnDanhSachLoaiPhong.ImageOptions.ImageIndex = 41;
             this.btnDanhSachLoaiPhong.Name = "btnDanhSachLoaiPhong";
             this.btnDanhSachLoaiPhong.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -402,7 +398,7 @@
             // 
             this.btnDanhSachCacPhong.Caption = "Danh sách các phòng";
             this.btnDanhSachCacPhong.Id = 20;
-            this.btnDanhSachCacPhong.ImageIndex = 44;
+            this.btnDanhSachCacPhong.ImageOptions.ImageIndex = 44;
             this.btnDanhSachCacPhong.Name = "btnDanhSachCacPhong";
             this.btnDanhSachCacPhong.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -436,7 +432,7 @@
             // 
             this.btnDanhSachNhanVien.Caption = "Danh sách nhân viên";
             this.btnDanhSachNhanVien.Id = 26;
-            this.btnDanhSachNhanVien.ImageIndex = 14;
+            this.btnDanhSachNhanVien.ImageOptions.ImageIndex = 14;
             this.btnDanhSachNhanVien.Name = "btnDanhSachNhanVien";
             this.btnDanhSachNhanVien.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -446,7 +442,7 @@
             // 
             this.btnDanhSachDichVu.Caption = "Danh sách dịch vụ";
             this.btnDanhSachDichVu.Id = 27;
-            this.btnDanhSachDichVu.ImageIndex = 0;
+            this.btnDanhSachDichVu.ImageOptions.ImageIndex = 0;
             this.btnDanhSachDichVu.Name = "btnDanhSachDichVu";
             this.btnDanhSachDichVu.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -467,7 +463,7 @@
             // 
             this.barButtonItem2.Caption = "Giới thiệu";
             this.barButtonItem2.Id = 31;
-            this.barButtonItem2.ImageIndex = 33;
+            this.barButtonItem2.ImageOptions.ImageIndex = 33;
             this.barButtonItem2.Name = "barButtonItem2";
             this.barButtonItem2.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -476,7 +472,7 @@
             // 
             this.barButtonItem3.Caption = "Thông tin";
             this.barButtonItem3.Id = 32;
-            this.barButtonItem3.ImageIndex = 21;
+            this.barButtonItem3.ImageOptions.ImageIndex = 21;
             this.barButtonItem3.Name = "barButtonItem3";
             this.barButtonItem3.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -485,7 +481,7 @@
             // 
             this.btnDoiMatKhau.Caption = "Đổi mật khẩu";
             this.btnDoiMatKhau.Id = 33;
-            this.btnDoiMatKhau.ImageIndex = 19;
+            this.btnDoiMatKhau.ImageOptions.ImageIndex = 19;
             this.btnDoiMatKhau.Name = "btnDoiMatKhau";
             this.btnDoiMatKhau.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -495,7 +491,7 @@
             // 
             this.btnQuanLyDichVu.Caption = "Quản lý dịch vụ";
             this.btnQuanLyDichVu.Id = 34;
-            this.btnQuanLyDichVu.ImageIndex = 6;
+            this.btnQuanLyDichVu.ImageOptions.ImageIndex = 6;
             this.btnQuanLyDichVu.Name = "btnQuanLyDichVu";
             this.btnQuanLyDichVu.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -505,7 +501,7 @@
             // 
             this.btnQLNV.Caption = "Quản lý nhân viên";
             this.btnQLNV.Id = 35;
-            this.btnQLNV.ImageIndex = 39;
+            this.btnQLNV.ImageOptions.ImageIndex = 39;
             this.btnQLNV.Name = "btnQLNV";
             this.btnQLNV.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -515,7 +511,7 @@
             // 
             this.btnQLCV.Caption = "Quản lý chức vụ";
             this.btnQLCV.Id = 36;
-            this.btnQLCV.ImageIndex = 14;
+            this.btnQLCV.ImageOptions.ImageIndex = 14;
             this.btnQLCV.Name = "btnQLCV";
             this.btnQLCV.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -525,7 +521,7 @@
             // 
             this.btnTraCuuKH.Caption = "Tra cứu khách hàng";
             this.btnTraCuuKH.Id = 38;
-            this.btnTraCuuKH.ImageIndex = 3;
+            this.btnTraCuuKH.ImageOptions.ImageIndex = 3;
             this.btnTraCuuKH.Name = "btnTraCuuKH";
             this.btnTraCuuKH.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -535,7 +531,7 @@
             // 
             this.btnTraCuuPhieuDK.Caption = "Tra cứu phiếu đăng ký";
             this.btnTraCuuPhieuDK.Id = 39;
-            this.btnTraCuuPhieuDK.ImageIndex = 46;
+            this.btnTraCuuPhieuDK.ImageOptions.ImageIndex = 46;
             this.btnTraCuuPhieuDK.Name = "btnTraCuuPhieuDK";
             this.btnTraCuuPhieuDK.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -545,7 +541,7 @@
             // 
             this.btnTraCuuPhong.Caption = "Tra cứu phòng ";
             this.btnTraCuuPhong.Id = 40;
-            this.btnTraCuuPhong.ImageIndex = 8;
+            this.btnTraCuuPhong.ImageOptions.ImageIndex = 8;
             this.btnTraCuuPhong.Name = "btnTraCuuPhong";
             this.btnTraCuuPhong.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -554,7 +550,7 @@
             // 
             this.btnTraCuuHD.Caption = "Tra cứu hóa đơn";
             this.btnTraCuuHD.Id = 41;
-            this.btnTraCuuHD.ImageIndex = 47;
+            this.btnTraCuuHD.ImageOptions.ImageIndex = 47;
             this.btnTraCuuHD.Name = "btnTraCuuHD";
             this.btnTraCuuHD.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -564,7 +560,7 @@
             // 
             this.btnTraCuuNV.Caption = "Tra cứu nhân viên";
             this.btnTraCuuNV.Id = 42;
-            this.btnTraCuuNV.ImageIndex = 50;
+            this.btnTraCuuNV.ImageOptions.ImageIndex = 50;
             this.btnTraCuuNV.Name = "btnTraCuuNV";
             this.btnTraCuuNV.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -574,7 +570,7 @@
             // 
             this.btnLogin.Caption = "Đăng nhập";
             this.btnLogin.Id = 43;
-            this.btnLogin.ImageIndex = 55;
+            this.btnLogin.ImageOptions.ImageIndex = 55;
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -583,8 +579,7 @@
             // rbHethong
             // 
             this.rbHethong.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup1,
-            this.ribbonPageGroup4});
+            this.ribbonPageGroup1});
             this.rbHethong.Name = "rbHethong";
             this.rbHethong.Text = "Hệ thống";
             // 
@@ -594,14 +589,7 @@
             this.ribbonPageGroup1.ItemLinks.Add(this.btnDoiMatKhau);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnDangXuat);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.Text = "Hệ thống";
-            // 
-            // ribbonPageGroup4
-            // 
-            this.ribbonPageGroup4.ItemLinks.Add(this.btnSaoLuu);
-            this.ribbonPageGroup4.ItemLinks.Add(this.btnKhoiPhuc);
-            this.ribbonPageGroup4.Name = "ribbonPageGroup4";
-            this.ribbonPageGroup4.Text = "Sao lưu";
+            this.ribbonPageGroup1.Text = "Tài khoản";
             // 
             // rbQuanLy
             // 
@@ -812,7 +800,6 @@
         private DevExpress.XtraBars.BarButtonItem btnDanhSachDichVu;
         private DevExpress.XtraBars.Ribbon.RibbonPage rbHethong;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         private DevExpress.XtraBars.Ribbon.RibbonPage rbQuanLy;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
