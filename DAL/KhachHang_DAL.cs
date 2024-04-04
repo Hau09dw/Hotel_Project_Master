@@ -64,7 +64,7 @@ namespace DAL
             List<KhachHang_DTO> lstKhachHang = new List<KhachHang_DTO>();
             try
             {
-                string strTruyVan = string.Format("select PDK.MaPhieuDK,KH.MaKH,KH.TenKH,KH.GioiTinh,KH.NgaySinh,KH.DiaChi,KH.CMND,SDT,KH.QuocTich,PHG.MaPhong,PHG.TenPhong from PhieuDangKy as PDK,ChiTietLoaiPhong as CTLP, KhachHang as KH,Phong as PHG where PDK.MaPhieuDK = CTLP.MaPhieuDK and PDK.MaKH = KH.MaKH and CTLP.MaPhong = PHG.MaPhong and DaVaoPhong = 1 and PHG.TinhTrangPhong = 1");
+                string strTruyVan = string.Format("select PDK.MaPhieuDK,KH.MaKH,KH.TenKH,KH.GioiTinh,KH.NgaySinh,KH.DiaChi,KH.CMND,SDT,KH.QuocTich,PHG.MaPhong,PHG.TenPhong from PhieuDangKy as PDK,ChiTietLoaiPhong as CTLP, KhachHang as KH,Phong as PHG where PDK.MaPhieuDK = CTLP.MaPhieuDK and PDK.MaKH = KH.MaKH and CTLP.MaLoaiPhong = PHG.MaPhong and DaVaoPhong = 1 and PHG.TinhTrangPhong = 1");
                 DataTable _dt = new DataTable();
                 _dt = DataProvider.fillDataTable(strTruyVan);
                 for (int i = 0; i < _dt.Rows.Count; i++)

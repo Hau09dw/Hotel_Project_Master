@@ -226,7 +226,7 @@ namespace DAL
             List<PhieuDangKy_DTO> listPDKDTO = new List<PhieuDangKy_DTO>();
             try
             {
-                string strTruyVan = string.Format(@"SELECT DISTINCT KH.MaKH, KH.TenKH, PDK.MaPhieuDK, PDK.TienDatCoc, PDK.MaNV, PDK.MaKH, KH.NgaySinh, KH.GioiTinh, KH.CMND, KH.QuocTich, KH.DiaChi, KH.SDT FROM PhieuDangKy as PDK, KhachHang as KH WHERE PDK.MaKH = KH.MaKH AND KH.DaXacNhan = 1 AND ISNULL(PDK.DaVaoPhong,'false') not in (1)");
+                string strTruyVan = string.Format(@"SELECT DISTINCT KH.MaKH, KH.TenKH, PDK.MaPhieuDK, PDK.TienDatCoc, PDK.MaNV, PDK.MaKH, KH.NgaySinh, KH.GioiTinh, KH.CMND, KH.QuocTich, KH.DiaChi, KH.SDT FROM PhieuDangKy as PDK, KhachHang as KH WHERE PDK.MaKH = KH.MaKH ");//AND KH.DaXacNhan = 1 AND ISNULL(PDK.DaVaoPhong,'false') not in (1)-->lấy ra từ dòng lệnh
                 DataTable _dt = new DataTable();
                 _dt = DataProvider.fillDataTable(strTruyVan);
                 if (_dt != null)

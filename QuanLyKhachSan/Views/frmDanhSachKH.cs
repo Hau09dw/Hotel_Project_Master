@@ -36,7 +36,7 @@ namespace QuanLyKhachSan.Views
 
         private void btnIn_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(@"SERVER = HAUS-LAPTOP0\MAY1; uid = sa; pwd = hau123; DATABASE = QuanLyKhachSan");
+            SqlConnection conn = new SqlConnection(@"SERVER = .; integrated security=True; DATABASE = QuanLyKhachSan");
             conn.Open();
             SqlCommand command = new SqlCommand("SELECT * FROM KhachHang", conn);
 
