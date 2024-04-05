@@ -112,18 +112,18 @@ namespace QuanLyKhachSan.Views
             }
             DichVu_DTO dvDTO = (DichVu_DTO)cmbTenDichVu.SelectedItem;
             cmbGiaDichVu.DataSource = DichVu_BLL.HienThiGiaDichVuLenComboBox(dvDTO.MaDichVu);
-            cmbGiaDichVu.DisplayMember = "GiaDichVu";
+            cmbGiaDichVu.DisplayMember = "DonGia";
             cmbGiaDichVu.ValueMember = "MaDichVu";
         }
 
         private void cmbGiaDichVu_SelectedIndexChanged(object sender, EventArgs e)
         {
-            /*if(cmbGiaDichVu.SelectedItem == null)
+           /* if (cmbGiaDichVu.SelectedItem == null)
             {
                 return;
             }
-            DichVu_DTO dvDTO = (DichVu_DTO)cmbGiaDichVu.SelectedItem;
-            cmbDonViTinh.DataSource = DichVu_BLL.HienThiDonViTinh(dvDTO.MaDichVu);
+            DichVu_DTO dvDTO = (DichVu_DTO)txtThanhTien.SelectedItem;
+            txtThanhTien.DataSource = DichVu_BLL.HienThiDonViTinh(dvDTO.ThanhTien);
             cmbDonViTinh.DisplayMember = "TenDonVi";
             cmbDonViTinh.ValueMember = "MaDonVi";*/
         }
@@ -152,7 +152,7 @@ namespace QuanLyKhachSan.Views
 
                 if(txtSoLuong.Text.Trim() == "")
                 {
-                    errorS += "Chưa nhập mã số lượng tính\n";
+                    errorS += "Chưa nhập số lượng tính\n";                                                                                                                                                                               
                 }
                 if (errorS != "")
                 {
@@ -198,6 +198,7 @@ namespace QuanLyKhachSan.Views
                     MaDichVu = row.Cells["MaDichVu"].Value.ToString();
                     MaPhong = row.Cells["MaPhong"].Value.ToString();
                 }
+
             }
             catch (Exception)
             {
@@ -217,6 +218,7 @@ namespace QuanLyKhachSan.Views
             cmbTenDichVu_TTDV.DataSource = DichVu_BLL.HienThiTenDichVuTheoMaDichVu(ldvDTO.MaLoaiDichVu);
             cmbTenDichVu_TTDV.DisplayMember = "TenDichVu";
             cmbTenDichVu_TTDV.ValueMember = "MaDichVu";
+            frmDichVu.MaDichVu = cmbTenDichVu_TTDV.SelectedValue.ToString();
         }
 
         private void cmbTenDichVu_TTDV_SelectedIndexChanged(object sender, EventArgs e)
@@ -227,20 +229,23 @@ namespace QuanLyKhachSan.Views
             }
             DichVu_DTO dvDTO = (DichVu_DTO)cmbTenDichVu_TTDV.SelectedItem;
             cmbGiaDichVu_TTDV.DataSource = DichVu_BLL.HienThiGiaDichVuLenComboBox(dvDTO.MaDichVu);
-            cmbGiaDichVu_TTDV.DisplayMember = "TenDichVu";
+            //cmbGiaDichVu_TTDV.DisplayMember = "TenDichVu";
+            //cmbGiaDichVu_TTDV.ValueMember = "MaDichVu";
+            cmbGiaDichVu_TTDV.DisplayMember = "DonGia";
             cmbGiaDichVu_TTDV.ValueMember = "MaDichVu";
+
         }
 
         private void cmbGiaDichVu_TTDV_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cmbGiaDichVu_TTDV.SelectedItem == null)
+            /*if (cmbGiaDichVu_TTDV.SelectedItem == null)
             {
                 return;
             }
             DichVu_DTO dvDTO = (DichVu_DTO)cmbGiaDichVu_TTDV.SelectedItem;
-            cmbDonViTinh_TTDV.DataSource = DichVu_BLL.HienThiDonViTinh(dvDTO.MaDichVu);
-            cmbDonViTinh_TTDV.DisplayMember = "TenDonVi";
-            cmbDonViTinh_TTDV.ValueMember = "MaDonVi";
+            cmbGiaDichVu_TTDV.DataSource = DichVu_BLL.HienThiDonViTinh(dvDTO.MaDichVu);
+            cmbGiaDichVu_TTDV.DisplayMember = "DonGia";
+            cmbGiaDichVu_TTDV.ValueMember = "MaDichVu";*/
         }
 
         private void cmbTenLoaiPhong_TTDV_SelectedIndexChanged(object sender, EventArgs e)
@@ -258,6 +263,7 @@ namespace QuanLyKhachSan.Views
                 cmbTenPhong_TTDV.DataSource = Phong_BLL.HienThiTenPhongTheoMaLoaiPhong_CoNguoi(lpDTO.MaLoaiPhong);
                 cmbTenPhong_TTDV.DisplayMember = "TenPhong";
                 cmbTenPhong_TTDV.ValueMember = "MaPhong";
+                frmDichVu.MaPhong = cmbTenPhong_TTDV.SelectedValue.ToString();
             }
            
             if (cmbTenPhong_TTDV.Items.Count == 0)

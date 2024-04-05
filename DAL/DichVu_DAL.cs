@@ -82,7 +82,7 @@ namespace DAL
             DataTable _dt = new DataTable();
             try
             {
-                string strTruyVan = string.Format(@"select distinct p.MaPhong, p.TenPhong, k.TenKH, ldv.MaLoaiDichVu, ldv.TenLoaiDichVu, dv.MaDichVu, TenDichVu, count(TenDichVu) as [SoLuong], sum(cthd.Gia) as [Tong Tien] from ChiTietHoaDonDichVu cthd join HoaDon d on d.MaHoaDon = cthd.MaHoaDon join Phong p on p.MaPhong = d.MaPhong join LoaiPhong lp on lp.MaLoaiPhong = p.MaLoaiPhong join ChiTietLoaiPhong c on lp.MaLoaiPhong = c.MaLoaiPhong join PhieuDangKy ph on ph.MaPhieuDK = c.MaPhieuDK  join KhachHang k on k.MaKH = ph.MaKH join DichVu dv on dv.MaDichVu = cthd.MaDichVu join LoaiDichVu ldv on dv.MaLoaiDichVu = ldv.MaLoaiDichVu where p.MaPhong = '"+ phgDTO.MaPhong+ "' group by TenDichVu, k.TenKH, p.TenPhong, p.MaPhong, dv.MaDichVu, ldv.MaLoaiDichVu, ldv.TenLoaiDichVu");
+                string strTruyVan = string.Format(@"select distinct p.MaPhong, p.TenPhong, k.TenKH, ldv.MaLoaiDichVu, ldv.TenLoaiDichVu, dv.MaDichVu, TenDichVu, count(TenDichVu) as [SoLuong], sum(cthd.Gia) as [Tong Tien] from ChiTietHoaDonDichVu cthd join Phong p on p.MaPhong = cthd.MaPhong join LoaiPhong lp on lp.MaLoaiPhong = p.MaLoaiPhong join ChiTietLoaiPhong c on lp.MaLoaiPhong = c.MaLoaiPhong join PhieuDangKy ph on ph.MaPhieuDK = c.MaPhieuDK  join KhachHang k on k.MaKH = ph.MaKH join DichVu dv on dv.MaDichVu = cthd.MaDichVu join LoaiDichVu ldv on dv.MaLoaiDichVu = ldv.MaLoaiDichVu where p.MaPhong = '" + phgDTO.MaPhong+ "' group by TenDichVu, k.TenKH, p.TenPhong, p.MaPhong, dv.MaDichVu, ldv.MaLoaiDichVu, ldv.TenLoaiDichVu");//sua theo sql
                 _dt = DataProvider.fillDataTable(strTruyVan);
 
             }
@@ -128,7 +128,7 @@ namespace DAL
             return lstGiaDichVu;
         }
 
-        public static List<DichVu_DTO>HienThiDonViTinh(string maDichVu)
+        public static List<DichVu_DTO>HienThiDonViTinh(string maDichVu)// đã xóa luôn trên form(hậu)
         {
             List<DichVu_DTO> lstDonViTinh = new List<DichVu_DTO>();
             try
@@ -159,20 +159,20 @@ namespace DAL
             return lstDonViTinh;
         }
 
-        public static DataTable HienThiDanhSachCacDichVuCanCapNhat(string maDichVu,string maPhong)
-        {
-            DataTable dt = new DataTable();
-            try
+            public static DataTable HienThiDanhSachCacDichVuCanCapNhat(string maDichVu, string maPhong)
             {
-                string strTruyVan = string.Format("select distinct d.MaSuDungDichVu, p.MaPhong, p.TenPhong, k.TenKH,ldv.MaLoaiDichVu,ldv.TenLoaiDichVu,TenDichVu,count(TenDichVu) as [SoLuong],sum(ThanhTien)as [Tong Tien] from DanhSachSDDichVu d join Phong p on p.MaPhong = d.MaPhong join ChiTietLoaiPhong c on p.MaPhong = c.MaPhong join PhieuDangKy ph on ph.MaPhieuDK = c.MaPhieuDK join KhachHang k on k.MaKH = ph.MaKH join DichVu dv on dv.MaDichVu = d.MaDichVu join LoaiDichVu ldv on dv.MaLoaiDichVu = ldv.MaLoaiDichVu where p.MaPhong = '"+maPhong+ "' and d.MaDichVu = '"+maDichVu+ "' group by TenDichVu, k.TenKH, p.TenPhong, p.MaPhong, d.MaSuDungDichVu,ldv.MaLoaiDichVu,ldv.TenLoaiDichVu");
-                dt = DataProvider.fillDataTable(strTruyVan);
-            }
-            catch (Exception ex)
-            {
+                DataTable dt = new DataTable();
+                try { 
+                
+                    string strTruyVan = string.Format("select distinct dv.MaDichVu, p.MaPhong, p.TenPhong, k.TenKH,ldv.MaLoaiDichVu, ldv.TenLoaiDichVu, dv.TenDichVu, count(TenDichVu) as [SoLuong], sum(cthd.Gia) as [Tong Tien] from ChiTietHoaDonDichVu cthd join Phong p on p.MaPhong = cthd.MaPhong join LoaiPhong lp on lp.MaLoaiPhong = p.MaLoaiPhong join ChiTietLoaiPhong c on lp.MaLoaiPhong = c.MaLoaiPhong join PhieuDangKy ph on ph.MaPhieuDK = c.MaPhieuDK join KhachHang k on k.MaKH = ph.MaKH join DichVu dv on dv.MaDichVu = cthd.MaDichVu join LoaiDichVu ldv on dv.MaLoaiDichVu = ldv.MaLoaiDichVu where p.MaPhong = '" + maPhong + "' and cthd.MaDichVu = '"+ maDichVu + "' group by dv.TenDichVu, k.TenKH, p.TenPhong, p.MaPhong, dv.MaDichVu, ldv.MaLoaiDichVu, ldv.TenLoaiDichVu");//sua lai theo sql
+                    dt = DataProvider.fillDataTable(strTruyVan);
+                }
+                catch (Exception ex)
+                {
 
-                XtraMessageBox.Show("Error : " + ex.Message);
-            }
-            return dt;
+                    XtraMessageBox.Show("Error : " + ex.Message);
+                }
+                return dt;
            
 
 

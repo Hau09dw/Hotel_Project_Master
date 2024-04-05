@@ -54,16 +54,16 @@ namespace QuanLyKhachSan.Views
             cmbTenDichVu.ValueMember = "MaDichVu";
         }
 
-        private void cmbGiaDichVu_SelectedIndexChanged(object sender, EventArgs e)
+        private void cmbGiaDichVu_SelectedIndexChanged(object sender, EventArgs e)//Khong can su dung(Hau) -- xoa tren form roi
         {
-            if (cmbGiaDichVu.SelectedItem == null)
+            /*if (cmbGiaDichVu.SelectedItem == null)
             {
                 return;
             }
             DichVu_DTO dvDTO = (DichVu_DTO)cmbGiaDichVu.SelectedItem;
             cmbDonViTinh.DataSource = DichVu_BLL.HienThiDonViTinh(dvDTO.MaDichVu);
             cmbDonViTinh.DisplayMember = "TenDonVi";
-            cmbDonViTinh.ValueMember = "MaDonVi";
+            cmbDonViTinh.ValueMember = "MaDonVi";*/
         }
 
         private void cmbTenDichVu_SelectedIndexChanged(object sender, EventArgs e)
@@ -115,7 +115,7 @@ namespace QuanLyKhachSan.Views
             if (dgvChiTietDichVu.SelectedRows != null)
             {
                 DataGridViewRow row = dgvChiTietDichVu.SelectedRows[0];
-                txtMaSDDichVu.Text = row.Cells["MaSuDungDichVu"].Value.ToString();
+                txtMaSDDichVu.Text = row.Cells["MaDichVu"].Value.ToString();
                 cmbLoaiDichVu.Text = row.Cells["TenLoaiDichVu"].Value.ToString();
                 cmbTenDichVu.Text = row.Cells["TenDichVu"].Value.ToString();
                 txtSoLuong.Text = row.Cells["SoLuong"].Value.ToString();
@@ -144,6 +144,11 @@ namespace QuanLyKhachSan.Views
                 }
 
             }
+        }
+
+        private void labelControl1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
