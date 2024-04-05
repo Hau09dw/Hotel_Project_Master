@@ -82,8 +82,7 @@ namespace DAL
             DataTable _dt = new DataTable();
             try
             {
-                string strTruyVan = string.Format(@"select distinct p.MaPhong, p.TenPhong, k.TenKH,ldv.MaLoaiDichVu,ldv.TenLoaiDichVu,dv.MaDichVu,TenDichVu,count(TenDichVu) as [SoLuong],sum(ThanhTien)as [Tong Tien] from DanhSachSDDichVu d  join Phong p on p.MaPhong = d.MaPhong join ChiTietLoaiPhong c on p.MaPhong  = c.MaPhong join PhieuDangKy ph on ph.MaPhieuDK = c.MaPhieuDK  join KhachHang k on k.MaKH = ph.MaKH  join DichVu dv on dv.MaDichVu = d.MaDichVu  join LoaiDichVu ldv on dv.MaLoaiDichVu = ldv.MaLoaiDichVu where p.MaPhong = '" + phgDTO.MaPhong + "' group by TenDichVu,k.TenKH,p.TenPhong,p.MaPhong,dv.MaDichVu,ldv.MaLoaiDichVu,ldv.TenLoaiDichVu");
-
+                string strTruyVan = string.Format(@"select distinct p.MaPhong, p.TenPhong, k.TenKH, ldv.MaLoaiDichVu, ldv.TenLoaiDichVu, dv.MaDichVu, TenDichVu, count(TenDichVu) as [SoLuong], sum(cthd.Gia) as [Tong Tien] from ChiTietHoaDonDichVu cthd join HoaDon d on d.MaHoaDon = cthd.MaHoaDon join Phong p on p.MaPhong = d.MaPhong join LoaiPhong lp on lp.MaLoaiPhong = p.MaLoaiPhong join ChiTietLoaiPhong c on lp.MaLoaiPhong = c.MaLoaiPhong join PhieuDangKy ph on ph.MaPhieuDK = c.MaPhieuDK  join KhachHang k on k.MaKH = ph.MaKH join DichVu dv on dv.MaDichVu = cthd.MaDichVu join LoaiDichVu ldv on dv.MaLoaiDichVu = ldv.MaLoaiDichVu where p.MaPhong = '"+ phgDTO.MaPhong+ "' group by TenDichVu, k.TenKH, p.TenPhong, p.MaPhong, dv.MaDichVu, ldv.MaLoaiDichVu, ldv.TenLoaiDichVu");
                 _dt = DataProvider.fillDataTable(strTruyVan);
 
             }
@@ -134,7 +133,7 @@ namespace DAL
             List<DichVu_DTO> lstDonViTinh = new List<DichVu_DTO>();
             try
             {
-                string strTruyVan = string.Format("select DV.MaDichVu,DV.DonGia,DoVi.MaDonVi,DoVi.TenDonVi from DichVu as DV, DonVi as DoVi where DV.MaDonVi = DoVI.MaDonVi and DV.MaDichVu = '"+maDichVu+"'");
+                string strTruyVan = string.Format("select DV.MaDichVu,DV.GiaDichVu,DV.DonViTinh from DichVu as DV where DV.MaDichVu = '"+maDichVu+"'");//DoVi.MaDonVi,DoVi.TenDonVi--, DonVi as DoVi -- DV.MaDonVi = DoVI.MaDonVi and 
                 DataTable _dt = new DataTable();
                 _dt = DataProvider.fillDataTable(strTruyVan);
                 if (_dt != null)
@@ -143,9 +142,9 @@ namespace DAL
                     {
                         DichVu_DTO dvDTO = new DichVu_DTO();
                         dvDTO.MaDichVu = _dt.Rows[i]["MaDichVu"].ToString();
-                        dvDTO.DonGia = Convert.ToInt32(_dt.Rows[i]["DonGia"]);
-                        dvDTO.MaDonVi = _dt.Rows[i]["MaDonVi"].ToString();
-                        dvDTO.TenDonVi = _dt.Rows[i]["TenDonVi"].ToString();
+                        dvDTO.DonGia = Convert.ToInt32(_dt.Rows[i]["GiaDichVu"]);
+                        dvDTO.MaDonVi = _dt.Rows[i]["DonViTinh"].ToString();//--> sua tu MaDonVi
+                        //dvDTO.TenDonVi = _dt.Rows[i]["TenDonVi"].ToString();
 
                         lstDonViTinh.Add(dvDTO);
                     }

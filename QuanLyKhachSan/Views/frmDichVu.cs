@@ -227,7 +227,7 @@ namespace QuanLyKhachSan.Views
             }
             DichVu_DTO dvDTO = (DichVu_DTO)cmbTenDichVu_TTDV.SelectedItem;
             cmbGiaDichVu_TTDV.DataSource = DichVu_BLL.HienThiGiaDichVuLenComboBox(dvDTO.MaDichVu);
-            cmbGiaDichVu_TTDV.DisplayMember = "GiaDichVu";
+            cmbGiaDichVu_TTDV.DisplayMember = "TenDichVu";
             cmbGiaDichVu_TTDV.ValueMember = "MaDichVu";
         }
 
