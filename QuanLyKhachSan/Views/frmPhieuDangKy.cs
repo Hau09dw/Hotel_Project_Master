@@ -53,7 +53,17 @@ namespace QuanLyKhachSan.Views
         {
             lstPhieuDangKyDTO = PhieuDangKy_BLL.HienThiDanhSachKhachHangTrongPDK(pos);
             dgvPhieuDK.DataSource = lstPhieuDangKyDTO;
-
+            dgvPhieuDK.Columns[0].HeaderText = "Tên KH";
+            dgvPhieuDK.Columns[1].HeaderText = "Mã PĐK";
+            dgvPhieuDK.Columns[2].HeaderText = "Ngày Đến";
+            dgvPhieuDK.Columns[3].HeaderText = "Giờ Đến";
+            dgvPhieuDK.Columns[4].HeaderText = "Ngày Đi";
+            dgvPhieuDK.Columns[5].HeaderText = "Giờ Đi";
+            dgvPhieuDK.Columns[6].HeaderText = "SL Trẻ Em";
+            dgvPhieuDK.Columns[7].HeaderText = "SL Người Lớn";
+            dgvPhieuDK.Columns[8].HeaderText = "Tiền Đặt Cọc";
+            dgvPhieuDK.Columns[9].Visible = false;
+            dgvPhieuDK.Columns[10].Visible = false;
         }
 
         private void HienThiLaiDuLieuTrenDataGridView()

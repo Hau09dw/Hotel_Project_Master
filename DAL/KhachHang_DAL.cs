@@ -7,6 +7,7 @@ using DTO;
 using System.Windows.Forms;
 using System.Data;
 using DevExpress.XtraEditors;
+using System.Data.SqlClient;
 
 namespace DAL
 {
@@ -219,10 +220,26 @@ namespace DAL
         }
         public static int XoaKhachHang(string maKH)
         {
-            string strTruyVan = "DELETE FROM KhachHang WHERE MaKH = '" + maKH + "'  ";
-            int count = DataProvider.ExecuteNonQuery(strTruyVan);
+            int count = 0;
+            SqlConnection _conn = DataProvider.getConnection();
+            _conn.Open();
+            {
+                try
+                {
+                    string strTruyVan = "DELETE FROM KhachHang WHERE MaKH = '" + maKH + "'  ";
 
-            return count;
+                    SqlCommand _cmd = new SqlCommand(strTruyVan, _conn);
+                    count = _cmd.ExecuteNonQuery();
+
+
+                    return count;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Không thể xóa khách hàng đã từng ở khách sạn, xin hãy kiểm tra lại.\nNếu bạn vẫn muốn xóa khách hàng này, xin hãy xóa những thông tin liên quan đến họ trước (Hóa đơn, phiếu đặt phòng,..) \n\n\n***Chi tiết lỗi:\n\n " + ex.Message, "Lỗi");
+                    return 0;
+                }
+            }
         }
 
         public static DataTable TimMaKhachHang(string MaKH)

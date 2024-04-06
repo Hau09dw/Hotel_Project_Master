@@ -71,7 +71,7 @@ namespace QuanLyKhachSan.Views
             if (cmbTimTheo.Text == "Tên Khách Hàng")
             {
                 dgvKhachHang.DataSource = KhachHang_BLL.TimTenKhachHang(txtTuKhoa.Text);
-                dgvKhachHang.Columns[8].Visible = false;
+                
             }
         }
 

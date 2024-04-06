@@ -20,7 +20,7 @@ namespace DAL
             {
                 string strTruyVan = @"SELECT DISTINCT KH.MaKH ,KH.TenKH,PDK.MaPhieuDK,PDK.NgayDen,PDK.GioDen,PDK.NgayDi,PDK.GioDi,PDK.SoLuongNguoiLon,PDK.SoLuongTreEm,PDK.TienDatCoc,PDK.MaNV,PDK.MaKH,KH.NgaySinh,KH.GioiTinh,KH.CMND,KH.QuocTich,KH.DiaChi,KH.SDT
               FROM PhieuDangKy as PDK, KhachHang as KH
-            WHERE PDK.MaKH = KH.MaKH ";//AND KH.DaXacNhan = 1
+            WHERE PDK.MaKH = KH.MaKH ";
                 DataTable _dt = new DataTable();
                 _dt = DataProvider.fillDataTable(strTruyVan);
                 if (_dt != null)
@@ -76,7 +76,7 @@ namespace DAL
             List<PhieuDangKy_DTO> lstMaPhieuDKChuaDuocDP = new List<PhieuDangKy_DTO>();
             try
             {
-                string strTruyVan = string.Format("select * from PhieuDangKy where DaXacNhan = 0");
+                string strTruyVan = string.Format("select * from PhieuDangKy");
                 DataTable _dt = new DataTable();
                 _dt = DataProvider.fillDataTable(strTruyVan);
                 if (_dt != null)
@@ -180,7 +180,7 @@ namespace DAL
             {
                 string strTruyVan = string.Format(@"SELECT DISTINCT KH.MaKH, KH.TenKH, PDK.MaPhieuDK, PDK.NgayDen, PDK.GioDen, PDK.NgayDi, PDK.GioDi, PDK.SoLuongNguoiLon, PDK.SoLuongTreEm, PDK.TienDatCoc, PDK.MaNV, PDK.MaKH, KH.NgaySinh, KH.GioiTinh, KH.CMND, KH.QuocTich, KH.DiaChi, KH.SDT
               FROM PhieuDangKy as PDK, KhachHang as KH
-            WHERE PDK.MaKH = KH.MaKH AND KH.DaXacNhan = 1 AND  MaPhieuDK = '" + MaPhieuDK + "'");
+            WHERE PDK.MaKH = KH.MaKH AND  MaPhieuDK = '" + MaPhieuDK + "'");
                 DataTable _dt = new DataTable();
                 _dt = DataProvider.fillDataTable(strTruyVan);
                 if (_dt != null)
@@ -226,7 +226,7 @@ namespace DAL
             List<PhieuDangKy_DTO> listPDKDTO = new List<PhieuDangKy_DTO>();
             try
             {
-                string strTruyVan = string.Format(@"SELECT DISTINCT KH.MaKH, KH.TenKH, PDK.MaPhieuDK, PDK.TienDatCoc, PDK.MaNV, PDK.MaKH, KH.NgaySinh, KH.GioiTinh, KH.CMND, KH.QuocTich, KH.DiaChi, KH.SDT FROM PhieuDangKy as PDK, KhachHang as KH WHERE PDK.MaKH = KH.MaKH ");//AND KH.DaXacNhan = 1 AND ISNULL(PDK.DaVaoPhong,'false') not in (1)-->lấy ra từ dòng lệnh
+                string strTruyVan = string.Format(@"SELECT DISTINCT KH.MaKH, KH.TenKH, PDK.MaPhieuDK, PDK.TienDatCoc, PDK.MaNV, PDK.MaKH, KH.NgaySinh, KH.GioiTinh, KH.CMND, KH.QuocTich, KH.DiaChi, KH.SDT FROM PhieuDangKy as PDK, KhachHang as KH WHERE PDK.MaKH = KH.MaKH ");
                 DataTable _dt = new DataTable();
                 _dt = DataProvider.fillDataTable(strTruyVan);
                 if (_dt != null)
@@ -265,14 +265,7 @@ namespace DAL
             {
                 string strTruyVan = string.Format(@"INSERT INTO PhieuDangKy(MaPhieuDK,NgayDen,NgayDi,GioDen, GioDi,SoLuongNguoiLon,SoLuongTreEm,TienDatCoc, MaNV,MaKH) VALUES('{0}', '{1}', '{2}', '{3}', '{4}', {5}, {6}, {7}, '{8}', '{9}')", pdkDTO.MaPhieuDK, pdkDTO.NgayDen, pdkDTO.NgayDi, pdkDTO.GioDen, pdkDTO.GioDi, pdkDTO.SoLuongNguoiLon, pdkDTO.SoLuongTreEm, pdkDTO.TienDatCoc, pdkDTO.MaNV,pdkDTO.MaKH);
 
-                count = DataProvider.ExecuteNonQuery(strTruyVan);
-
-                //Cập nhật phiếu đăng ký đã có khách hàng
-                string strTruyVanUpdateKH = " UPDATE KhachHang SET DaXacNhan = 1 WHERE MaKH =  '" + pdkDTO.MaKH + "'";
-
-                count = DataProvider.ExecuteNonQuery(strTruyVanUpdateKH);
-
-                
+                count = DataProvider.ExecuteNonQuery(strTruyVan);                
             }
             catch (Exception ex)
             {

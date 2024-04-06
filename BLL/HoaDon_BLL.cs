@@ -21,7 +21,7 @@ namespace BLL
 
         public static int ThemChiTietHoaDon(HoaDon_DTO hdDTO) => HoaDon_DAL.ThemChiTietHoaDon(hdDTO);
 
-        public static DataTable HienThiDanhSachChiTietHoaDon() => HoaDon_DAL.HienThiDanhSachChiTietHoaDon();
+        public static DataTable HienThiDanhSachChiTietHoaDon(string MaKH) => HoaDon_DAL.HienThiDanhSachChiTietHoaDon(MaKH);
 
         public static DataTable LayMaChiTietHoaDon() => HoaDon_DAL.LayMaChiTietHoaDon();
 

@@ -167,12 +167,12 @@ namespace DAL
             return count;
         }
 
-        public static DataTable HienThiDanhSachChiTietHoaDon()
+        public static DataTable HienThiDanhSachChiTietHoaDon(string MaKH)
         {
             DataTable dt = new DataTable();
             try
             {
-                string strTruyVan = string.Format("SELECT * FROM ChiTietHoaDon where DaThanhToan = 0");
+                string strTruyVan = string.Format("SELECT DV.TenDichVu N'Tên Dịch vụ', DV.GiaDichVu as N'Đơn Giá', CT.SoLuong N'Số Lượng', DV.GiaDichVu * CT.SoLuong as N'Thành Tiền', P.TenPhong N'Tên Phòng', KH.TenKH N'Tên KH'\r\nFROM DichVu DV\r\nLEFT JOIN ChiTietHoaDonDichVu CT ON DV.MaDichVu = CT.MaDichVu\r\nLEFT JOIN Phong P ON P.MaPhong = CT.MaPhong\r\nLEFT JOIN HoaDon HD ON HD.MaHoaDon = CT.MaHoaDon\r\nLEFT JOIN PhieuDangKy DK ON HD.MaPhieuDK = DK.MaPhieuDK\r\nLEFT JOIN KhachHang KH ON DK.MaKH = KH.MaKH\r\nWHERE KH.MaKH = '"+MaKH+"'");
                 dt = DataProvider.fillDataTable(strTruyVan);
             }
             catch (Exception ex)
@@ -188,7 +188,7 @@ namespace DAL
             DataTable dt = new DataTable();
             try
             {
-                string strTruyVan = string.Format("select HD.MaHoaDon,HD.NgayThanhToan,CTHD.TienDichVu,CTHD.TienPhong,CTHD.PhuThu,HD.SoTienDaDatTruoc,HD.TongTienHoaDon from HoaDon as HD inner join ChiTietHoaDon as CTHD on HD.MaChiTietHoaDon = CTHD.MaChiTietHoaDon where CTHD.DaThanhToan = 1");
+                string strTruyVan = string.Format("select * from HoaDon ");
                 dt = DataProvider.fillDataTable(strTruyVan);
             }
             catch (Exception ex)

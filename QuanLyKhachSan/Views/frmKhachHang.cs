@@ -397,5 +397,11 @@ namespace QuanLyKhachSan
 
 
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            dtpNgaySinh.Text = cmbQuocTich.Text = txtCMND.Text = txtDiaChi.Text = txtDienThoai.Text = txtMaKH.Text = txtTenKH.Text = "";
+            dgvKhachHang.ClearSelection();
+        }
     }
 }

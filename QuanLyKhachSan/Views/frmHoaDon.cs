@@ -27,7 +27,7 @@ namespace QuanLyKhachSan.Views
         private void frmHoaDon_Load(object sender, EventArgs e)
         {
             HienThiDanhSachCacKhachHangDaCoPhong_KH();
-            HienThiDanhSachChiTietHoaDon();
+            HienThiDanhSachChiTietHoaDon("");
             HienThiDanhSachCacHoaDon();
             txtMaNV.Text = frmMain.MaNV;
             btnXacNhanHD.Enabled = false;
@@ -40,13 +40,27 @@ namespace QuanLyKhachSan.Views
         private void HienThiDanhSachCacHoaDon()
         {
             dgvXuLyHD.DataSource = HoaDon_BLL.HienThiDanhSachHoaDon();
+            dgvXuLyHD.Columns[0].HeaderText = "Mã Hóa Đơn";
+            dgvXuLyHD.Columns[1].HeaderText = "Tên Hóa Đơn";
+            dgvXuLyHD.Columns[2].HeaderText = "Ngày Bắt Đầu";
+            dgvXuLyHD.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy" ;
+            dgvXuLyHD.Columns[3].HeaderText = "Ngày Kết Thúc";
+            dgvXuLyHD.Columns[4].HeaderText = "Tiền Phòng";
+            dgvXuLyHD.Columns[5].HeaderText = "Chi phí phát sinh";
+            dgvXuLyHD.Columns[6].HeaderText = "Tổng tiền Hóa Đơn";
+            dgvXuLyHD.Columns[7].HeaderText = "Tiền Đặt Cọc";
+            dgvXuLyHD.Columns[8].HeaderText = "Mã NV";
+            dgvXuLyHD.Columns[9].HeaderText = "Mã Phiếu ĐK";
+            dgvXuLyHD.Columns[10].HeaderText = "Mã Phòng";
         }
 
 
-        private void HienThiDanhSachChiTietHoaDon()
+        private void HienThiDanhSachChiTietHoaDon(string MaKH)
         {
-            dgvHoaDon.DataSource = HoaDon_BLL.HienThiDanhSachChiTietHoaDon();
-            dgvHoaDon.Columns[6].Visible = false;
+            if (string.IsNullOrEmpty(MaKH))
+                return;
+            dgvHoaDon.DataSource = HoaDon_BLL.HienThiDanhSachChiTietHoaDon(MaKH);
+            //dgvHoaDon.Columns[6].Visible = false;
         }   
        
         private void dgvDanhSachKH_Click(object sender, EventArgs e)
@@ -60,7 +74,8 @@ namespace QuanLyKhachSan.Views
                     DataGridViewRow row = dgvDanhSachKH.SelectedRows[0];
                     MaPhong = row.Cells["MaPhonggg"].Value.ToString();
                     MaPhieuDK = row.Cells["MaPhieuDKK"].Value.ToString();
-
+                    string MaKH = row.Cells[0].Value.ToString().Trim();
+                    HienThiDanhSachChiTietHoaDon(MaKH) ;
 
                 }
             }
@@ -104,7 +119,7 @@ namespace QuanLyKhachSan.Views
 
             frmChiTietHoaDon frmCTHD = new frmChiTietHoaDon();
             frmCTHD.ShowDialog();
-            HienThiDanhSachChiTietHoaDon();
+            HienThiDanhSachChiTietHoaDon("");
             HienThiDanhSachCacKhachHangDaCoPhong_KH();
             
         }
@@ -125,7 +140,7 @@ namespace QuanLyKhachSan.Views
                 {
                    
                     XtraMessageBox.Show("Xác nhận thanh toán thành công!!!", "Thông báo");
-                    HienThiDanhSachChiTietHoaDon();
+                    HienThiDanhSachChiTietHoaDon("");
                     HienThiDanhSachCacHoaDon();
                 }
                 else
@@ -146,7 +161,7 @@ namespace QuanLyKhachSan.Views
         {
             SqlConnection conn = new SqlConnection(@"SERVER = .; integrated security=True; DATABASE = QuanLyKhachSan");
             conn.Open();
-            string sql = "select HD.MaHoaDon,HD.NgayThanhToan,CTHD.TienPhong,CTHD.TienDichVu,CTHD.PhuThu,CTHD.ThanhTien,HD.SoTienDaDatTruoc,HD.TongTienHoaDon,HD.MaNV from HoaDon as HD inner join ChiTietHoaDon as CTHD on HD.MaChiTietHoaDon = CTHD.MaChiTietHoaDon";
+            string sql = "select * from HoaDon";
             SqlCommand command = new SqlCommand(sql, conn);
 
             SqlDataAdapter adapter = new SqlDataAdapter(command);

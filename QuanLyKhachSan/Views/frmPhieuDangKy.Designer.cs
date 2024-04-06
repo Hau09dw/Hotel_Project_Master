@@ -52,6 +52,7 @@
             this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.txtMaNVV = new System.Windows.Forms.TextBox();
             this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
             this.btnDuyet = new DevExpress.XtraEditors.SimpleButton();
             this.txtSoLuongTE = new DevExpress.XtraEditors.TextEdit();
@@ -74,17 +75,6 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.dgvPhieuDK = new System.Windows.Forms.DataGridView();
-            this.TenKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaPhieuDK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayDen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayDi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GioDen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GioDi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuongNguoiLon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuongTreEm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TienDatCoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaKHH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
             this.btnThemPhong = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl24 = new DevExpress.XtraEditors.LabelControl();
@@ -108,7 +98,7 @@
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
-            this.txtMaNVV = new System.Windows.Forms.TextBox();
+            this.TenKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
@@ -125,10 +115,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtpGioDi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpGioDen.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTienDatCoc.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtpNgayDi.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpNgayDi.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtpNgayDen.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpNgayDi.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpNgayDen.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpNgayDen.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaPhieuDK.Properties)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
@@ -142,10 +132,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtpGioDen_TTPDK.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaNV_TTPDK.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTienDatCoc_TTPDK.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtpNgayDi_TTPDK.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpNgayDi_TTPDK.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtpNgayDen_TTPDK.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpNgayDi_TTPDK.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpNgayDen_TTPDK.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpNgayDen_TTPDK.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaPDK_TTPDK.Properties)).BeginInit();
             this.SuspendLayout();
             // 
@@ -218,21 +208,21 @@
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkTurquoise;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvLoadKhachHang.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvLoadKhachHang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvLoadKhachHang.EnableHeadersVisualStyles = false;
-            this.dgvLoadKhachHang.Location = new System.Drawing.Point(2, 20);
+            this.dgvLoadKhachHang.Location = new System.Drawing.Point(2, 23);
             this.dgvLoadKhachHang.MultiSelect = false;
             this.dgvLoadKhachHang.Name = "dgvLoadKhachHang";
             this.dgvLoadKhachHang.ReadOnly = true;
             this.dgvLoadKhachHang.RowHeadersVisible = false;
             this.dgvLoadKhachHang.RowTemplate.Height = 25;
             this.dgvLoadKhachHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLoadKhachHang.Size = new System.Drawing.Size(937, 400);
+            this.dgvLoadKhachHang.Size = new System.Drawing.Size(937, 397);
             this.dgvLoadKhachHang.TabIndex = 1;
             this.dgvLoadKhachHang.Click += new System.EventHandler(this.dgvLoadKhachHang_Click);
             // 
@@ -326,6 +316,7 @@
             // labelControl17
             // 
             this.labelControl17.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl17.Appearance.Options.UseFont = true;
             this.labelControl17.Location = new System.Drawing.Point(73, 33);
             this.labelControl17.Name = "labelControl17";
             this.labelControl17.Size = new System.Drawing.Size(100, 17);
@@ -335,6 +326,7 @@
             // labelControl9
             // 
             this.labelControl9.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl9.Appearance.Options.UseFont = true;
             this.labelControl9.Location = new System.Drawing.Point(444, 34);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(102, 17);
@@ -371,9 +363,18 @@
             this.groupControl1.TabIndex = 1;
             this.groupControl1.Text = "Thông tin đặt phòng";
             // 
+            // txtMaNVV
+            // 
+            this.txtMaNVV.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaNVV.Location = new System.Drawing.Point(152, 310);
+            this.txtMaNVV.Name = "txtMaNVV";
+            this.txtMaNVV.Size = new System.Drawing.Size(167, 25);
+            this.txtMaNVV.TabIndex = 11;
+            // 
             // labelControl19
             // 
             this.labelControl19.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl19.Appearance.Options.UseFont = true;
             this.labelControl19.Location = new System.Drawing.Point(15, 314);
             this.labelControl19.Name = "labelControl19";
             this.labelControl19.Size = new System.Drawing.Size(89, 17);
@@ -493,6 +494,7 @@
             // labelControl8
             // 
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl8.Appearance.Options.UseFont = true;
             this.labelControl8.Location = new System.Drawing.Point(14, 277);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(82, 17);
@@ -502,6 +504,7 @@
             // labelControl7
             // 
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl7.Appearance.Options.UseFont = true;
             this.labelControl7.Location = new System.Drawing.Point(14, 239);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(106, 17);
@@ -511,6 +514,7 @@
             // labelControl6
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl6.Appearance.Options.UseFont = true;
             this.labelControl6.Location = new System.Drawing.Point(14, 205);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(124, 17);
@@ -520,6 +524,7 @@
             // labelControl5
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl5.Appearance.Options.UseFont = true;
             this.labelControl5.Location = new System.Drawing.Point(15, 169);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(46, 17);
@@ -529,6 +534,7 @@
             // labelControl4
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl4.Appearance.Options.UseFont = true;
             this.labelControl4.Location = new System.Drawing.Point(14, 101);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(57, 17);
@@ -538,6 +544,7 @@
             // labelControl3
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl3.Appearance.Options.UseFont = true;
             this.labelControl3.Location = new System.Drawing.Point(14, 135);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(57, 17);
@@ -547,6 +554,7 @@
             // labelControl2
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Location = new System.Drawing.Point(15, 65);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(68, 17);
@@ -556,6 +564,7 @@
             // labelControl1
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Location = new System.Drawing.Point(15, 31);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(116, 17);
@@ -607,114 +616,26 @@
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvPhieuDK.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvPhieuDK.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPhieuDK.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.TenKH,
-            this.MaPhieuDK,
-            this.NgayDen,
-            this.NgayDi,
-            this.GioDen,
-            this.GioDi,
-            this.SoLuongNguoiLon,
-            this.SoLuongTreEm,
-            this.TienDatCoc,
-            this.MaNV,
-            this.MaKHH});
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.DarkTurquoise;
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvPhieuDK.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvPhieuDK.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvPhieuDK.EnableHeadersVisualStyles = false;
-            this.dgvPhieuDK.Location = new System.Drawing.Point(2, 20);
+            this.dgvPhieuDK.Location = new System.Drawing.Point(2, 23);
             this.dgvPhieuDK.MultiSelect = false;
             this.dgvPhieuDK.Name = "dgvPhieuDK";
             this.dgvPhieuDK.ReadOnly = true;
             this.dgvPhieuDK.RowHeadersVisible = false;
             this.dgvPhieuDK.RowTemplate.Height = 25;
             this.dgvPhieuDK.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPhieuDK.Size = new System.Drawing.Size(956, 462);
+            this.dgvPhieuDK.Size = new System.Drawing.Size(956, 459);
             this.dgvPhieuDK.TabIndex = 1;
             this.dgvPhieuDK.Click += new System.EventHandler(this.dgvPhieuDK_Click);
-            // 
-            // TenKH
-            // 
-            this.TenKH.DataPropertyName = "TenKH";
-            this.TenKH.HeaderText = "Tên Khách Hàng";
-            this.TenKH.Name = "TenKH";
-            this.TenKH.ReadOnly = true;
-            // 
-            // MaPhieuDK
-            // 
-            this.MaPhieuDK.DataPropertyName = "MaPhieuDK";
-            this.MaPhieuDK.HeaderText = "Mã Phiếu ĐK";
-            this.MaPhieuDK.Name = "MaPhieuDK";
-            this.MaPhieuDK.ReadOnly = true;
-            // 
-            // NgayDen
-            // 
-            this.NgayDen.DataPropertyName = "NgayDen";
-            this.NgayDen.HeaderText = "Ngày Đến";
-            this.NgayDen.Name = "NgayDen";
-            this.NgayDen.ReadOnly = true;
-            // 
-            // NgayDi
-            // 
-            this.NgayDi.DataPropertyName = "NgayDi";
-            this.NgayDi.HeaderText = "NgayDi";
-            this.NgayDi.Name = "NgayDi";
-            this.NgayDi.ReadOnly = true;
-            // 
-            // GioDen
-            // 
-            this.GioDen.DataPropertyName = "GioDen";
-            this.GioDen.HeaderText = "Giờ Đến";
-            this.GioDen.Name = "GioDen";
-            this.GioDen.ReadOnly = true;
-            // 
-            // GioDi
-            // 
-            this.GioDi.DataPropertyName = "GioDi";
-            this.GioDi.HeaderText = "Giờ Đi";
-            this.GioDi.Name = "GioDi";
-            this.GioDi.ReadOnly = true;
-            // 
-            // SoLuongNguoiLon
-            // 
-            this.SoLuongNguoiLon.DataPropertyName = "SoLuongNguoiLon";
-            this.SoLuongNguoiLon.HeaderText = "SL Người Lớn";
-            this.SoLuongNguoiLon.Name = "SoLuongNguoiLon";
-            this.SoLuongNguoiLon.ReadOnly = true;
-            // 
-            // SoLuongTreEm
-            // 
-            this.SoLuongTreEm.DataPropertyName = "SoLuongTreEm";
-            this.SoLuongTreEm.HeaderText = "SL Trẻ Em";
-            this.SoLuongTreEm.Name = "SoLuongTreEm";
-            this.SoLuongTreEm.ReadOnly = true;
-            // 
-            // TienDatCoc
-            // 
-            this.TienDatCoc.HeaderText = "Tiền Đặt Cọc";
-            this.TienDatCoc.Name = "TienDatCoc";
-            this.TienDatCoc.ReadOnly = true;
-            // 
-            // MaNV
-            // 
-            this.MaNV.DataPropertyName = "MaNV";
-            this.MaNV.HeaderText = "Mã NV";
-            this.MaNV.Name = "MaNV";
-            this.MaNV.ReadOnly = true;
-            // 
-            // MaKHH
-            // 
-            this.MaKHH.DataPropertyName = "MaKH";
-            this.MaKHH.HeaderText = "Mã KH";
-            this.MaKHH.Name = "MaKHH";
-            this.MaKHH.ReadOnly = true;
             // 
             // groupControl4
             // 
@@ -761,6 +682,7 @@
             // labelControl24
             // 
             this.labelControl24.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl24.Appearance.Options.UseFont = true;
             this.labelControl24.Location = new System.Drawing.Point(15, 315);
             this.labelControl24.Name = "labelControl24";
             this.labelControl24.Size = new System.Drawing.Size(89, 17);
@@ -897,6 +819,7 @@
             // labelControl10
             // 
             this.labelControl10.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl10.Appearance.Options.UseFont = true;
             this.labelControl10.Location = new System.Drawing.Point(15, 277);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(82, 17);
@@ -906,6 +829,7 @@
             // labelControl11
             // 
             this.labelControl11.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl11.Appearance.Options.UseFont = true;
             this.labelControl11.Location = new System.Drawing.Point(15, 239);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Size = new System.Drawing.Size(106, 17);
@@ -915,6 +839,7 @@
             // labelControl12
             // 
             this.labelControl12.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl12.Appearance.Options.UseFont = true;
             this.labelControl12.Location = new System.Drawing.Point(15, 205);
             this.labelControl12.Name = "labelControl12";
             this.labelControl12.Size = new System.Drawing.Size(124, 17);
@@ -924,6 +849,7 @@
             // labelControl13
             // 
             this.labelControl13.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl13.Appearance.Options.UseFont = true;
             this.labelControl13.Location = new System.Drawing.Point(16, 169);
             this.labelControl13.Name = "labelControl13";
             this.labelControl13.Size = new System.Drawing.Size(46, 17);
@@ -933,6 +859,7 @@
             // labelControl14
             // 
             this.labelControl14.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl14.Appearance.Options.UseFont = true;
             this.labelControl14.Location = new System.Drawing.Point(15, 101);
             this.labelControl14.Name = "labelControl14";
             this.labelControl14.Size = new System.Drawing.Size(57, 17);
@@ -942,6 +869,7 @@
             // labelControl15
             // 
             this.labelControl15.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl15.Appearance.Options.UseFont = true;
             this.labelControl15.Location = new System.Drawing.Point(15, 135);
             this.labelControl15.Name = "labelControl15";
             this.labelControl15.Size = new System.Drawing.Size(57, 17);
@@ -951,6 +879,7 @@
             // labelControl16
             // 
             this.labelControl16.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl16.Appearance.Options.UseFont = true;
             this.labelControl16.Location = new System.Drawing.Point(16, 65);
             this.labelControl16.Name = "labelControl16";
             this.labelControl16.Size = new System.Drawing.Size(68, 17);
@@ -960,19 +889,19 @@
             // labelControl18
             // 
             this.labelControl18.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl18.Appearance.Options.UseFont = true;
             this.labelControl18.Location = new System.Drawing.Point(16, 31);
             this.labelControl18.Name = "labelControl18";
             this.labelControl18.Size = new System.Drawing.Size(116, 17);
             this.labelControl18.TabIndex = 6;
             this.labelControl18.Text = "Mã phiếu đăng ký : ";
             // 
-            // txtMaNVV
+            // TenKH
             // 
-            this.txtMaNVV.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaNVV.Location = new System.Drawing.Point(152, 310);
-            this.txtMaNVV.Name = "txtMaNVV";
-            this.txtMaNVV.Size = new System.Drawing.Size(167, 25);
-            this.txtMaNVV.TabIndex = 11;
+            this.TenKH.DataPropertyName = "TenKH";
+            this.TenKH.HeaderText = "Tên Khách Hàng";
+            this.TenKH.Name = "TenKH";
+            this.TenKH.Width = 87;
             // 
             // frmPhieuDangKy
             // 
@@ -1094,17 +1023,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
         private System.Windows.Forms.DataGridViewTextBoxColumn SDT;
         private System.Windows.Forms.DataGridViewTextBoxColumn QuocTich;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenKH;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaPhieuDK;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NgayDen;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NgayDi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GioDen;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GioDi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuongNguoiLon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuongTreEm;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TienDatCoc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaNV;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaKHH;
         private System.Windows.Forms.TextBox txtMaNVV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenKH;
     }
 }
