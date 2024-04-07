@@ -319,5 +319,10 @@ namespace QuanLyKhachSan.Views
 
 
         }
+
+        private void tabPane1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

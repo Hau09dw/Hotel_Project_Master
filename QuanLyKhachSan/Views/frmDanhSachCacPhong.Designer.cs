@@ -44,10 +44,11 @@
             this.groupControl1.Controls.Add(this.dgvDanhSachCacPhong);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(839, 332);
+            this.groupControl1.Size = new System.Drawing.Size(979, 409);
             this.groupControl1.TabIndex = 1;
-            this.groupControl1.Text = "Danh sách các phòng";
+            this.groupControl1.Text = "List of rooms";
             // 
             // dgvDanhSachCacPhong
             // 
@@ -65,7 +66,7 @@
             this.dgvDanhSachCacPhong.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(72)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 7.8F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -74,22 +75,24 @@
             this.dgvDanhSachCacPhong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 7.8F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkTurquoise;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvDanhSachCacPhong.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvDanhSachCacPhong.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDanhSachCacPhong.EnableHeadersVisualStyles = false;
-            this.dgvDanhSachCacPhong.Location = new System.Drawing.Point(2, 20);
+            this.dgvDanhSachCacPhong.Location = new System.Drawing.Point(2, 28);
+            this.dgvDanhSachCacPhong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvDanhSachCacPhong.MultiSelect = false;
             this.dgvDanhSachCacPhong.Name = "dgvDanhSachCacPhong";
             this.dgvDanhSachCacPhong.ReadOnly = true;
             this.dgvDanhSachCacPhong.RowHeadersVisible = false;
+            this.dgvDanhSachCacPhong.RowHeadersWidth = 51;
             this.dgvDanhSachCacPhong.RowTemplate.Height = 25;
             this.dgvDanhSachCacPhong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDanhSachCacPhong.Size = new System.Drawing.Size(835, 310);
+            this.dgvDanhSachCacPhong.Size = new System.Drawing.Size(975, 379);
             this.dgvDanhSachCacPhong.TabIndex = 1;
             this.dgvDanhSachCacPhong.Click += new System.EventHandler(this.dgvDanhSachCacPhong_Click);
             // 
@@ -98,22 +101,24 @@
             this.btnIn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btnIn.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIn.Appearance.Options.UseFont = true;
-            this.btnIn.Location = new System.Drawing.Point(290, 350);
+            this.btnIn.Location = new System.Drawing.Point(338, 431);
+            this.btnIn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnIn.Name = "btnIn";
-            this.btnIn.Size = new System.Drawing.Size(199, 37);
+            this.btnIn.Size = new System.Drawing.Size(232, 46);
             this.btnIn.TabIndex = 2;
-            this.btnIn.Text = "In";
+            this.btnIn.Text = "PRINT";
             this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
             // 
             // frmDanhSachCacPhong
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(839, 408);
+            this.ClientSize = new System.Drawing.Size(979, 502);
             this.Controls.Add(this.btnIn);
             this.Controls.Add(this.groupControl1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmDanhSachCacPhong";
-            this.Text = "DANH SÁCH CÁC PHÒNG";
+            this.Text = "ROOM LIST";
             this.Load += new System.EventHandler(this.frmDanhSachCacPhong_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);

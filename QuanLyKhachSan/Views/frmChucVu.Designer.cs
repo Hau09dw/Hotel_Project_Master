@@ -55,39 +55,45 @@
             // 
             // txtMaChucVu
             // 
-            this.txtMaChucVu.Location = new System.Drawing.Point(237, 32);
+            this.txtMaChucVu.Location = new System.Drawing.Point(276, 39);
+            this.txtMaChucVu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMaChucVu.Name = "txtMaChucVu";
             this.txtMaChucVu.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaChucVu.Properties.Appearance.Options.UseFont = true;
-            this.txtMaChucVu.Size = new System.Drawing.Size(228, 24);
+            this.txtMaChucVu.Size = new System.Drawing.Size(266, 28);
             this.txtMaChucVu.TabIndex = 0;
             // 
             // txtTenChucVu
             // 
-            this.txtTenChucVu.Location = new System.Drawing.Point(237, 74);
+            this.txtTenChucVu.Location = new System.Drawing.Point(276, 91);
+            this.txtTenChucVu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTenChucVu.Name = "txtTenChucVu";
             this.txtTenChucVu.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenChucVu.Properties.Appearance.Options.UseFont = true;
-            this.txtTenChucVu.Size = new System.Drawing.Size(228, 24);
+            this.txtTenChucVu.Size = new System.Drawing.Size(266, 28);
             this.txtTenChucVu.TabIndex = 0;
             // 
             // labelControl1
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Location = new System.Drawing.Point(123, 77);
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(144, 95);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(79, 17);
+            this.labelControl1.Size = new System.Drawing.Size(101, 21);
             this.labelControl1.TabIndex = 1;
-            this.labelControl1.Text = "Tên chức vụ : ";
+            this.labelControl1.Text = "Posion name : ";
             // 
             // labelControl2
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl2.Location = new System.Drawing.Point(123, 35);
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Location = new System.Drawing.Point(144, 43);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(78, 17);
+            this.labelControl2.Size = new System.Drawing.Size(86, 21);
             this.labelControl2.TabIndex = 1;
-            this.labelControl2.Text = "Mã chức vụ : ";
+            this.labelControl2.Text = "Position ID : ";
             // 
             // groupControl1
             // 
@@ -97,10 +103,11 @@
             this.groupControl1.Controls.Add(this.labelControl1);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(614, 111);
+            this.groupControl1.Size = new System.Drawing.Size(716, 137);
             this.groupControl1.TabIndex = 2;
-            this.groupControl1.Text = "Thông tin chức vụ";
+            this.groupControl1.Text = "Position information";
             // 
             // groupControl2
             // 
@@ -108,22 +115,24 @@
             this.groupControl2.Controls.Add(this.btnCapNhatChucVu);
             this.groupControl2.Controls.Add(this.btnThemChucVu);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupControl2.Location = new System.Drawing.Point(0, 111);
+            this.groupControl2.Location = new System.Drawing.Point(0, 137);
+            this.groupControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(139, 266);
+            this.groupControl2.Size = new System.Drawing.Size(175, 327);
             this.groupControl2.TabIndex = 3;
-            this.groupControl2.Text = "Xử lý";
+            this.groupControl2.Text = "Process";
             // 
             // btnXoaChucVu
             // 
             this.btnXoaChucVu.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoaChucVu.Appearance.Options.UseFont = true;
             this.btnXoaChucVu.Enabled = false;
-            this.btnXoaChucVu.Location = new System.Drawing.Point(12, 185);
+            this.btnXoaChucVu.Location = new System.Drawing.Point(14, 225);
+            this.btnXoaChucVu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnXoaChucVu.Name = "btnXoaChucVu";
-            this.btnXoaChucVu.Size = new System.Drawing.Size(112, 53);
+            this.btnXoaChucVu.Size = new System.Drawing.Size(131, 65);
             this.btnXoaChucVu.TabIndex = 0;
-            this.btnXoaChucVu.Text = "Xóa chức vụ";
+            this.btnXoaChucVu.Text = "DELETE";
             this.btnXoaChucVu.Click += new System.EventHandler(this.btnXoaChucVu_Click);
             // 
             // btnCapNhatChucVu
@@ -131,33 +140,36 @@
             this.btnCapNhatChucVu.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCapNhatChucVu.Appearance.Options.UseFont = true;
             this.btnCapNhatChucVu.Enabled = false;
-            this.btnCapNhatChucVu.Location = new System.Drawing.Point(12, 39);
+            this.btnCapNhatChucVu.Location = new System.Drawing.Point(14, 48);
+            this.btnCapNhatChucVu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCapNhatChucVu.Name = "btnCapNhatChucVu";
-            this.btnCapNhatChucVu.Size = new System.Drawing.Size(112, 53);
+            this.btnCapNhatChucVu.Size = new System.Drawing.Size(131, 65);
             this.btnCapNhatChucVu.TabIndex = 0;
-            this.btnCapNhatChucVu.Text = "Cập nhật chức vụ";
+            this.btnCapNhatChucVu.Text = "UPDATE";
             this.btnCapNhatChucVu.Click += new System.EventHandler(this.btnCapNhatChucVu_Click);
             // 
             // btnThemChucVu
             // 
             this.btnThemChucVu.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemChucVu.Appearance.Options.UseFont = true;
-            this.btnThemChucVu.Location = new System.Drawing.Point(12, 109);
+            this.btnThemChucVu.Location = new System.Drawing.Point(14, 134);
+            this.btnThemChucVu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnThemChucVu.Name = "btnThemChucVu";
-            this.btnThemChucVu.Size = new System.Drawing.Size(112, 53);
+            this.btnThemChucVu.Size = new System.Drawing.Size(131, 65);
             this.btnThemChucVu.TabIndex = 0;
-            this.btnThemChucVu.Text = "Thêm chức vụ ";
+            this.btnThemChucVu.Text = "ADD";
             this.btnThemChucVu.Click += new System.EventHandler(this.btnThemChucVu_Click);
             // 
             // groupControl3
             // 
             this.groupControl3.Controls.Add(this.dgvChucVu);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl3.Location = new System.Drawing.Point(139, 111);
+            this.groupControl3.Location = new System.Drawing.Point(175, 137);
+            this.groupControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(475, 266);
+            this.groupControl3.Size = new System.Drawing.Size(541, 327);
             this.groupControl3.TabIndex = 4;
-            this.groupControl3.Text = "Danh sách các chức vụ ";
+            this.groupControl3.Text = "List of positions";
             // 
             // dgvChucVu
             // 
@@ -175,7 +187,7 @@
             this.dgvChucVu.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(72)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 7.8F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -184,36 +196,39 @@
             this.dgvChucVu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 7.8F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkTurquoise;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvChucVu.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvChucVu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvChucVu.EnableHeadersVisualStyles = false;
-            this.dgvChucVu.Location = new System.Drawing.Point(2, 20);
+            this.dgvChucVu.Location = new System.Drawing.Point(2, 28);
+            this.dgvChucVu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvChucVu.MultiSelect = false;
             this.dgvChucVu.Name = "dgvChucVu";
             this.dgvChucVu.ReadOnly = true;
             this.dgvChucVu.RowHeadersVisible = false;
+            this.dgvChucVu.RowHeadersWidth = 51;
             this.dgvChucVu.RowTemplate.Height = 25;
             this.dgvChucVu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvChucVu.Size = new System.Drawing.Size(471, 244);
+            this.dgvChucVu.Size = new System.Drawing.Size(537, 297);
             this.dgvChucVu.TabIndex = 1;
             this.dgvChucVu.Click += new System.EventHandler(this.dgvChucVu_Click);
             // 
             // frmChucVu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(614, 377);
+            this.ClientSize = new System.Drawing.Size(716, 464);
             this.Controls.Add(this.groupControl3);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.groupControl1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmChucVu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "QUẢN LÝ CHỨC VỤ";
+            this.Text = "POSITION MANAGEMENT";
             this.Load += new System.EventHandler(this.frmChucVu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtMaChucVu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenChucVu.Properties)).EndInit();

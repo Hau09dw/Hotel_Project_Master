@@ -37,16 +37,6 @@
             this.tabNavigationPage1 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
             this.dgvCacKhachHangDaCP = new System.Windows.Forms.DataGridView();
-            this.MaKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CMND = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QuocTich = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaPhieuDK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.txtSoLuong = new DevExpress.XtraEditors.TextEdit();
             this.txtTenKH = new DevExpress.XtraEditors.TextEdit();
@@ -67,14 +57,6 @@
             this.tabNavigationPage2 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
             this.dgvThongTinPhongDaDatDV = new System.Windows.Forms.DataGridView();
-            this.MaaPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaLoaiDichVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaDichVuu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenPhongg = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenKHH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenLoaiDichVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenDichVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuongTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupControl6 = new DevExpress.XtraEditors.GroupControl();
             this.cmbTenLoaiPhong_TTDV = new System.Windows.Forms.ComboBox();
             this.cmbTenPhong_TTDV = new System.Windows.Forms.ComboBox();
@@ -94,6 +76,24 @@
             this.btnCapNhatDichVu = new DevExpress.XtraEditors.SimpleButton();
             this.txtThanhTien = new DevExpress.XtraEditors.TextEdit();
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
+            this.MaKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CMND = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QuocTich = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaPhieuDK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaaPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaLoaiDichVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaDichVuu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenPhongg = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenKHH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenLoaiDichVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenDichVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuongTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabNavigationPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
             this.groupControl4.SuspendLayout();
@@ -121,7 +121,7 @@
             // 
             // tabNavigationPage1
             // 
-            this.tabNavigationPage1.Caption = "Xử lý dịch vụ";
+            this.tabNavigationPage1.Caption = "Process the service";
             this.tabNavigationPage1.Controls.Add(this.groupControl4);
             this.tabNavigationPage1.Controls.Add(this.groupControl1);
             this.tabNavigationPage1.Margin = new System.Windows.Forms.Padding(4);
@@ -137,7 +137,7 @@
             this.groupControl4.Name = "groupControl4";
             this.groupControl4.Size = new System.Drawing.Size(1018, 512);
             this.groupControl4.TabIndex = 44;
-            this.groupControl4.Text = "Danh sách các khách hàng đã đặt phòng";
+            this.groupControl4.Text = "List of customers who have booked rooms";
             // 
             // dgvCacKhachHangDaCP
             // 
@@ -196,86 +196,6 @@
             this.dgvCacKhachHangDaCP.TabIndex = 1;
             this.dgvCacKhachHangDaCP.Click += new System.EventHandler(this.dgvCacKhachHangDaCP_Click);
             // 
-            // MaKH
-            // 
-            this.MaKH.DataPropertyName = "MaKhachHang";
-            this.MaKH.HeaderText = "Mã Khách Hàng";
-            this.MaKH.MinimumWidth = 6;
-            this.MaKH.Name = "MaKH";
-            this.MaKH.ReadOnly = true;
-            // 
-            // TenKH
-            // 
-            this.TenKH.DataPropertyName = "TenKhachHang";
-            this.TenKH.HeaderText = "Tên Khách Hàng";
-            this.TenKH.MinimumWidth = 6;
-            this.TenKH.Name = "TenKH";
-            this.TenKH.ReadOnly = true;
-            // 
-            // NgaySinh
-            // 
-            this.NgaySinh.DataPropertyName = "NgaySinh";
-            this.NgaySinh.HeaderText = "Ngày Sinh";
-            this.NgaySinh.MinimumWidth = 6;
-            this.NgaySinh.Name = "NgaySinh";
-            this.NgaySinh.ReadOnly = true;
-            // 
-            // GioiTinh
-            // 
-            this.GioiTinh.DataPropertyName = "GioiTinh";
-            this.GioiTinh.HeaderText = "Giới Tính";
-            this.GioiTinh.MinimumWidth = 6;
-            this.GioiTinh.Name = "GioiTinh";
-            this.GioiTinh.ReadOnly = true;
-            // 
-            // CMND
-            // 
-            this.CMND.DataPropertyName = "CMND";
-            this.CMND.HeaderText = "CMND";
-            this.CMND.MinimumWidth = 6;
-            this.CMND.Name = "CMND";
-            this.CMND.ReadOnly = true;
-            // 
-            // DiaChi
-            // 
-            this.DiaChi.DataPropertyName = "DiaChi";
-            this.DiaChi.HeaderText = "Địa Chỉ";
-            this.DiaChi.MinimumWidth = 6;
-            this.DiaChi.Name = "DiaChi";
-            this.DiaChi.ReadOnly = true;
-            // 
-            // SDT
-            // 
-            this.SDT.DataPropertyName = "SDT";
-            this.SDT.HeaderText = "SDT";
-            this.SDT.MinimumWidth = 6;
-            this.SDT.Name = "SDT";
-            this.SDT.ReadOnly = true;
-            // 
-            // QuocTich
-            // 
-            this.QuocTich.DataPropertyName = "QuocTich";
-            this.QuocTich.HeaderText = "Quốc Tịch";
-            this.QuocTich.MinimumWidth = 6;
-            this.QuocTich.Name = "QuocTich";
-            this.QuocTich.ReadOnly = true;
-            // 
-            // MaPhieuDK
-            // 
-            this.MaPhieuDK.DataPropertyName = "MaPhieuDK";
-            this.MaPhieuDK.HeaderText = "Mã Phiếu ĐK";
-            this.MaPhieuDK.MinimumWidth = 6;
-            this.MaPhieuDK.Name = "MaPhieuDK";
-            this.MaPhieuDK.ReadOnly = true;
-            // 
-            // TenPhong
-            // 
-            this.TenPhong.DataPropertyName = "TenPhong";
-            this.TenPhong.HeaderText = "Tên Phòng";
-            this.TenPhong.MinimumWidth = 6;
-            this.TenPhong.Name = "TenPhong";
-            this.TenPhong.ReadOnly = true;
-            // 
             // groupControl1
             // 
             this.groupControl1.Controls.Add(this.txtSoLuong);
@@ -299,7 +219,7 @@
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(422, 512);
             this.groupControl1.TabIndex = 42;
-            this.groupControl1.Text = "Thông tin dịch vụ";
+            this.groupControl1.Text = "Service information";
             // 
             // txtSoLuong
             // 
@@ -341,9 +261,9 @@
             this.labelControl1.Location = new System.Drawing.Point(9, 138);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(120, 21);
+            this.labelControl1.Size = new System.Drawing.Size(122, 21);
             this.labelControl1.TabIndex = 7;
-            this.labelControl1.Text = "Tên khách hàng : ";
+            this.labelControl1.Text = "Customer name : ";
             // 
             // labelControl11
             // 
@@ -352,9 +272,9 @@
             this.labelControl11.Location = new System.Drawing.Point(12, 90);
             this.labelControl11.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(82, 21);
+            this.labelControl11.Size = new System.Drawing.Size(72, 21);
             this.labelControl11.TabIndex = 8;
-            this.labelControl11.Text = "Mã phòng : ";
+            this.labelControl11.Text = "Room ID : ";
             // 
             // txtMaSDDV
             // 
@@ -372,12 +292,12 @@
             this.btnXacNhanDichVu.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXacNhanDichVu.Appearance.Options.UseFont = true;
             this.btnXacNhanDichVu.Enabled = false;
-            this.btnXacNhanDichVu.Location = new System.Drawing.Point(27, 392);
+            this.btnXacNhanDichVu.Location = new System.Drawing.Point(47, 405);
             this.btnXacNhanDichVu.Margin = new System.Windows.Forms.Padding(4);
             this.btnXacNhanDichVu.Name = "btnXacNhanDichVu";
-            this.btnXacNhanDichVu.Size = new System.Drawing.Size(362, 116);
+            this.btnXacNhanDichVu.Size = new System.Drawing.Size(306, 78);
             this.btnXacNhanDichVu.TabIndex = 5;
-            this.btnXacNhanDichVu.Text = "Xác nhận dịch vụ";
+            this.btnXacNhanDichVu.Text = "CONFIRM";
             this.btnXacNhanDichVu.Click += new System.EventHandler(this.btnXacNhanDichVu_Click);
             // 
             // cmbTenDichVu
@@ -421,9 +341,9 @@
             this.labelControl12.Location = new System.Drawing.Point(12, 46);
             this.labelControl12.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(120, 23);
+            this.labelControl12.Size = new System.Drawing.Size(76, 21);
             this.labelControl12.TabIndex = 1;
-            this.labelControl12.Text = "Mã sd dịch vụ : ";
+            this.labelControl12.Text = "Service ID :";
             // 
             // labelControl5
             // 
@@ -432,9 +352,9 @@
             this.labelControl5.Location = new System.Drawing.Point(10, 185);
             this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(105, 23);
+            this.labelControl5.Size = new System.Drawing.Size(95, 21);
             this.labelControl5.TabIndex = 1;
-            this.labelControl5.Text = "Loại dịch vụ : ";
+            this.labelControl5.Text = "Service type : ";
             // 
             // labelControl13
             // 
@@ -443,9 +363,9 @@
             this.labelControl13.Location = new System.Drawing.Point(12, 350);
             this.labelControl13.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl13.Name = "labelControl13";
-            this.labelControl13.Size = new System.Drawing.Size(134, 23);
+            this.labelControl13.Size = new System.Drawing.Size(57, 21);
             this.labelControl13.TabIndex = 1;
-            this.labelControl13.Text = "Số lượng đơn vị : ";
+            this.labelControl13.Text = "Quality :";
             // 
             // labelControl3
             // 
@@ -454,9 +374,9 @@
             this.labelControl3.Location = new System.Drawing.Point(10, 294);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(99, 23);
+            this.labelControl3.Size = new System.Drawing.Size(99, 21);
             this.labelControl3.TabIndex = 1;
-            this.labelControl3.Text = "Giá dịch vụ : ";
+            this.labelControl3.Text = "Service price : ";
             // 
             // labelControl2
             // 
@@ -465,9 +385,9 @@
             this.labelControl2.Location = new System.Drawing.Point(10, 240);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(95, 23);
+            this.labelControl2.Size = new System.Drawing.Size(104, 21);
             this.labelControl2.TabIndex = 1;
-            this.labelControl2.Text = "Tên dịch vụ :";
+            this.labelControl2.Text = "Service name : ";
             // 
             // tabPane1
             // 
@@ -488,7 +408,7 @@
             // 
             // tabNavigationPage2
             // 
-            this.tabNavigationPage2.Caption = "Thông tin dịch vụ";
+            this.tabNavigationPage2.Caption = "Service information";
             this.tabNavigationPage2.Controls.Add(this.groupControl5);
             this.tabNavigationPage2.Controls.Add(this.groupControl6);
             this.tabNavigationPage2.Controls.Add(this.groupControl7);
@@ -505,7 +425,7 @@
             this.groupControl5.Name = "groupControl5";
             this.groupControl5.Size = new System.Drawing.Size(1014, 422);
             this.groupControl5.TabIndex = 47;
-            this.groupControl5.Text = "Danh sách các dịch vụ";
+            this.groupControl5.Text = "List of services";
             // 
             // dgvThongTinPhongDaDatDV
             // 
@@ -562,70 +482,6 @@
             this.dgvThongTinPhongDaDatDV.TabIndex = 2;
             this.dgvThongTinPhongDaDatDV.Click += new System.EventHandler(this.dgvThongTinPhongDaDatDV_Click);
             // 
-            // MaaPhong
-            // 
-            this.MaaPhong.DataPropertyName = "MaPhong";
-            this.MaaPhong.HeaderText = "Mã Phòng";
-            this.MaaPhong.MinimumWidth = 6;
-            this.MaaPhong.Name = "MaaPhong";
-            this.MaaPhong.ReadOnly = true;
-            // 
-            // MaLoaiDichVu
-            // 
-            this.MaLoaiDichVu.DataPropertyName = "MaLoaiDichVu";
-            this.MaLoaiDichVu.HeaderText = "Mã Loại DV";
-            this.MaLoaiDichVu.MinimumWidth = 6;
-            this.MaLoaiDichVu.Name = "MaLoaiDichVu";
-            this.MaLoaiDichVu.ReadOnly = true;
-            // 
-            // MaDichVuu
-            // 
-            this.MaDichVuu.DataPropertyName = "MaDichVu";
-            this.MaDichVuu.HeaderText = "Mã Dịch Vụ";
-            this.MaDichVuu.MinimumWidth = 6;
-            this.MaDichVuu.Name = "MaDichVuu";
-            this.MaDichVuu.ReadOnly = true;
-            // 
-            // TenPhongg
-            // 
-            this.TenPhongg.DataPropertyName = "TenPhong";
-            this.TenPhongg.HeaderText = "Tên Phòng";
-            this.TenPhongg.MinimumWidth = 6;
-            this.TenPhongg.Name = "TenPhongg";
-            this.TenPhongg.ReadOnly = true;
-            // 
-            // TenKHH
-            // 
-            this.TenKHH.DataPropertyName = "TenKH";
-            this.TenKHH.HeaderText = "Tên Khách Hàng";
-            this.TenKHH.MinimumWidth = 6;
-            this.TenKHH.Name = "TenKHH";
-            this.TenKHH.ReadOnly = true;
-            // 
-            // TenLoaiDichVu
-            // 
-            this.TenLoaiDichVu.DataPropertyName = "TenLoaiDichVu";
-            this.TenLoaiDichVu.HeaderText = "Tên Loại DV";
-            this.TenLoaiDichVu.MinimumWidth = 6;
-            this.TenLoaiDichVu.Name = "TenLoaiDichVu";
-            this.TenLoaiDichVu.ReadOnly = true;
-            // 
-            // TenDichVu
-            // 
-            this.TenDichVu.DataPropertyName = "TenDichVu";
-            this.TenDichVu.HeaderText = "Tên Dịch Vụ";
-            this.TenDichVu.MinimumWidth = 6;
-            this.TenDichVu.Name = "TenDichVu";
-            this.TenDichVu.ReadOnly = true;
-            // 
-            // SoLuongTinh
-            // 
-            this.SoLuongTinh.DataPropertyName = "SoLuong";
-            this.SoLuongTinh.HeaderText = "Số Lượng Tính";
-            this.SoLuongTinh.MinimumWidth = 6;
-            this.SoLuongTinh.Name = "SoLuongTinh";
-            this.SoLuongTinh.ReadOnly = true;
-            // 
             // groupControl6
             // 
             this.groupControl6.Controls.Add(this.cmbTenLoaiPhong_TTDV);
@@ -648,7 +504,7 @@
             this.groupControl6.Name = "groupControl6";
             this.groupControl6.Size = new System.Drawing.Size(426, 422);
             this.groupControl6.TabIndex = 46;
-            this.groupControl6.Text = "Thông tin dịch vụ";
+            this.groupControl6.Text = "Service information";
             // 
             // cmbTenLoaiPhong_TTDV
             // 
@@ -701,9 +557,9 @@
             this.labelControl15.Location = new System.Drawing.Point(13, 159);
             this.labelControl15.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(120, 21);
+            this.labelControl15.Size = new System.Drawing.Size(122, 21);
             this.labelControl15.TabIndex = 14;
-            this.labelControl15.Text = "Tên khách hàng : ";
+            this.labelControl15.Text = "Customer name : ";
             // 
             // labelControl17
             // 
@@ -712,9 +568,9 @@
             this.labelControl17.Location = new System.Drawing.Point(13, 58);
             this.labelControl17.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl17.Name = "labelControl17";
-            this.labelControl17.Size = new System.Drawing.Size(100, 23);
+            this.labelControl17.Size = new System.Drawing.Size(87, 21);
             this.labelControl17.TabIndex = 15;
-            this.labelControl17.Text = "Loại phòng : ";
+            this.labelControl17.Text = "Room type : ";
             // 
             // labelControl16
             // 
@@ -723,9 +579,9 @@
             this.labelControl16.Location = new System.Drawing.Point(13, 106);
             this.labelControl16.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl16.Name = "labelControl16";
-            this.labelControl16.Size = new System.Drawing.Size(85, 21);
+            this.labelControl16.Size = new System.Drawing.Size(96, 21);
             this.labelControl16.TabIndex = 15;
-            this.labelControl16.Text = "Tên phòng : ";
+            this.labelControl16.Text = "Room name : ";
             // 
             // txtSoLuong_TTDV
             // 
@@ -745,9 +601,9 @@
             this.labelControl10.Location = new System.Drawing.Point(14, 381);
             this.labelControl10.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(82, 23);
+            this.labelControl10.Size = new System.Drawing.Size(57, 21);
             this.labelControl10.TabIndex = 12;
-            this.labelControl10.Text = "Số lượng : ";
+            this.labelControl10.Text = "Quality :";
             // 
             // labelControl6
             // 
@@ -756,9 +612,9 @@
             this.labelControl6.Location = new System.Drawing.Point(13, 208);
             this.labelControl6.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(105, 23);
+            this.labelControl6.Size = new System.Drawing.Size(91, 21);
             this.labelControl6.TabIndex = 3;
-            this.labelControl6.Text = "Loại dịch vụ : ";
+            this.labelControl6.Text = "Service type :";
             // 
             // cmbLoaiDichVu_TTDV
             // 
@@ -791,9 +647,9 @@
             this.labelControl8.Location = new System.Drawing.Point(13, 315);
             this.labelControl8.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(99, 23);
+            this.labelControl8.Size = new System.Drawing.Size(95, 21);
             this.labelControl8.TabIndex = 1;
-            this.labelControl8.Text = "Giá dịch vụ : ";
+            this.labelControl8.Text = "Service price :";
             // 
             // labelControl9
             // 
@@ -802,9 +658,9 @@
             this.labelControl9.Location = new System.Drawing.Point(13, 263);
             this.labelControl9.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(95, 23);
+            this.labelControl9.Size = new System.Drawing.Size(100, 21);
             this.labelControl9.TabIndex = 1;
-            this.labelControl9.Text = "Tên dịch vụ :";
+            this.labelControl9.Text = "Service name :";
             // 
             // groupControl7
             // 
@@ -817,18 +673,18 @@
             this.groupControl7.Name = "groupControl7";
             this.groupControl7.Size = new System.Drawing.Size(1440, 90);
             this.groupControl7.TabIndex = 45;
-            this.groupControl7.Text = "Xử lý";
+            this.groupControl7.Text = "Process";
             // 
             // btnCapNhatDichVu
             // 
             this.btnCapNhatDichVu.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCapNhatDichVu.Appearance.Options.UseFont = true;
-            this.btnCapNhatDichVu.Location = new System.Drawing.Point(14, 36);
+            this.btnCapNhatDichVu.Location = new System.Drawing.Point(29, 36);
             this.btnCapNhatDichVu.Margin = new System.Windows.Forms.Padding(4);
             this.btnCapNhatDichVu.Name = "btnCapNhatDichVu";
-            this.btnCapNhatDichVu.Size = new System.Drawing.Size(321, 46);
+            this.btnCapNhatDichVu.Size = new System.Drawing.Size(255, 46);
             this.btnCapNhatDichVu.TabIndex = 0;
-            this.btnCapNhatDichVu.Text = "Cập nhật dịch vụ";
+            this.btnCapNhatDichVu.Text = "UPDATE";
             this.btnCapNhatDichVu.Click += new System.EventHandler(this.btnCapNhatDichVu_Click);
             // 
             // txtThanhTien
@@ -846,13 +702,157 @@
             // 
             this.labelControl14.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl14.Appearance.Options.UseFont = true;
-            this.labelControl14.Location = new System.Drawing.Point(974, 49);
+            this.labelControl14.Location = new System.Drawing.Point(968, 49);
             this.labelControl14.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(214, 23);
+            this.labelControl14.Size = new System.Drawing.Size(220, 21);
             this.labelControl14.TabIndex = 1;
-            this.labelControl14.Text = "Tổng tiền sử dụng dịch vụ : ";
+            this.labelControl14.Text = "Total amount for service usage :";
             this.labelControl14.Click += new System.EventHandler(this.labelControl14_Click);
+            // 
+            // MaKH
+            // 
+            this.MaKH.DataPropertyName = "MaKhachHang";
+            this.MaKH.HeaderText = "CustomerID";
+            this.MaKH.MinimumWidth = 6;
+            this.MaKH.Name = "MaKH";
+            this.MaKH.ReadOnly = true;
+            // 
+            // TenKH
+            // 
+            this.TenKH.DataPropertyName = "TenKhachHang";
+            this.TenKH.HeaderText = "Customer name";
+            this.TenKH.MinimumWidth = 6;
+            this.TenKH.Name = "TenKH";
+            this.TenKH.ReadOnly = true;
+            // 
+            // NgaySinh
+            // 
+            this.NgaySinh.DataPropertyName = "NgaySinh";
+            this.NgaySinh.HeaderText = "DateOfbirth";
+            this.NgaySinh.MinimumWidth = 6;
+            this.NgaySinh.Name = "NgaySinh";
+            this.NgaySinh.ReadOnly = true;
+            // 
+            // GioiTinh
+            // 
+            this.GioiTinh.DataPropertyName = "GioiTinh";
+            this.GioiTinh.HeaderText = "Sex";
+            this.GioiTinh.MinimumWidth = 6;
+            this.GioiTinh.Name = "GioiTinh";
+            this.GioiTinh.ReadOnly = true;
+            // 
+            // CMND
+            // 
+            this.CMND.DataPropertyName = "CMND";
+            this.CMND.HeaderText = "ID Card";
+            this.CMND.MinimumWidth = 6;
+            this.CMND.Name = "CMND";
+            this.CMND.ReadOnly = true;
+            // 
+            // DiaChi
+            // 
+            this.DiaChi.DataPropertyName = "DiaChi";
+            this.DiaChi.HeaderText = "Address";
+            this.DiaChi.MinimumWidth = 6;
+            this.DiaChi.Name = "DiaChi";
+            this.DiaChi.ReadOnly = true;
+            // 
+            // SDT
+            // 
+            this.SDT.DataPropertyName = "SDT";
+            this.SDT.HeaderText = "Phone";
+            this.SDT.MinimumWidth = 6;
+            this.SDT.Name = "SDT";
+            this.SDT.ReadOnly = true;
+            // 
+            // QuocTich
+            // 
+            this.QuocTich.DataPropertyName = "QuocTich";
+            this.QuocTich.HeaderText = "nationality";
+            this.QuocTich.MinimumWidth = 6;
+            this.QuocTich.Name = "QuocTich";
+            this.QuocTich.ReadOnly = true;
+            // 
+            // MaPhieuDK
+            // 
+            this.MaPhieuDK.DataPropertyName = "MaPhieuDK";
+            this.MaPhieuDK.HeaderText = "Registration voucher ID";
+            this.MaPhieuDK.MinimumWidth = 6;
+            this.MaPhieuDK.Name = "MaPhieuDK";
+            this.MaPhieuDK.ReadOnly = true;
+            // 
+            // TenPhong
+            // 
+            this.TenPhong.DataPropertyName = "TenPhong";
+            this.TenPhong.HeaderText = "Room name";
+            this.TenPhong.MinimumWidth = 6;
+            this.TenPhong.Name = "TenPhong";
+            this.TenPhong.ReadOnly = true;
+            // 
+            // MaaPhong
+            // 
+            this.MaaPhong.DataPropertyName = "MaPhong";
+            this.MaaPhong.HeaderText = "Room ID";
+            this.MaaPhong.MinimumWidth = 6;
+            this.MaaPhong.Name = "MaaPhong";
+            this.MaaPhong.ReadOnly = true;
+            // 
+            // MaLoaiDichVu
+            // 
+            this.MaLoaiDichVu.DataPropertyName = "MaLoaiDichVu";
+            this.MaLoaiDichVu.HeaderText = "Service type ID";
+            this.MaLoaiDichVu.MinimumWidth = 6;
+            this.MaLoaiDichVu.Name = "MaLoaiDichVu";
+            this.MaLoaiDichVu.ReadOnly = true;
+            // 
+            // MaDichVuu
+            // 
+            this.MaDichVuu.DataPropertyName = "MaDichVu";
+            this.MaDichVuu.HeaderText = "Service ID";
+            this.MaDichVuu.MinimumWidth = 6;
+            this.MaDichVuu.Name = "MaDichVuu";
+            this.MaDichVuu.ReadOnly = true;
+            // 
+            // TenPhongg
+            // 
+            this.TenPhongg.DataPropertyName = "TenPhong";
+            this.TenPhongg.HeaderText = "Room name";
+            this.TenPhongg.MinimumWidth = 6;
+            this.TenPhongg.Name = "TenPhongg";
+            this.TenPhongg.ReadOnly = true;
+            // 
+            // TenKHH
+            // 
+            this.TenKHH.DataPropertyName = "TenKH";
+            this.TenKHH.HeaderText = "Customer name";
+            this.TenKHH.MinimumWidth = 6;
+            this.TenKHH.Name = "TenKHH";
+            this.TenKHH.ReadOnly = true;
+            // 
+            // TenLoaiDichVu
+            // 
+            this.TenLoaiDichVu.DataPropertyName = "TenLoaiDichVu";
+            this.TenLoaiDichVu.HeaderText = "Service type";
+            this.TenLoaiDichVu.MinimumWidth = 6;
+            this.TenLoaiDichVu.Name = "TenLoaiDichVu";
+            this.TenLoaiDichVu.ReadOnly = true;
+            // 
+            // TenDichVu
+            // 
+            this.TenDichVu.DataPropertyName = "TenDichVu";
+            this.TenDichVu.HeaderText = "Service name";
+            this.TenDichVu.MinimumWidth = 6;
+            this.TenDichVu.Name = "TenDichVu";
+            this.TenDichVu.ReadOnly = true;
+            // 
+            // SoLuongTinh
+            // 
+            this.SoLuongTinh.DataPropertyName = "SoLuong";
+            this.SoLuongTinh.HeaderText = "Quality";
+            this.SoLuongTinh.MinimumWidth = 6;
+            this.SoLuongTinh.Name = "SoLuongTinh";
+            this.SoLuongTinh.ReadOnly = true;
             // 
             // frmDichVu
             // 
@@ -863,7 +863,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmDichVu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "QUẢN LÝ DỊCH VỤ";
+            this.Text = "SERVICES MANAGEMENT";
             this.Load += new System.EventHandler(this.frmDichVu_Load);
             this.tabNavigationPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();

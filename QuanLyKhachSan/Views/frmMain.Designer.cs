@@ -111,6 +111,7 @@
             // ribbonControl1
             // 
             this.ribbonControl1.Controller = this.barAndDockingController2;
+            this.ribbonControl1.EmptyAreaImageOptions.ImagePadding = new System.Windows.Forms.Padding(35, 37, 35, 37);
             this.ribbonControl1.ExpandCollapseItem.Id = 0;
             this.ribbonControl1.Images = this.imageList1;
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
@@ -156,8 +157,10 @@
             this.btnTraCuuNV,
             this.btnLogin});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
+            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonControl1.MaxItemId = 44;
             this.ribbonControl1.Name = "ribbonControl1";
+            this.ribbonControl1.OptionsMenuMinWidth = 385;
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rbHethong,
             this.rbQuanLy,
@@ -165,7 +168,7 @@
             this.rbQuanTri,
             this.rbTraCuu,
             this.rbTroGiup});
-            this.ribbonControl1.Size = new System.Drawing.Size(1108, 150);
+            this.ribbonControl1.Size = new System.Drawing.Size(1293, 183);
             // 
             // imageList1
             // 
@@ -240,7 +243,7 @@
             // 
             // btnQuanLyKhachHang
             // 
-            this.btnQuanLyKhachHang.Caption = "Quản lý khách hàng";
+            this.btnQuanLyKhachHang.Caption = "Customer Management";
             this.btnQuanLyKhachHang.Id = 2;
             this.btnQuanLyKhachHang.ImageOptions.ImageIndex = 4;
             this.btnQuanLyKhachHang.Name = "btnQuanLyKhachHang";
@@ -250,7 +253,7 @@
             // 
             // btnQuanLyPDK
             // 
-            this.btnQuanLyPDK.Caption = "Quản lý phiếu đăng ký";
+            this.btnQuanLyPDK.Caption = "Registration Voucher Management";
             this.btnQuanLyPDK.Id = 3;
             this.btnQuanLyPDK.ImageOptions.ImageIndex = 40;
             this.btnQuanLyPDK.Name = "btnQuanLyPDK";
@@ -260,7 +263,7 @@
             // 
             // btnQuanLyDatPhong
             // 
-            this.btnQuanLyDatPhong.Caption = "Quản lý đặt phòng";
+            this.btnQuanLyDatPhong.Caption = "Room Booking  Management";
             this.btnQuanLyDatPhong.Id = 4;
             this.btnQuanLyDatPhong.ImageOptions.ImageIndex = 2;
             this.btnQuanLyDatPhong.Name = "btnQuanLyDatPhong";
@@ -270,7 +273,7 @@
             // 
             // btnQLHD
             // 
-            this.btnQLHD.Caption = "Quản lý hóa đơn";
+            this.btnQLHD.Caption = "Invoice Management";
             this.btnQLHD.Id = 5;
             this.btnQLHD.ImageOptions.ImageIndex = 1;
             this.btnQLHD.Name = "btnQLHD";
@@ -280,7 +283,7 @@
             // 
             // btnDangXuat
             // 
-            this.btnDangXuat.Caption = "Đăng xuất";
+            this.btnDangXuat.Caption = "EXIT";
             this.btnDangXuat.Id = 6;
             this.btnDangXuat.ImageOptions.ImageIndex = 48;
             this.btnDangXuat.Name = "btnDangXuat";
@@ -366,7 +369,7 @@
             // 
             // btnDanhSachKH
             // 
-            this.btnDanhSachKH.Caption = "Danh sách khách hàng";
+            this.btnDanhSachKH.Caption = "Customer List";
             this.btnDanhSachKH.Id = 17;
             this.btnDanhSachKH.ImageOptions.ImageIndex = 25;
             this.btnDanhSachKH.Name = "btnDanhSachKH";
@@ -376,7 +379,7 @@
             // 
             // btnDanhSachPhieuDK
             // 
-            this.btnDanhSachPhieuDK.Caption = "Danh sách phiếu đăng ký";
+            this.btnDanhSachPhieuDK.Caption = "Registration Voucher List";
             this.btnDanhSachPhieuDK.Id = 18;
             this.btnDanhSachPhieuDK.ImageOptions.ImageIndex = 47;
             this.btnDanhSachPhieuDK.Name = "btnDanhSachPhieuDK";
@@ -386,7 +389,7 @@
             // 
             // btnDanhSachLoaiPhong
             // 
-            this.btnDanhSachLoaiPhong.Caption = "Danh sách loại phòng";
+            this.btnDanhSachLoaiPhong.Caption = "Room Type List";
             this.btnDanhSachLoaiPhong.Id = 19;
             this.btnDanhSachLoaiPhong.ImageOptions.ImageIndex = 41;
             this.btnDanhSachLoaiPhong.Name = "btnDanhSachLoaiPhong";
@@ -396,7 +399,7 @@
             // 
             // btnDanhSachCacPhong
             // 
-            this.btnDanhSachCacPhong.Caption = "Danh sách các phòng";
+            this.btnDanhSachCacPhong.Caption = "Room List";
             this.btnDanhSachCacPhong.Id = 20;
             this.btnDanhSachCacPhong.ImageOptions.ImageIndex = 44;
             this.btnDanhSachCacPhong.Name = "btnDanhSachCacPhong";
@@ -430,7 +433,7 @@
             // 
             // btnDanhSachNhanVien
             // 
-            this.btnDanhSachNhanVien.Caption = "Danh sách nhân viên";
+            this.btnDanhSachNhanVien.Caption = "Employee List";
             this.btnDanhSachNhanVien.Id = 26;
             this.btnDanhSachNhanVien.ImageOptions.ImageIndex = 14;
             this.btnDanhSachNhanVien.Name = "btnDanhSachNhanVien";
@@ -440,7 +443,7 @@
             // 
             // btnDanhSachDichVu
             // 
-            this.btnDanhSachDichVu.Caption = "Danh sách dịch vụ";
+            this.btnDanhSachDichVu.Caption = "Service List";
             this.btnDanhSachDichVu.Id = 27;
             this.btnDanhSachDichVu.ImageOptions.ImageIndex = 0;
             this.btnDanhSachDichVu.Name = "btnDanhSachDichVu";
@@ -461,7 +464,7 @@
             // 
             // barButtonItem2
             // 
-            this.barButtonItem2.Caption = "Giới thiệu";
+            this.barButtonItem2.Caption = "Introduce";
             this.barButtonItem2.Id = 31;
             this.barButtonItem2.ImageOptions.ImageIndex = 33;
             this.barButtonItem2.Name = "barButtonItem2";
@@ -479,7 +482,7 @@
             // 
             // btnDoiMatKhau
             // 
-            this.btnDoiMatKhau.Caption = "Đổi mật khẩu";
+            this.btnDoiMatKhau.Caption = "CHANGE PASSWORD";
             this.btnDoiMatKhau.Id = 33;
             this.btnDoiMatKhau.ImageOptions.ImageIndex = 19;
             this.btnDoiMatKhau.Name = "btnDoiMatKhau";
@@ -489,7 +492,8 @@
             // 
             // btnQuanLyDichVu
             // 
-            this.btnQuanLyDichVu.Caption = "Quản lý dịch vụ";
+            this.btnQuanLyDichVu.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.DropDown;
+            this.btnQuanLyDichVu.Caption = "Services Management";
             this.btnQuanLyDichVu.Id = 34;
             this.btnQuanLyDichVu.ImageOptions.ImageIndex = 6;
             this.btnQuanLyDichVu.Name = "btnQuanLyDichVu";
@@ -499,7 +503,7 @@
             // 
             // btnQLNV
             // 
-            this.btnQLNV.Caption = "Quản lý nhân viên";
+            this.btnQLNV.Caption = "Manage Employees";
             this.btnQLNV.Id = 35;
             this.btnQLNV.ImageOptions.ImageIndex = 39;
             this.btnQLNV.Name = "btnQLNV";
@@ -509,7 +513,7 @@
             // 
             // btnQLCV
             // 
-            this.btnQLCV.Caption = "Quản lý chức vụ";
+            this.btnQLCV.Caption = "Manage Positions";
             this.btnQLCV.Id = 36;
             this.btnQLCV.ImageOptions.ImageIndex = 14;
             this.btnQLCV.Name = "btnQLCV";
@@ -519,7 +523,7 @@
             // 
             // btnTraCuuKH
             // 
-            this.btnTraCuuKH.Caption = "Tra cứu khách hàng";
+            this.btnTraCuuKH.Caption = "Search for Customers";
             this.btnTraCuuKH.Id = 38;
             this.btnTraCuuKH.ImageOptions.ImageIndex = 3;
             this.btnTraCuuKH.Name = "btnTraCuuKH";
@@ -529,7 +533,7 @@
             // 
             // btnTraCuuPhieuDK
             // 
-            this.btnTraCuuPhieuDK.Caption = "Tra cứu phiếu đăng ký";
+            this.btnTraCuuPhieuDK.Caption = "Search for Registration Vouchers";
             this.btnTraCuuPhieuDK.Id = 39;
             this.btnTraCuuPhieuDK.ImageOptions.ImageIndex = 46;
             this.btnTraCuuPhieuDK.Name = "btnTraCuuPhieuDK";
@@ -539,7 +543,7 @@
             // 
             // btnTraCuuPhong
             // 
-            this.btnTraCuuPhong.Caption = "Tra cứu phòng ";
+            this.btnTraCuuPhong.Caption = "Search for Rooms";
             this.btnTraCuuPhong.Id = 40;
             this.btnTraCuuPhong.ImageOptions.ImageIndex = 8;
             this.btnTraCuuPhong.Name = "btnTraCuuPhong";
@@ -548,7 +552,7 @@
             // 
             // btnTraCuuHD
             // 
-            this.btnTraCuuHD.Caption = "Tra cứu hóa đơn";
+            this.btnTraCuuHD.Caption = "Search for Invoices";
             this.btnTraCuuHD.Id = 41;
             this.btnTraCuuHD.ImageOptions.ImageIndex = 47;
             this.btnTraCuuHD.Name = "btnTraCuuHD";
@@ -558,7 +562,7 @@
             // 
             // btnTraCuuNV
             // 
-            this.btnTraCuuNV.Caption = "Tra cứu nhân viên";
+            this.btnTraCuuNV.Caption = "Search for Employees";
             this.btnTraCuuNV.Id = 42;
             this.btnTraCuuNV.ImageOptions.ImageIndex = 50;
             this.btnTraCuuNV.Name = "btnTraCuuNV";
@@ -568,7 +572,7 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Caption = "Đăng nhập";
+            this.btnLogin.Caption = "LOGIN";
             this.btnLogin.Id = 43;
             this.btnLogin.ImageOptions.ImageIndex = 55;
             this.btnLogin.Name = "btnLogin";
@@ -581,7 +585,7 @@
             this.rbHethong.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup1});
             this.rbHethong.Name = "rbHethong";
-            this.rbHethong.Text = "Hệ thống";
+            this.rbHethong.Text = "SYSTEM";
             // 
             // ribbonPageGroup1
             // 
@@ -589,7 +593,7 @@
             this.ribbonPageGroup1.ItemLinks.Add(this.btnDoiMatKhau);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnDangXuat);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.Text = "Tài khoản";
+            this.ribbonPageGroup1.Text = "Account";
             // 
             // rbQuanLy
             // 
@@ -600,37 +604,32 @@
             this.ribbonPageGroup14,
             this.ribbonPageGroup16});
             this.rbQuanLy.Name = "rbQuanLy";
-            this.rbQuanLy.Text = "Quản lý";
+            this.rbQuanLy.Text = "MANAGE";
             // 
             // ribbonPageGroup2
             // 
             this.ribbonPageGroup2.ItemLinks.Add(this.btnQuanLyKhachHang);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            this.ribbonPageGroup2.Text = "Khách hàng";
             // 
             // ribbonPageGroup5
             // 
             this.ribbonPageGroup5.ItemLinks.Add(this.btnQuanLyPDK);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
-            this.ribbonPageGroup5.Text = "Phiếu Đăng Ký";
             // 
             // ribbonPageGroup6
             // 
             this.ribbonPageGroup6.ItemLinks.Add(this.btnQuanLyDatPhong);
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
-            this.ribbonPageGroup6.Text = "Phòng";
             // 
             // ribbonPageGroup14
             // 
             this.ribbonPageGroup14.ItemLinks.Add(this.btnQuanLyDichVu);
             this.ribbonPageGroup14.Name = "ribbonPageGroup14";
-            this.ribbonPageGroup14.Text = "Dịch Vụ";
             // 
             // ribbonPageGroup16
             // 
             this.ribbonPageGroup16.ItemLinks.Add(this.btnQLHD);
             this.ribbonPageGroup16.Name = "ribbonPageGroup16";
-            this.ribbonPageGroup16.Text = "Hóa Đơn";
             // 
             // rbDanhMuc
             // 
@@ -641,38 +640,33 @@
             this.ribbonPageGroup19,
             this.ribbonPageGroup20});
             this.rbDanhMuc.Name = "rbDanhMuc";
-            this.rbDanhMuc.Text = "Danh mục";
+            this.rbDanhMuc.Text = "CATEGORY";
             // 
             // ribbonPageGroup7
             // 
             this.ribbonPageGroup7.ItemLinks.Add(this.btnDanhSachKH);
             this.ribbonPageGroup7.Name = "ribbonPageGroup7";
-            this.ribbonPageGroup7.Text = "Khách Hàng";
             // 
             // ribbonPageGroup8
             // 
             this.ribbonPageGroup8.ItemLinks.Add(this.btnDanhSachPhieuDK);
             this.ribbonPageGroup8.Name = "ribbonPageGroup8";
-            this.ribbonPageGroup8.Text = "Phiếu Đăng Ký";
             // 
             // ribbonPageGroup9
             // 
             this.ribbonPageGroup9.ItemLinks.Add(this.btnDanhSachLoaiPhong);
             this.ribbonPageGroup9.ItemLinks.Add(this.btnDanhSachCacPhong);
             this.ribbonPageGroup9.Name = "ribbonPageGroup9";
-            this.ribbonPageGroup9.Text = "Phòng";
             // 
             // ribbonPageGroup19
             // 
             this.ribbonPageGroup19.ItemLinks.Add(this.btnDanhSachNhanVien);
             this.ribbonPageGroup19.Name = "ribbonPageGroup19";
-            this.ribbonPageGroup19.Text = "Nhân Viên";
             // 
             // ribbonPageGroup20
             // 
             this.ribbonPageGroup20.ItemLinks.Add(this.btnDanhSachDichVu);
             this.ribbonPageGroup20.Name = "ribbonPageGroup20";
-            this.ribbonPageGroup20.Text = "Dịch Vụ";
             // 
             // rbQuanTri
             // 
@@ -680,19 +674,17 @@
             this.ribbonPageGroup15,
             this.ribbonPageGroup23});
             this.rbQuanTri.Name = "rbQuanTri";
-            this.rbQuanTri.Text = "Quản trị";
+            this.rbQuanTri.Text = "ADMINISTRATION";
             // 
             // ribbonPageGroup15
             // 
             this.ribbonPageGroup15.ItemLinks.Add(this.btnQLNV);
             this.ribbonPageGroup15.Name = "ribbonPageGroup15";
-            this.ribbonPageGroup15.Text = "Nhân Viên";
             // 
             // ribbonPageGroup23
             // 
             this.ribbonPageGroup23.ItemLinks.Add(this.btnQLCV);
             this.ribbonPageGroup23.Name = "ribbonPageGroup23";
-            this.ribbonPageGroup23.Text = "Chức Vụ";
             // 
             // rbTraCuu
             // 
@@ -703,61 +695,58 @@
             this.ribbonPageGroup17,
             this.ribbonPageGroup18});
             this.rbTraCuu.Name = "rbTraCuu";
-            this.rbTraCuu.Text = "Tra cứu";
+            this.rbTraCuu.Text = "SEARCH";
             // 
             // ribbonPageGroup10
             // 
             this.ribbonPageGroup10.ItemLinks.Add(this.btnTraCuuKH);
             this.ribbonPageGroup10.Name = "ribbonPageGroup10";
-            this.ribbonPageGroup10.Text = "Khách Hàng";
             // 
             // ribbonPageGroup11
             // 
             this.ribbonPageGroup11.ItemLinks.Add(this.btnTraCuuPhieuDK);
             this.ribbonPageGroup11.Name = "ribbonPageGroup11";
-            this.ribbonPageGroup11.Text = "Phiếu Đăng Ký";
             // 
             // ribbonPageGroup12
             // 
             this.ribbonPageGroup12.ItemLinks.Add(this.btnTraCuuPhong);
             this.ribbonPageGroup12.Name = "ribbonPageGroup12";
-            this.ribbonPageGroup12.Text = "Phòng";
             // 
             // ribbonPageGroup17
             // 
             this.ribbonPageGroup17.ItemLinks.Add(this.btnTraCuuHD);
             this.ribbonPageGroup17.Name = "ribbonPageGroup17";
-            this.ribbonPageGroup17.Text = "Hóa Đơn";
             // 
             // ribbonPageGroup18
             // 
             this.ribbonPageGroup18.ItemLinks.Add(this.btnTraCuuNV);
             this.ribbonPageGroup18.Name = "ribbonPageGroup18";
-            this.ribbonPageGroup18.Text = "Nhân viên";
             // 
             // rbTroGiup
             // 
             this.rbTroGiup.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup13});
             this.rbTroGiup.Name = "rbTroGiup";
-            this.rbTroGiup.Text = "Trợ giúp";
+            this.rbTroGiup.Text = "HELP";
             // 
             // ribbonPageGroup13
             // 
             this.ribbonPageGroup13.ItemLinks.Add(this.barButtonItem2);
             this.ribbonPageGroup13.Name = "ribbonPageGroup13";
-            this.ribbonPageGroup13.Text = "Trợ Giúp";
+            this.ribbonPageGroup13.Text = "Help";
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1108, 497);
+            this.ClientSize = new System.Drawing.Size(1293, 612);
             this.Controls.Add(this.ribbonControl1);
+            this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("frmMain.IconOptions.SvgImage")));
             this.IsMdiContainer = true;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CHƯƠNG TRÌNH HỆ THỐNG QUẢN LÝ KHÁCH SẠN";
+            this.Text = "HMC HOTEL MANAGEMENT SYSTEM";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.barAndDockingController2)).EndInit();

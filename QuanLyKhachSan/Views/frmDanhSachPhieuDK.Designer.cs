@@ -44,10 +44,11 @@
             this.groupControl1.Controls.Add(this.dgvDanhSachCacPhieuDK);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(925, 322);
+            this.groupControl1.Size = new System.Drawing.Size(1079, 396);
             this.groupControl1.TabIndex = 2;
-            this.groupControl1.Text = "Danh sách các phiếu đăng ký";
+            this.groupControl1.Text = "List of registration vouchers";
             // 
             // dgvDanhSachCacPhieuDK
             // 
@@ -65,7 +66,7 @@
             this.dgvDanhSachCacPhieuDK.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(72)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 7.8F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -74,45 +75,49 @@
             this.dgvDanhSachCacPhieuDK.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 7.8F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkTurquoise;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvDanhSachCacPhieuDK.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvDanhSachCacPhieuDK.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDanhSachCacPhieuDK.EnableHeadersVisualStyles = false;
-            this.dgvDanhSachCacPhieuDK.Location = new System.Drawing.Point(2, 20);
+            this.dgvDanhSachCacPhieuDK.Location = new System.Drawing.Point(2, 28);
+            this.dgvDanhSachCacPhieuDK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvDanhSachCacPhieuDK.MultiSelect = false;
             this.dgvDanhSachCacPhieuDK.Name = "dgvDanhSachCacPhieuDK";
             this.dgvDanhSachCacPhieuDK.ReadOnly = true;
             this.dgvDanhSachCacPhieuDK.RowHeadersVisible = false;
+            this.dgvDanhSachCacPhieuDK.RowHeadersWidth = 51;
             this.dgvDanhSachCacPhieuDK.RowTemplate.Height = 25;
             this.dgvDanhSachCacPhieuDK.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDanhSachCacPhieuDK.Size = new System.Drawing.Size(921, 300);
+            this.dgvDanhSachCacPhieuDK.Size = new System.Drawing.Size(1075, 366);
             this.dgvDanhSachCacPhieuDK.TabIndex = 1;
             // 
             // btnIn
             // 
             this.btnIn.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIn.Appearance.Options.UseFont = true;
-            this.btnIn.Location = new System.Drawing.Point(387, 328);
+            this.btnIn.Location = new System.Drawing.Point(451, 404);
+            this.btnIn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnIn.Name = "btnIn";
-            this.btnIn.Size = new System.Drawing.Size(146, 34);
+            this.btnIn.Size = new System.Drawing.Size(170, 42);
             this.btnIn.TabIndex = 3;
-            this.btnIn.Text = "In";
+            this.btnIn.Text = "PRINT";
             this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
             // 
             // frmDanhSachPhieuDK
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(925, 374);
+            this.ClientSize = new System.Drawing.Size(1079, 460);
             this.Controls.Add(this.btnIn);
             this.Controls.Add(this.groupControl1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmDanhSachPhieuDK";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "DANH SÁCH CÁC PHIẾU ĐĂNG KÝ";
+            this.Text = "REGISTRATION VOUCHER LIST";
             this.Load += new System.EventHandler(this.frmDanhSachPhieuDK_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
