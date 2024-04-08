@@ -222,7 +222,7 @@ namespace QuanLyKhachSan.Views
                 {
                     DataGridViewRow row = dgvThongTinDatPhong.SelectedRows[0];
                     cmbTenPhong_TTDP.Text = row.Cells["TenPhong"].Value.ToString();
-                    txtMaPhieuDK_TTDP.Text = row.Cells["MaPhieuDK"].Value.ToString();
+                    txtMaPhieuDK_TTDP.Text = row.Cells["MaPhieuDKK"].Value.ToString();
                     txtTenKH_TTDP.Text = row.Cells["TenKhachHang"].Value.ToString();
                 }
             }
@@ -322,11 +322,6 @@ namespace QuanLyKhachSan.Views
         }
 
         private void tabPane1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgvThongTinDatPhong_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
