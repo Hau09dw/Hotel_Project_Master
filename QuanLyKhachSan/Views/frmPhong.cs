@@ -20,10 +20,10 @@ namespace QuanLyKhachSan.Views
             InitializeComponent();
         }
 
-        List<Phong_DTO> lstTenPhong = new List<Phong_DTO>();
+        //List<Phong_DTO> lstTenPhong = new List<Phong_DTO>();
         List<LoaiPhong_DTO> lstTenLoaiPhong = new List<LoaiPhong_DTO>();
-        List<DichVu_DTO> lstTenDichVu = new List<DichVu_DTO>();
-        List<LoaiDichVu_DTO> lstLoaiDichVu = new List<LoaiDichVu_DTO>();
+        //List<DichVu_DTO> lstTenDichVu = new List<DichVu_DTO>();
+        //List<LoaiDichVu_DTO> lstLoaiDichVu = new List<LoaiDichVu_DTO>();
         List<PhieuDangKy_DTO> lstPhieuDangKy;
         List<KhachHang_DTO> lstKhachHangDaCoPhong = new List<KhachHang_DTO>();
         private void frmPhong_Load(object sender, EventArgs e)

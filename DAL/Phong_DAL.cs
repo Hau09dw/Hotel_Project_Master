@@ -182,10 +182,6 @@ namespace DAL
                 string strTruyVan = string.Format("INSERT INTO ChiTietLoaiPhong(MaPhieuDK,MaPhong) VALUES('{0}','{1}')", pdkDTO.MaPhieuDK, phgDTO.MaPhong);
                count = DataProvider.ExecuteNonQuery(strTruyVan);
 
-                string strTruyVanUpdate = string.Format("UPDATE PhieuDangKy SET DaVaoPhong = 1 WHERE MaPhieuDK = '" + pdkDTO.MaPhieuDK + "'");
-
-                count = DataProvider.ExecuteNonQuery(strTruyVanUpdate);
-
                 string strTruyVanUpdateTTP = string.Format("UPDATE Phong SET TinhTrangPhong = 1 WHERE MaPhong = '" + phgDTO.MaPhong + "'");
 
                 count = DataProvider.ExecuteNonQuery(strTruyVanUpdateTTP);
