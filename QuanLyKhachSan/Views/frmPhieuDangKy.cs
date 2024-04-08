@@ -53,15 +53,15 @@ namespace QuanLyKhachSan.Views
         {
             lstPhieuDangKyDTO = PhieuDangKy_BLL.HienThiDanhSachKhachHangTrongPDK(pos);
             dgvPhieuDK.DataSource = lstPhieuDangKyDTO;
-            dgvPhieuDK.Columns[0].HeaderText = "Tên KH";
-            dgvPhieuDK.Columns[1].HeaderText = "Mã PĐK";
-            dgvPhieuDK.Columns[2].HeaderText = "Ngày Đến";
-            dgvPhieuDK.Columns[3].HeaderText = "Giờ Đến";
-            dgvPhieuDK.Columns[4].HeaderText = "Ngày Đi";
-            dgvPhieuDK.Columns[5].HeaderText = "Giờ Đi";
-            dgvPhieuDK.Columns[6].HeaderText = "SL Trẻ Em";
-            dgvPhieuDK.Columns[7].HeaderText = "SL Người Lớn";
-            dgvPhieuDK.Columns[8].HeaderText = "Tiền Đặt Cọc";
+            dgvPhieuDK.Columns[0].HeaderText = "Customer name";
+            dgvPhieuDK.Columns[1].HeaderText = "Registration voucher ID";
+            dgvPhieuDK.Columns[2].HeaderText = "Checkin date";
+            dgvPhieuDK.Columns[3].HeaderText = "checkin time";
+            dgvPhieuDK.Columns[4].HeaderText = "checkout date";
+            dgvPhieuDK.Columns[5].HeaderText = "checkout time";
+            dgvPhieuDK.Columns[6].HeaderText = "Number of adults ";
+            dgvPhieuDK.Columns[7].HeaderText = "Number of children";
+            dgvPhieuDK.Columns[8].HeaderText = "Deposit price";
             dgvPhieuDK.Columns[9].Visible = false;
             dgvPhieuDK.Columns[10].Visible = false;
         }
@@ -117,7 +117,8 @@ namespace QuanLyKhachSan.Views
 
                 if (PhieuDangKy_BLL.KiemTraMa(txtMaPhieuDK.Text) == 1)
                 {
-                    errorS += "Mã phiếu đăng ký đã bị trùng. Xin kiểm tra lại mã phiếu!!\n";
+                    //Mã phiếu đăng ký đã bị trùng. Xin kiểm tra lại mã phiếu
+                    errorS += "The registration code is duplicated. Please check the code again!!\n";
                     
                 }
                 else
@@ -128,7 +129,8 @@ namespace QuanLyKhachSan.Views
             }
             else
             {
-                errorS += "Chưa nhập thông tin trên phiếu đăng ký. Hãy nhập thông tin để tiếp tục!!\n";
+                //Chưa nhập thông tin trên phiếu đăng ký. Hãy nhập thông tin để tiếp tục
+                errorS += "Registration form information not entered. Please enter the information to proceed!!\n";
             }
 
             if (txtSoLuongNL.Text.Trim() != "")
@@ -140,15 +142,15 @@ namespace QuanLyKhachSan.Views
                 }
                 else
                 {
-
-                    errorS += "Kiểu dữ liệu không hợp lệ. Dữ liệu phải là số...\n";
+                    //Kiểu dữ liệu không hợp lệ. Dữ liệu phải là số...
+                    errorS += "(1)Invalid data type. Data must be numeric...\n";
 
                 }
             }
             else
             {
-                
-                errorS+= "Chưa nhập số lượng người lớn. Hãy nhập số lượng người lớn để tiếp tục!!\n";
+                //Chưa nhập số lượng người lớn. Hãy nhập số lượng người lớn để tiếp tục
+                errorS += "You haven't entered the number of adults. Please enter the number of adults to continue.!!\n";
               
             }
             if (txtSoLuongTE.Text.Trim() != "")
@@ -160,8 +162,8 @@ namespace QuanLyKhachSan.Views
                 }
                 else
                 {
-
-                    errorS += "Kiểu dữ liệu không hợp lệ. Dữ liệu phải là số...\n";
+                    //Kiểu dữ liệu không hợp lệ. Dữ liệu phải là số...
+                    errorS += "(2)Invalid data type. Data must be numeric...\n";
 
                 }
             }
@@ -179,7 +181,8 @@ namespace QuanLyKhachSan.Views
                 }
                 else
                 {
-                    errorS += "Kiểu dữ liệu không hợp lệ. Dữ liệu phải là số...\n";
+                    
+                    errorS += "(3)Invalid data type. Data must be numeric...\n";
                 }
             }
             else
@@ -189,7 +192,7 @@ namespace QuanLyKhachSan.Views
            
             if (errorS != "")
             {
-                MessageBox.Show(errorS,"Thông báo lỗi");
+                MessageBox.Show(errorS,"Error notification  ");
                 return;
             }          
             pdkDTO.NgayDen = Convert.ToDateTime(dtpNgayDen.Text);
@@ -203,13 +206,15 @@ namespace QuanLyKhachSan.Views
 
             if (check > 0)
             {
-                XtraMessageBox.Show("Thêm 1 phiếu đăng ký thành công", "Thông báo");
+                //Thêm 1 phiếu đăng ký thành công
+                XtraMessageBox.Show("Successfully added 1 registration voucher", "Notification");
                 HienThiDuLieuKhachHang(pos);
                 HienThiDanhSachKhachHangTrongPDK();
             }
             else
             {
-                XtraMessageBox.Show("Thêm 1 phiếu đăng ký thất bại!!", "Thông báo");
+                //Thêm 1 phiếu đăng ký thất bại
+                XtraMessageBox.Show("Failed to add 1 registration voucher!!", "Notification");
             }
         }
 
@@ -304,13 +309,13 @@ namespace QuanLyKhachSan.Views
                 pdkDTOUpDate.SoLuongTreEm = pdkDTO.SoLuongTreEm;
                 pdkDTOUpDate.TienDatCoc = pdkDTO.TienDatCoc;
                 HienThiLaiDuLieuTrenDataGridView();
-                XtraMessageBox.Show("Cập nhật lại phiếu đăng ký thành công", "Thông báo");
+                XtraMessageBox.Show("Registration voucher updated successfully", "Notification");
 
 
             }
             else
             {
-                XtraMessageBox.Show("Cập nhật phiếu đăng ký thất bại", "Thông báo");
+                XtraMessageBox.Show("Registration voucher updated failed", "Notification");
             }
 
 
@@ -324,11 +329,11 @@ namespace QuanLyKhachSan.Views
                     PhieuDangKy_DTO pdkDTODelete = lstPhieuDangKyDTO.Single(n => n.MaPhieuDK == MaPhieuDK);
                     lstPhieuDangKyDTO.Remove(pdkDTODelete);
                     HienThiLaiDuLieuTrenDataGridView();
-                    XtraMessageBox.Show("Xóa phiếu đăng ký thành công!", "Thông báo");
+                    XtraMessageBox.Show("Successfully deleted registration voucher!", "Notification");
                 }
                 else
                 {
-                    XtraMessageBox.Show("Xóa phiếu đăng ký thất bại!", "Thông báo");
+                    XtraMessageBox.Show("Failed deleted registration form!", "Notification");
                 }
 
         }
