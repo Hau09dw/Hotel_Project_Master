@@ -82,7 +82,14 @@ namespace DAL
             DataTable _dt = new DataTable();
             try
             {
-                string strTruyVan = string.Format(@"select distinct p.MaPhong, p.TenPhong, k.TenKH, ldv.MaLoaiDichVu, ldv.TenLoaiDichVu, dv.MaDichVu, TenDichVu, count(TenDichVu) as [SoLuong], sum(cthd.Gia) as [Tong Tien] from ChiTietHoaDonDichVu cthd join Phong p on p.MaPhong = cthd.MaPhong join LoaiPhong lp on lp.MaLoaiPhong = p.MaLoaiPhong join ChiTietLoaiPhong c on lp.MaLoaiPhong = c.MaLoaiPhong join PhieuDangKy ph on ph.MaPhieuDK = c.MaPhieuDK  join KhachHang k on k.MaKH = ph.MaKH join DichVu dv on dv.MaDichVu = cthd.MaDichVu join LoaiDichVu ldv on dv.MaLoaiDichVu = ldv.MaLoaiDichVu where p.MaPhong = '" + phgDTO.MaPhong+ "' group by TenDichVu, k.TenKH, p.TenPhong, p.MaPhong, dv.MaDichVu, ldv.MaLoaiDichVu, ldv.TenLoaiDichVu");//sua theo sql
+                string strTruyVan = string.Format(@"select distinct p.MaPhong, p.TenPhong, k.TenKH, ldv.TenLoaiDichVu, dv.MaDichVu, dv.TenDichVu, cthd.SoLuong, cthd.SoLuong * dv.GiaDichVu as [TongTien] 
+                            from ChiTietHoaDonDichVu cthd 
+                            left join Phong p on p.MaPhong = cthd.MaPhong
+                            left join ChiTietLoaiPhong ctp ON ctp.MaPhong = p.MaPhong
+                            join PhieuDangKy dk ON dk.MaPhieuDK = ctp.MaPhieuDK
+                            join KhachHang k ON k.MaKH = dk.MaKH
+                            join DichVu dv on dv.MaDichVu = cthd.MaDichVu
+                            join LoaiDichVu ldv on ldv.MaLoaiDichVu = dv.MaLoaiDichVu");//sua theo sql
                 _dt = DataProvider.fillDataTable(strTruyVan);
 
             }
@@ -219,7 +226,22 @@ namespace DAL
             int count = 0;
             try
             {
-                string strTruyVan = string.Format("DELETE FROM ChiTietHoaDonDichVu where MaDichVu = '" + maSuDungDichVu + "'");
+                string strTruyVan = string.Format("DELETE FROM DichVu where MaDichVu = '" + maSuDungDichVu + "'");
+                count = DataProvider.ExecuteNonQuery(strTruyVan);
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            return count;
+        }
+        public static int XoaPhieuDichVu(string maSuDungDichVu, string MaPhong)
+        {
+            int count = 0;
+            try
+            {
+                string strTruyVan = string.Format("DELETE FROM ChiTietHoaDonDichVu where MaDichVu = '" + maSuDungDichVu + "' AND MaPhong = '" + MaPhong + "'");
                 count = DataProvider.ExecuteNonQuery(strTruyVan);
             }
             catch (Exception ex)

@@ -65,7 +65,7 @@ namespace QuanLyKhachSan.Views
 
             Phong_DTO maPhong = (Phong_DTO)cmbTenPhong_TTDV.SelectedItem;
             dgvThongTinPhongDaDatDV.DataSource = DichVu_BLL.HienThiThongTinPhongDaDangKyDichVu(maPhong);
-
+            dgvThongTinPhongDaDatDV.Columns["TongTien"].DefaultCellStyle.Format = "{0:0,0 VND}";
         }
 
         private void HienThiTenLoaiDichVuLenComboBox()
@@ -136,6 +136,19 @@ namespace QuanLyKhachSan.Views
             Phong_DTO phgDTO = new Phong_DTO();
             try
             {
+                int sl = int.Parse(txtSoLuong.Text);
+                if (sl <= 0)
+                {
+                    MessageBox.Show("Please input a number bigger than 0");
+                    return;
+                }
+            }
+            catch {
+                MessageBox.Show("Please check your quantity again","Error", MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                return;
+            }
+            try
+            {
                 string errorS = "";
                 if(txtMaSDDV.Text.Trim() != "")
                 {
@@ -143,7 +156,7 @@ namespace QuanLyKhachSan.Views
                 }
                 else
                 {
-                    errorS += "Chưa nhập mã sử dụng dịch vụ\n";
+                    errorS += "Service ID is empty.\n";
                 }
                 dvDTO.MaDichVu = (string)cmbTenDichVu.SelectedValue;
                 
@@ -156,7 +169,8 @@ namespace QuanLyKhachSan.Views
                 }
                 if (errorS != "")
                 {
-                    MessageBox.Show("Thông báo lỗi");
+                    MessageBox.Show(errorS, "Thông báo lỗi");
+                    return;
                 }
                     
                 int check = DichVu_BLL.XacNhanDichVu(dvDTO, phgDTO);
@@ -193,10 +207,12 @@ namespace QuanLyKhachSan.Views
                     DataGridViewRow row = dgvThongTinPhongDaDatDV.SelectedRows[0];
                     cmbLoaiDichVu_TTDV.Text = row.Cells["TenLoaiDichVu"].Value.ToString();
                     cmbTenDichVu_TTDV.Text = row.Cells["TenDichVu"].Value.ToString();
+                    cmbTenPhong_TTDV.Text = row.Cells["TenPhongg"].Value.ToString();
                     txtTenKH_TTDV.Text = row.Cells["TenKHH"].Value.ToString();
                     txtSoLuong_TTDV.Text = row.Cells["SoLuongTinh"].Value.ToString();
-                    MaDichVu = row.Cells["MaDichVu"].Value.ToString();
-                    MaPhong = row.Cells["MaPhong"].Value.ToString();
+                    MaDichVu = row.Cells["MaDichVuu"].Value.ToString();
+                    MaPhong = row.Cells["MaaPhong"].Value.ToString();
+                    cmbTenLoaiPhong_TTDV.Text = Phong_BLL.GetTenLoaiPhong(MaPhong);
                 }
 
             }
@@ -299,7 +315,6 @@ namespace QuanLyKhachSan.Views
             dgvThongTinPhongDaDatDV.Visible = true;
             dgvThongTinPhongDaDatDV.DataSource = DichVu_BLL.HienThiThongTinPhongDaDangKyDichVu(maPhong);
 
-            HienThiTongTien(maPhong.MaPhong);
 
             
 
@@ -325,17 +340,6 @@ namespace QuanLyKhachSan.Views
             
         }
 
-        public void HienThiTongTien(string maPhong)
-        {
-            string sum = DichVu_BLL.TongTien(maPhong);
-            if (sum == "")
-            {
-                txtThanhTien.Text = "0";
-                return;
-            }
-            txtThanhTien.Text = sum;
-            
-        }
 
         private void dgvCacKhachHangDaCP_Click(object sender, EventArgs e)
         {
@@ -363,6 +367,28 @@ namespace QuanLyKhachSan.Views
         private void labelControl14_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnDeleteServ_Click(object sender, EventArgs e)
+        {
+            if (dgvThongTinPhongDaDatDV.Rows.Count == 0)
+            {
+                XtraMessageBox.Show("There's nothing here!","Error");
+                return;
+
+            }
+            DialogResult _dr = MessageBox.Show("Do you really want to delete this Service Ticket?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            if (_dr == DialogResult.Yes)
+            {
+                DichVu_BLL.XoaPhieuDichVu(MaDichVu, MaPhong);
+                XtraMessageBox.Show("Service Ticket Delete Sucessful!", "Thông báo");
+                HienThiDanhSachPhongDaDangKyDichVu();
+
+            }
+            else
+            {
+                return;
+            }
         }
     }
 }

@@ -27,6 +27,7 @@ namespace BLL
         public static DataTable HienThiDanhSachCacDichVuCanCapNhat(string maDichVu, string maPhong)=>DichVu_DAL.HienThiDanhSachCacDichVuCanCapNhat(maDichVu,maPhong);
 
         public static int XoaDichVu(string maSuDungDichVu) => DichVu_DAL.XoaDichVu(maSuDungDichVu);
+        public static int XoaPhieuDichVu(string maSuDungDichVu, string MaPhong) => DichVu_DAL.XoaPhieuDichVu(maSuDungDichVu, MaPhong);
 
         public static string TongTien(string maPhong) => DichVu_DAL.TongTien(maPhong);
 

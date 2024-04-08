@@ -140,7 +140,7 @@ namespace QuanLyKhachSan.Views
                 }
                 else
                 {
-                    XtraMessageBox.Show("Xóa 1 dịch vụ thất bại", "Thông báo");
+                    XtraMessageBox.Show("Xóa 1 dịch vụ thất bại, Vui lòng xóa Phiếu dịch vụ trước", "Thông báo");
                 }
 
             }

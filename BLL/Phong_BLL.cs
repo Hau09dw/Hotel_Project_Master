@@ -35,6 +35,8 @@ namespace BLL
 
         public static DataTable TimTenPhong(string tenPhong) => Phong_DAL.TimTenPhong(tenPhong);
 
+        public static string GetTenLoaiPhong(string maPhong) => Phong_DAL.GetTenLoaiPhong(maPhong);
+
 
     }
 }

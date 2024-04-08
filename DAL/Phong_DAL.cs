@@ -297,8 +297,21 @@ namespace DAL
             }
             return dt;
         }
+        //get TenLoaiPhong from MaPhong
+        public static string GetTenLoaiPhong(string maPhong)
+        {
+            try
+            {
+                string strTruyVan_LayTenLoaiPhongTheoMaPhong = string.Format($"Select TenLoaiPhong from Phong p left join LoaiPhong lp on p.MaLoaiPhong = lp.MaLoaiPhong WHERE MaPhong = '" + maPhong + "'");
+                string LoaiPhong = DataProvider.ExecuteScalar(strTruyVan_LayTenLoaiPhongTheoMaPhong);
 
-
+                return LoaiPhong;
+            }
+            catch (Exception ex) 
+            { 
+                throw ex;
+            }
+        }
 
 
 

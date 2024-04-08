@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabNavigationPage1 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
@@ -67,14 +68,6 @@
             this.tabNavigationPage2 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
             this.dgvThongTinPhongDaDatDV = new System.Windows.Forms.DataGridView();
-            this.MaaPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaLoaiDichVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaDichVuu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenPhongg = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenKHH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenLoaiDichVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenDichVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuongTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupControl6 = new DevExpress.XtraEditors.GroupControl();
             this.cmbTenLoaiPhong_TTDV = new System.Windows.Forms.ComboBox();
             this.cmbTenPhong_TTDV = new System.Windows.Forms.ComboBox();
@@ -92,8 +85,15 @@
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl7 = new DevExpress.XtraEditors.GroupControl();
             this.btnCapNhatDichVu = new DevExpress.XtraEditors.SimpleButton();
-            this.txtThanhTien = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
+            this.btnDeleteServ = new DevExpress.XtraEditors.SimpleButton();
+            this.MaaPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenPhongg = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenKHH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenLoaiDichVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaDichVuu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenDichVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuongTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TongTienn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabNavigationPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
             this.groupControl4.SuspendLayout();
@@ -116,7 +116,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSoLuong_TTDV.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl7)).BeginInit();
             this.groupControl7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtThanhTien.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // tabNavigationPage1
@@ -510,21 +509,21 @@
             this.dgvThongTinPhongDaDatDV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvThongTinPhongDaDatDV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaaPhong,
-            this.MaLoaiDichVu,
-            this.MaDichVuu,
             this.TenPhongg,
             this.TenKHH,
             this.TenLoaiDichVu,
+            this.MaDichVuu,
             this.TenDichVu,
-            this.SoLuongTinh});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.DarkTurquoise;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvThongTinPhongDaDatDV.DefaultCellStyle = dataGridViewCellStyle6;
+            this.SoLuongTinh,
+            this.TongTienn});
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.DarkTurquoise;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvThongTinPhongDaDatDV.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvThongTinPhongDaDatDV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvThongTinPhongDaDatDV.EnableHeadersVisualStyles = false;
             this.dgvThongTinPhongDaDatDV.Location = new System.Drawing.Point(2, 23);
@@ -538,70 +537,6 @@
             this.dgvThongTinPhongDaDatDV.Size = new System.Drawing.Size(865, 318);
             this.dgvThongTinPhongDaDatDV.TabIndex = 2;
             this.dgvThongTinPhongDaDatDV.Click += new System.EventHandler(this.dgvThongTinPhongDaDatDV_Click);
-            // 
-            // MaaPhong
-            // 
-            this.MaaPhong.DataPropertyName = "MaPhong";
-            this.MaaPhong.HeaderText = "Room ID";
-            this.MaaPhong.MinimumWidth = 6;
-            this.MaaPhong.Name = "MaaPhong";
-            this.MaaPhong.ReadOnly = true;
-            // 
-            // MaLoaiDichVu
-            // 
-            this.MaLoaiDichVu.DataPropertyName = "MaLoaiDichVu";
-            this.MaLoaiDichVu.HeaderText = "Service type ID";
-            this.MaLoaiDichVu.MinimumWidth = 6;
-            this.MaLoaiDichVu.Name = "MaLoaiDichVu";
-            this.MaLoaiDichVu.ReadOnly = true;
-            // 
-            // MaDichVuu
-            // 
-            this.MaDichVuu.DataPropertyName = "MaDichVu";
-            this.MaDichVuu.HeaderText = "Service ID";
-            this.MaDichVuu.MinimumWidth = 6;
-            this.MaDichVuu.Name = "MaDichVuu";
-            this.MaDichVuu.ReadOnly = true;
-            // 
-            // TenPhongg
-            // 
-            this.TenPhongg.DataPropertyName = "TenPhong";
-            this.TenPhongg.HeaderText = "Room name";
-            this.TenPhongg.MinimumWidth = 6;
-            this.TenPhongg.Name = "TenPhongg";
-            this.TenPhongg.ReadOnly = true;
-            // 
-            // TenKHH
-            // 
-            this.TenKHH.DataPropertyName = "TenKH";
-            this.TenKHH.HeaderText = "Customer name";
-            this.TenKHH.MinimumWidth = 6;
-            this.TenKHH.Name = "TenKHH";
-            this.TenKHH.ReadOnly = true;
-            // 
-            // TenLoaiDichVu
-            // 
-            this.TenLoaiDichVu.DataPropertyName = "TenLoaiDichVu";
-            this.TenLoaiDichVu.HeaderText = "Service type";
-            this.TenLoaiDichVu.MinimumWidth = 6;
-            this.TenLoaiDichVu.Name = "TenLoaiDichVu";
-            this.TenLoaiDichVu.ReadOnly = true;
-            // 
-            // TenDichVu
-            // 
-            this.TenDichVu.DataPropertyName = "TenDichVu";
-            this.TenDichVu.HeaderText = "Service name";
-            this.TenDichVu.MinimumWidth = 6;
-            this.TenDichVu.Name = "TenDichVu";
-            this.TenDichVu.ReadOnly = true;
-            // 
-            // SoLuongTinh
-            // 
-            this.SoLuongTinh.DataPropertyName = "SoLuong";
-            this.SoLuongTinh.HeaderText = "Quality";
-            this.SoLuongTinh.MinimumWidth = 6;
-            this.SoLuongTinh.Name = "SoLuongTinh";
-            this.SoLuongTinh.ReadOnly = true;
             // 
             // groupControl6
             // 
@@ -628,6 +563,7 @@
             // 
             // cmbTenLoaiPhong_TTDV
             // 
+            this.cmbTenLoaiPhong_TTDV.Enabled = false;
             this.cmbTenLoaiPhong_TTDV.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTenLoaiPhong_TTDV.FormattingEnabled = true;
             this.cmbTenLoaiPhong_TTDV.Location = new System.Drawing.Point(126, 44);
@@ -638,6 +574,7 @@
             // 
             // cmbTenPhong_TTDV
             // 
+            this.cmbTenPhong_TTDV.Enabled = false;
             this.cmbTenPhong_TTDV.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTenPhong_TTDV.FormattingEnabled = true;
             this.cmbTenPhong_TTDV.Location = new System.Drawing.Point(126, 83);
@@ -658,6 +595,7 @@
             // 
             // txtTenKH_TTDV
             // 
+            this.txtTenKH_TTDV.Enabled = false;
             this.txtTenKH_TTDV.Location = new System.Drawing.Point(127, 126);
             this.txtTenKH_TTDV.Name = "txtTenKH_TTDV";
             this.txtTenKH_TTDV.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -712,9 +650,9 @@
             this.labelControl10.Appearance.Options.UseFont = true;
             this.labelControl10.Location = new System.Drawing.Point(12, 310);
             this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(47, 17);
+            this.labelControl10.Size = new System.Drawing.Size(48, 17);
             this.labelControl10.TabIndex = 12;
-            this.labelControl10.Text = "Quality :";
+            this.labelControl10.Text = "Quantity";
             // 
             // labelControl6
             // 
@@ -739,6 +677,7 @@
             // 
             // cmbGiaDichVu_TTDV
             // 
+            this.cmbGiaDichVu_TTDV.Enabled = false;
             this.cmbGiaDichVu_TTDV.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.cmbGiaDichVu_TTDV.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbGiaDichVu_TTDV.FormattingEnabled = true;
@@ -770,9 +709,8 @@
             // 
             // groupControl7
             // 
+            this.groupControl7.Controls.Add(this.btnDeleteServ);
             this.groupControl7.Controls.Add(this.btnCapNhatDichVu);
-            this.groupControl7.Controls.Add(this.txtThanhTien);
-            this.groupControl7.Controls.Add(this.labelControl14);
             this.groupControl7.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl7.Location = new System.Drawing.Point(0, 0);
             this.groupControl7.Name = "groupControl7";
@@ -791,26 +729,81 @@
             this.btnCapNhatDichVu.Text = "UPDATE";
             this.btnCapNhatDichVu.Click += new System.EventHandler(this.btnCapNhatDichVu_Click);
             // 
-            // txtThanhTien
+            // btnDeleteServ
             // 
-            this.txtThanhTien.Location = new System.Drawing.Point(1025, 37);
-            this.txtThanhTien.Name = "txtThanhTien";
-            this.txtThanhTien.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtThanhTien.Properties.Appearance.Options.UseFont = true;
-            this.txtThanhTien.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.txtThanhTien.Size = new System.Drawing.Size(175, 24);
-            this.txtThanhTien.TabIndex = 0;
+            this.btnDeleteServ.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteServ.Appearance.Options.UseFont = true;
+            this.btnDeleteServ.Location = new System.Drawing.Point(308, 29);
+            this.btnDeleteServ.Name = "btnDeleteServ";
+            this.btnDeleteServ.Size = new System.Drawing.Size(219, 37);
+            this.btnDeleteServ.TabIndex = 2;
+            this.btnDeleteServ.Text = "DELETE";
+            this.btnDeleteServ.Click += new System.EventHandler(this.btnDeleteServ_Click);
             // 
-            // labelControl14
+            // MaaPhong
             // 
-            this.labelControl14.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl14.Appearance.Options.UseFont = true;
-            this.labelControl14.Location = new System.Drawing.Point(830, 40);
-            this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(188, 17);
-            this.labelControl14.TabIndex = 1;
-            this.labelControl14.Text = "Total amount for service usage :";
-            this.labelControl14.Click += new System.EventHandler(this.labelControl14_Click);
+            this.MaaPhong.DataPropertyName = "MaPhong";
+            this.MaaPhong.HeaderText = "Room ID";
+            this.MaaPhong.MinimumWidth = 6;
+            this.MaaPhong.Name = "MaaPhong";
+            this.MaaPhong.ReadOnly = true;
+            // 
+            // TenPhongg
+            // 
+            this.TenPhongg.DataPropertyName = "TenPhong";
+            this.TenPhongg.HeaderText = "Room Name";
+            this.TenPhongg.MinimumWidth = 6;
+            this.TenPhongg.Name = "TenPhongg";
+            this.TenPhongg.ReadOnly = true;
+            // 
+            // TenKHH
+            // 
+            this.TenKHH.DataPropertyName = "TenKH";
+            this.TenKHH.HeaderText = "Customer name";
+            this.TenKHH.MinimumWidth = 6;
+            this.TenKHH.Name = "TenKHH";
+            this.TenKHH.ReadOnly = true;
+            // 
+            // TenLoaiDichVu
+            // 
+            this.TenLoaiDichVu.DataPropertyName = "TenLoaiDichVu";
+            this.TenLoaiDichVu.HeaderText = "Service type";
+            this.TenLoaiDichVu.MinimumWidth = 6;
+            this.TenLoaiDichVu.Name = "TenLoaiDichVu";
+            this.TenLoaiDichVu.ReadOnly = true;
+            // 
+            // MaDichVuu
+            // 
+            this.MaDichVuu.DataPropertyName = "MaDichVu";
+            this.MaDichVuu.HeaderText = "Service ID";
+            this.MaDichVuu.MinimumWidth = 6;
+            this.MaDichVuu.Name = "MaDichVuu";
+            this.MaDichVuu.ReadOnly = true;
+            // 
+            // TenDichVu
+            // 
+            this.TenDichVu.DataPropertyName = "TenDichVu";
+            this.TenDichVu.HeaderText = "Service name";
+            this.TenDichVu.MinimumWidth = 6;
+            this.TenDichVu.Name = "TenDichVu";
+            this.TenDichVu.ReadOnly = true;
+            // 
+            // SoLuongTinh
+            // 
+            this.SoLuongTinh.DataPropertyName = "SoLuong";
+            this.SoLuongTinh.HeaderText = "Quantity";
+            this.SoLuongTinh.MinimumWidth = 6;
+            this.SoLuongTinh.Name = "SoLuongTinh";
+            this.SoLuongTinh.ReadOnly = true;
+            // 
+            // TongTienn
+            // 
+            this.TongTienn.DataPropertyName = "TongTien";
+            dataGridViewCellStyle6.Format = "##,# VND";
+            this.TongTienn.DefaultCellStyle = dataGridViewCellStyle6;
+            this.TongTienn.HeaderText = "Total Amount";
+            this.TongTienn.Name = "TongTienn";
+            this.TongTienn.ReadOnly = true;
             // 
             // frmDichVu
             // 
@@ -846,8 +839,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSoLuong_TTDV.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl7)).EndInit();
             this.groupControl7.ResumeLayout(false);
-            this.groupControl7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtThanhTien.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -882,8 +873,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl11;
         private DevExpress.XtraEditors.TextEdit txtSoLuong;
         private DevExpress.XtraEditors.LabelControl labelControl13;
-        private DevExpress.XtraEditors.TextEdit txtThanhTien;
-        private DevExpress.XtraEditors.LabelControl labelControl14;
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private System.Windows.Forms.ComboBox cmbLoaiDichVu_TTDV;
         private DevExpress.XtraEditors.TextEdit txtSoLuong_TTDV;
@@ -906,13 +895,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn QuocTich;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaPhieuDK;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenPhong;
+        private DevExpress.XtraEditors.SimpleButton btnDeleteServ;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaaPhong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaLoaiDichVu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaDichVuu;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenPhongg;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenKHH;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenLoaiDichVu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaDichVuu;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenDichVu;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuongTinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TongTienn;
     }
 }
