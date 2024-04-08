@@ -306,20 +306,20 @@ namespace QuanLyKhachSan
                     btnSuaKH.Enabled = true;
                     btnXoaKH.Enabled = true;
                     DataGridViewRow _row = dgvKhachHang.SelectedRows[0];
-                    txtMaKH.Text = _row.Cells["Customer ID"].Value.ToString();
-                    txtTenKH.Text = _row.Cells["Customer name"].Value.ToString();
-                    dtpNgaySinh.Text = Convert.ToDateTime(_row.Cells["DateOfBirth"].Value.ToString()).ToShortDateString();
+                    txtMaKH.Text = _row.Cells["MaKH"].Value.ToString();
+                    txtTenKH.Text = _row.Cells["TenKH"].Value.ToString();
+                    dtpNgaySinh.Text = Convert.ToDateTime(_row.Cells["NgaySinh"].Value.ToString()).ToShortDateString();
                     if (_row.Cells["GioiTinh"].Value.ToString() == "Nam")
                     {
                         rdbNam.Checked = true;
                     }
-                    else rdbNu.Checked = true;
+                    else rdbNu.Checked = true;  
 
 
-                    txtCMND.Text = _row.Cells["ID Card"].Value.ToString();
-                    txtDiaChi.Text = _row.Cells["Address"].Value.ToString();
-                    txtDienThoai.Text = _row.Cells["Phone"].Value.ToString();
-                    cmbQuocTich.Text = _row.Cells["Nationality"].Value.ToString();
+                    txtCMND.Text = _row.Cells["CMND"].Value.ToString();
+                    txtDiaChi.Text = _row.Cells["DiaChi"].Value.ToString();
+                    txtDienThoai.Text = _row.Cells["SDT"].Value.ToString();
+                    cmbQuocTich.Text = _row.Cells["QuocTich"].Value.ToString();
                 }
             }
             catch (Exception)

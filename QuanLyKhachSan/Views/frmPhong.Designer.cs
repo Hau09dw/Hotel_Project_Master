@@ -107,16 +107,18 @@
             this.tabNavigationPage1.Controls.Add(this.groupControl1);
             this.tabNavigationPage1.Controls.Add(this.groupControl3);
             this.tabNavigationPage1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabNavigationPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabNavigationPage1.Name = "tabNavigationPage1";
-            this.tabNavigationPage1.Size = new System.Drawing.Size(1244, 474);
+            this.tabNavigationPage1.Size = new System.Drawing.Size(1451, 583);
             // 
             // groupControl2
             // 
             this.groupControl2.Controls.Add(this.dgvPhong);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl2.Location = new System.Drawing.Point(370, 0);
+            this.groupControl2.Location = new System.Drawing.Point(432, 0);
+            this.groupControl2.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(874, 364);
+            this.groupControl2.Size = new System.Drawing.Size(1019, 448);
             this.groupControl2.TabIndex = 19;
             this.groupControl2.Text = "information about waiting guests";
             // 
@@ -136,7 +138,7 @@
             this.dgvPhong.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(72)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 7.8F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -151,7 +153,7 @@
             this.MaNV});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 7.8F);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkTurquoise;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
@@ -159,7 +161,8 @@
             this.dgvPhong.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPhong.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvPhong.EnableHeadersVisualStyles = false;
-            this.dgvPhong.Location = new System.Drawing.Point(2, 23);
+            this.dgvPhong.Location = new System.Drawing.Point(2, 28);
+            this.dgvPhong.Margin = new System.Windows.Forms.Padding(4);
             this.dgvPhong.MultiSelect = false;
             this.dgvPhong.Name = "dgvPhong";
             this.dgvPhong.ReadOnly = true;
@@ -168,7 +171,7 @@
             this.dgvPhong.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dgvPhong.RowTemplate.Height = 25;
             this.dgvPhong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPhong.Size = new System.Drawing.Size(870, 339);
+            this.dgvPhong.Size = new System.Drawing.Size(1015, 418);
             this.dgvPhong.TabIndex = 2;
             this.dgvPhong.Click += new System.EventHandler(this.dgvPhong_Click);
             // 
@@ -222,38 +225,42 @@
             this.groupControl1.Controls.Add(this.labelControl2);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(370, 364);
+            this.groupControl1.Size = new System.Drawing.Size(432, 448);
             this.groupControl1.TabIndex = 18;
             this.groupControl1.Text = "Booking information";
             // 
             // txtMaPhieuDK
             // 
-            this.txtMaPhieuDK.Location = new System.Drawing.Point(165, 34);
+            this.txtMaPhieuDK.Location = new System.Drawing.Point(192, 42);
+            this.txtMaPhieuDK.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaPhieuDK.Name = "txtMaPhieuDK";
             this.txtMaPhieuDK.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaPhieuDK.Properties.Appearance.Options.UseFont = true;
             this.txtMaPhieuDK.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txtMaPhieuDK.Properties.ReadOnly = true;
-            this.txtMaPhieuDK.Size = new System.Drawing.Size(199, 24);
+            this.txtMaPhieuDK.Size = new System.Drawing.Size(232, 28);
             this.txtMaPhieuDK.TabIndex = 3;
             // 
             // cmbTenPhong
             // 
             this.cmbTenPhong.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTenPhong.FormattingEnabled = true;
-            this.cmbTenPhong.Location = new System.Drawing.Point(162, 124);
+            this.cmbTenPhong.Location = new System.Drawing.Point(189, 152);
+            this.cmbTenPhong.Margin = new System.Windows.Forms.Padding(4);
             this.cmbTenPhong.Name = "cmbTenPhong";
-            this.cmbTenPhong.Size = new System.Drawing.Size(200, 25);
+            this.cmbTenPhong.Size = new System.Drawing.Size(233, 29);
             this.cmbTenPhong.TabIndex = 5;
             // 
             // cmbTenLoaiPhong
             // 
             this.cmbTenLoaiPhong.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTenLoaiPhong.FormattingEnabled = true;
-            this.cmbTenLoaiPhong.Location = new System.Drawing.Point(162, 76);
+            this.cmbTenLoaiPhong.Location = new System.Drawing.Point(189, 93);
+            this.cmbTenLoaiPhong.Margin = new System.Windows.Forms.Padding(4);
             this.cmbTenLoaiPhong.Name = "cmbTenLoaiPhong";
-            this.cmbTenLoaiPhong.Size = new System.Drawing.Size(200, 25);
+            this.cmbTenLoaiPhong.Size = new System.Drawing.Size(233, 29);
             this.cmbTenLoaiPhong.TabIndex = 4;
             this.cmbTenLoaiPhong.SelectedIndexChanged += new System.EventHandler(this.cmbTenLoaiPhong_SelectedIndexChanged);
             // 
@@ -261,9 +268,10 @@
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(17, 83);
+            this.labelControl5.Location = new System.Drawing.Point(20, 102);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(71, 17);
+            this.labelControl5.Size = new System.Drawing.Size(83, 21);
             this.labelControl5.TabIndex = 17;
             this.labelControl5.Text = "Room type :";
             // 
@@ -271,9 +279,10 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(17, 40);
+            this.labelControl4.Location = new System.Drawing.Point(20, 49);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(143, 17);
+            this.labelControl4.Size = new System.Drawing.Size(170, 21);
             this.labelControl4.TabIndex = 18;
             this.labelControl4.Text = "Registration voucher ID :";
             // 
@@ -281,9 +290,10 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(17, 126);
+            this.labelControl2.Location = new System.Drawing.Point(20, 155);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(78, 17);
+            this.labelControl2.Size = new System.Drawing.Size(92, 21);
             this.labelControl2.TabIndex = 19;
             this.labelControl2.Text = "Room name :";
             // 
@@ -291,9 +301,10 @@
             // 
             this.groupControl3.Controls.Add(this.btnXacNhanDatPhong);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupControl3.Location = new System.Drawing.Point(0, 364);
+            this.groupControl3.Location = new System.Drawing.Point(0, 448);
+            this.groupControl3.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(1244, 110);
+            this.groupControl3.Size = new System.Drawing.Size(1451, 135);
             this.groupControl3.TabIndex = 17;
             this.groupControl3.Text = "Xử lý";
             // 
@@ -301,9 +312,10 @@
             // 
             this.btnXacNhanDatPhong.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXacNhanDatPhong.Appearance.Options.UseFont = true;
-            this.btnXacNhanDatPhong.Location = new System.Drawing.Point(496, 34);
+            this.btnXacNhanDatPhong.Location = new System.Drawing.Point(579, 42);
+            this.btnXacNhanDatPhong.Margin = new System.Windows.Forms.Padding(4);
             this.btnXacNhanDatPhong.Name = "btnXacNhanDatPhong";
-            this.btnXacNhanDatPhong.Size = new System.Drawing.Size(220, 61);
+            this.btnXacNhanDatPhong.Size = new System.Drawing.Size(257, 75);
             this.btnXacNhanDatPhong.TabIndex = 0;
             this.btnXacNhanDatPhong.Text = "Confirm room reservation";
             this.btnXacNhanDatPhong.Click += new System.EventHandler(this.btnXacNhanDatPhong_Click);
@@ -314,13 +326,14 @@
             this.tabPane1.Controls.Add(this.tabNavigationPage2);
             this.tabPane1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabPane1.Location = new System.Drawing.Point(0, 0);
+            this.tabPane1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPane1.Name = "tabPane1";
             this.tabPane1.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
             this.tabNavigationPage1,
             this.tabNavigationPage2});
-            this.tabPane1.RegularSize = new System.Drawing.Size(1244, 507);
+            this.tabPane1.RegularSize = new System.Drawing.Size(1451, 624);
             this.tabPane1.SelectedPage = this.tabNavigationPage1;
-            this.tabPane1.Size = new System.Drawing.Size(1244, 507);
+            this.tabPane1.Size = new System.Drawing.Size(1451, 624);
             this.tabPane1.TabIndex = 0;
             this.tabPane1.Text = "Thông tin loại phòng";
             this.tabPane1.Click += new System.EventHandler(this.tabPane1_Click);
@@ -331,16 +344,18 @@
             this.tabNavigationPage2.Controls.Add(this.groupControl6);
             this.tabNavigationPage2.Controls.Add(this.groupControl5);
             this.tabNavigationPage2.Controls.Add(this.groupControl4);
+            this.tabNavigationPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabNavigationPage2.Name = "tabNavigationPage2";
-            this.tabNavigationPage2.Size = new System.Drawing.Size(1244, 474);
+            this.tabNavigationPage2.Size = new System.Drawing.Size(1451, 583);
             // 
             // groupControl6
             // 
             this.groupControl6.Controls.Add(this.dgvThongTinDatPhong);
             this.groupControl6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl6.Location = new System.Drawing.Point(346, 88);
+            this.groupControl6.Location = new System.Drawing.Point(404, 108);
+            this.groupControl6.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl6.Name = "groupControl6";
-            this.groupControl6.Size = new System.Drawing.Size(898, 386);
+            this.groupControl6.Size = new System.Drawing.Size(1047, 475);
             this.groupControl6.TabIndex = 4;
             this.groupControl6.Text = "List of occupied rooms";
             // 
@@ -360,7 +375,7 @@
             this.dgvThongTinDatPhong.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(72)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Tahoma", 7.8F);
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -379,7 +394,7 @@
             this.QuocTich});
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Tahoma", 7.8F);
             dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.DarkTurquoise;
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
@@ -387,7 +402,8 @@
             this.dgvThongTinDatPhong.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvThongTinDatPhong.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvThongTinDatPhong.EnableHeadersVisualStyles = false;
-            this.dgvThongTinDatPhong.Location = new System.Drawing.Point(2, 23);
+            this.dgvThongTinDatPhong.Location = new System.Drawing.Point(2, 28);
+            this.dgvThongTinDatPhong.Margin = new System.Windows.Forms.Padding(4);
             this.dgvThongTinDatPhong.MultiSelect = false;
             this.dgvThongTinDatPhong.Name = "dgvThongTinDatPhong";
             this.dgvThongTinDatPhong.ReadOnly = true;
@@ -396,8 +412,9 @@
             this.dgvThongTinDatPhong.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dgvThongTinDatPhong.RowTemplate.Height = 25;
             this.dgvThongTinDatPhong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvThongTinDatPhong.Size = new System.Drawing.Size(894, 361);
+            this.dgvThongTinDatPhong.Size = new System.Drawing.Size(1043, 445);
             this.dgvThongTinDatPhong.TabIndex = 3;
+            this.dgvThongTinDatPhong.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThongTinDatPhong_CellContentClick);
             this.dgvThongTinDatPhong.Click += new System.EventHandler(this.dgvThongTinDatPhong_Click);
             // 
             // MaPhieuDKK
@@ -483,30 +500,33 @@
             this.groupControl5.Controls.Add(this.labelControl1);
             this.groupControl5.Controls.Add(this.labelControl3);
             this.groupControl5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupControl5.Location = new System.Drawing.Point(0, 88);
+            this.groupControl5.Location = new System.Drawing.Point(0, 108);
+            this.groupControl5.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl5.Name = "groupControl5";
-            this.groupControl5.Size = new System.Drawing.Size(346, 386);
+            this.groupControl5.Size = new System.Drawing.Size(404, 475);
             this.groupControl5.TabIndex = 3;
             this.groupControl5.Text = "Room information";
             // 
             // txtMaPhieuDK_TTDP
             // 
-            this.txtMaPhieuDK_TTDP.Location = new System.Drawing.Point(154, 51);
+            this.txtMaPhieuDK_TTDP.Location = new System.Drawing.Point(180, 63);
+            this.txtMaPhieuDK_TTDP.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaPhieuDK_TTDP.Name = "txtMaPhieuDK_TTDP";
             this.txtMaPhieuDK_TTDP.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaPhieuDK_TTDP.Properties.Appearance.Options.UseFont = true;
             this.txtMaPhieuDK_TTDP.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txtMaPhieuDK_TTDP.Properties.ReadOnly = true;
-            this.txtMaPhieuDK_TTDP.Size = new System.Drawing.Size(182, 24);
+            this.txtMaPhieuDK_TTDP.Size = new System.Drawing.Size(212, 28);
             this.txtMaPhieuDK_TTDP.TabIndex = 29;
             // 
             // labelControl7
             // 
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl7.Appearance.Options.UseFont = true;
-            this.labelControl7.Location = new System.Drawing.Point(5, 57);
+            this.labelControl7.Location = new System.Drawing.Point(6, 70);
+            this.labelControl7.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(143, 17);
+            this.labelControl7.Size = new System.Drawing.Size(170, 21);
             this.labelControl7.TabIndex = 28;
             this.labelControl7.Text = "Registration voucher ID :";
             // 
@@ -514,38 +534,42 @@
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(5, 101);
+            this.labelControl6.Location = new System.Drawing.Point(6, 124);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(99, 17);
+            this.labelControl6.Size = new System.Drawing.Size(118, 21);
             this.labelControl6.TabIndex = 27;
             this.labelControl6.Text = "Customer name :";
             // 
             // txtTenKH_TTDP
             // 
-            this.txtTenKH_TTDP.Location = new System.Drawing.Point(154, 99);
+            this.txtTenKH_TTDP.Location = new System.Drawing.Point(180, 122);
+            this.txtTenKH_TTDP.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenKH_TTDP.Name = "txtTenKH_TTDP";
             this.txtTenKH_TTDP.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenKH_TTDP.Properties.Appearance.Options.UseFont = true;
             this.txtTenKH_TTDP.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.txtTenKH_TTDP.Size = new System.Drawing.Size(182, 24);
+            this.txtTenKH_TTDP.Size = new System.Drawing.Size(212, 28);
             this.txtTenKH_TTDP.TabIndex = 26;
             // 
             // cmbTenPhong_TTDP
             // 
             this.cmbTenPhong_TTDP.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTenPhong_TTDP.FormattingEnabled = true;
-            this.cmbTenPhong_TTDP.Location = new System.Drawing.Point(154, 193);
+            this.cmbTenPhong_TTDP.Location = new System.Drawing.Point(180, 238);
+            this.cmbTenPhong_TTDP.Margin = new System.Windows.Forms.Padding(4);
             this.cmbTenPhong_TTDP.Name = "cmbTenPhong_TTDP";
-            this.cmbTenPhong_TTDP.Size = new System.Drawing.Size(182, 25);
+            this.cmbTenPhong_TTDP.Size = new System.Drawing.Size(212, 29);
             this.cmbTenPhong_TTDP.TabIndex = 25;
             // 
             // cmbTenLoaiPhong_TTDP
             // 
             this.cmbTenLoaiPhong_TTDP.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTenLoaiPhong_TTDP.FormattingEnabled = true;
-            this.cmbTenLoaiPhong_TTDP.Location = new System.Drawing.Point(154, 145);
+            this.cmbTenLoaiPhong_TTDP.Location = new System.Drawing.Point(180, 179);
+            this.cmbTenLoaiPhong_TTDP.Margin = new System.Windows.Forms.Padding(4);
             this.cmbTenLoaiPhong_TTDP.Name = "cmbTenLoaiPhong_TTDP";
-            this.cmbTenLoaiPhong_TTDP.Size = new System.Drawing.Size(182, 25);
+            this.cmbTenLoaiPhong_TTDP.Size = new System.Drawing.Size(212, 29);
             this.cmbTenLoaiPhong_TTDP.TabIndex = 24;
             this.cmbTenLoaiPhong_TTDP.SelectedIndexChanged += new System.EventHandler(this.cmbTenLoaiPhong_TTDP_SelectedIndexChanged);
             // 
@@ -553,9 +577,10 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(5, 144);
+            this.labelControl1.Location = new System.Drawing.Point(6, 177);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(71, 17);
+            this.labelControl1.Size = new System.Drawing.Size(83, 21);
             this.labelControl1.TabIndex = 22;
             this.labelControl1.Text = "Room type :";
             // 
@@ -563,9 +588,10 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(5, 192);
+            this.labelControl3.Location = new System.Drawing.Point(6, 236);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(78, 17);
+            this.labelControl3.Size = new System.Drawing.Size(92, 21);
             this.labelControl3.TabIndex = 23;
             this.labelControl3.Text = "Room name :";
             // 
@@ -575,8 +601,9 @@
             this.groupControl4.Controls.Add(this.btnThayDoiPhongChoKhach);
             this.groupControl4.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl4.Location = new System.Drawing.Point(0, 0);
+            this.groupControl4.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(1244, 88);
+            this.groupControl4.Size = new System.Drawing.Size(1451, 108);
             this.groupControl4.TabIndex = 0;
             this.groupControl4.Text = "Process";
             // 
@@ -584,9 +611,10 @@
             // 
             this.btnCapNhatLaiTrangThaiPhong.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCapNhatLaiTrangThaiPhong.Appearance.Options.UseFont = true;
-            this.btnCapNhatLaiTrangThaiPhong.Location = new System.Drawing.Point(257, 30);
+            this.btnCapNhatLaiTrangThaiPhong.Location = new System.Drawing.Point(300, 37);
+            this.btnCapNhatLaiTrangThaiPhong.Margin = new System.Windows.Forms.Padding(4);
             this.btnCapNhatLaiTrangThaiPhong.Name = "btnCapNhatLaiTrangThaiPhong";
-            this.btnCapNhatLaiTrangThaiPhong.Size = new System.Drawing.Size(209, 33);
+            this.btnCapNhatLaiTrangThaiPhong.Size = new System.Drawing.Size(244, 41);
             this.btnCapNhatLaiTrangThaiPhong.TabIndex = 0;
             this.btnCapNhatLaiTrangThaiPhong.Text = "Update room status";
             this.btnCapNhatLaiTrangThaiPhong.Click += new System.EventHandler(this.btnCapNhatLaiTrangThaiPhong_Click);
@@ -595,20 +623,22 @@
             // 
             this.btnThayDoiPhongChoKhach.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThayDoiPhongChoKhach.Appearance.Options.UseFont = true;
-            this.btnThayDoiPhongChoKhach.Location = new System.Drawing.Point(18, 30);
+            this.btnThayDoiPhongChoKhach.Location = new System.Drawing.Point(21, 37);
+            this.btnThayDoiPhongChoKhach.Margin = new System.Windows.Forms.Padding(4);
             this.btnThayDoiPhongChoKhach.Name = "btnThayDoiPhongChoKhach";
-            this.btnThayDoiPhongChoKhach.Size = new System.Drawing.Size(209, 33);
+            this.btnThayDoiPhongChoKhach.Size = new System.Drawing.Size(244, 41);
             this.btnThayDoiPhongChoKhach.TabIndex = 0;
             this.btnThayDoiPhongChoKhach.Text = "Change customer\'s room";
             this.btnThayDoiPhongChoKhach.Click += new System.EventHandler(this.btnThayDoiPhongChoKhach_Click);
             // 
             // frmPhong
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1244, 507);
+            this.ClientSize = new System.Drawing.Size(1451, 624);
             this.Controls.Add(this.tabPane1);
             this.HelpButton = true;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmPhong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ROOM BOOKING MANAGEMENT";

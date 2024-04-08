@@ -106,7 +106,7 @@ namespace QuanLyKhachSan.Views
             cmbTenPhong.ValueMember = "MaPhong";
              if(cmbTenPhong.Items.Count ==0)
             {
-                cmbTenPhong.Text = "Hết phòng";
+                cmbTenPhong.Text = "No more rooms available";
                 cmbTenPhong.Enabled = false;
                 btnXacNhanDatPhong.Enabled = false;
                 return;
@@ -130,7 +130,7 @@ namespace QuanLyKhachSan.Views
 
                 if (cmbTenPhong.Items.Count == 0)
                 {
-                    cmbTenPhong.Text = "Hết phòng";
+                    cmbTenPhong.Text = "No more rooms available";
                     cmbTenPhong.Enabled = false;
                     return;
                 }
@@ -162,18 +162,19 @@ namespace QuanLyKhachSan.Views
                         {
                             cmbTenPhong.Enabled = false;
                             btnXacNhanDatPhong.Enabled = false;
-                            cmbTenPhong.Text = "Hết phòng";
+                            cmbTenPhong.Text = "No more rooms available";
 
                         }
 
-                        MessageBox.Show("Đã thêm khách hàng vào phòng thành công", "Thông báo");
+                        MessageBox.Show("Customer has been successfully added to the room", "Notification" +
+                            "");
                         txtMaPhieuDK.Text = "";
                         HienThiDSKhachHangDaCoPhong();
 
                     }
                     else
                     {
-                        MessageBox.Show("Thêm khách hàng vào phòng thất bại", "Thông báo");
+                        MessageBox.Show("Customer has been failed added to the room", "Notification");
                     }
                 }
             }
@@ -200,7 +201,7 @@ namespace QuanLyKhachSan.Views
             cmbTenPhong_TTDP.ValueMember = "MaPhong";
             if (cmbTenPhong_TTDP.Items.Count == 0)
             {
-                cmbTenPhong_TTDP.Text = "Hết phòng";
+                cmbTenPhong_TTDP.Text = "No more rooms available";
                 cmbTenPhong_TTDP.Enabled = false;
                 btnThayDoiPhongChoKhach.Enabled = false;
                 return;
@@ -221,7 +222,7 @@ namespace QuanLyKhachSan.Views
                 {
                     DataGridViewRow row = dgvThongTinDatPhong.SelectedRows[0];
                     cmbTenPhong_TTDP.Text = row.Cells["TenPhong"].Value.ToString();
-                    txtMaPhieuDK_TTDP.Text = row.Cells["MaPhieuDKK"].Value.ToString();
+                    txtMaPhieuDK_TTDP.Text = row.Cells["MaPhieuDK"].Value.ToString();
                     txtTenKH_TTDP.Text = row.Cells["TenKhachHang"].Value.ToString();
                 }
             }
@@ -240,7 +241,7 @@ namespace QuanLyKhachSan.Views
                 
                 if (cmbTenPhong_TTDP.Items.Count == 0)
                 {
-                    cmbTenPhong_TTDP.Text = "Hết phòng";
+                    cmbTenPhong_TTDP.Text = "No more rooms available";
                     cmbTenPhong_TTDP.Enabled = false;
                     return;
                 }
@@ -254,7 +255,7 @@ namespace QuanLyKhachSan.Views
 
                     int check = Phong_BLL.ThayDoiPhongChoKhach(pdkDTO, phgDTO);
 
-                    DialogResult _dr = MessageBox.Show("Bạn có chắc muốn thay đổi phòng cho khách không ?", "Thông báo",MessageBoxButtons.YesNo,MessageBoxIcon.Exclamation);
+                    DialogResult _dr = MessageBox.Show("Are you sure you want to change the room for the guest?", "Notification",MessageBoxButtons.YesNo,MessageBoxIcon.Exclamation);
                     if(_dr == DialogResult.Yes)
                     {
                         if (check > 0)
@@ -276,16 +277,16 @@ namespace QuanLyKhachSan.Views
                             {
                                 cmbTenPhong_TTDP.Enabled = false;
                                 btnThayDoiPhongChoKhach.Enabled = false;
-                                cmbTenPhong_TTDP.Text = "Hết phòng";
+                                cmbTenPhong_TTDP.Text = "No more rooms available";
 
                             }
 
-                            MessageBox.Show("Cập nhật phòng cho khách thành công!!!!", "Thông báo");
+                            MessageBox.Show("Room update for the guest was successful!!!!", "Notification");
 
                         }
                         else
                         {
-                            MessageBox.Show("Cập nhật phòng cho khách thất bại!!! Xin kiểm tra dữ liệu!!!", "Thông báo");
+                            MessageBox.Show("Room update for the guest was failed!!! PPlease check the data again!!!", "Notification");
                         }
                     }
 
@@ -309,11 +310,11 @@ namespace QuanLyKhachSan.Views
             if(check>0)
             {
                 HienThiDSKhachHangDaCoPhong();
-                MessageBox.Show("Đã cập nhật lại phòng thành công!!!!", "Thông báo");
+                MessageBox.Show("Room has been successfully updated.!!!!", "Notification");
             }
             else
             {
-                MessageBox.Show("Cập nhật thất bại!!!!", "Thông báo");
+                MessageBox.Show("Update failed!!!!", "Notification");
             }
 
 
@@ -321,6 +322,11 @@ namespace QuanLyKhachSan.Views
         }
 
         private void tabPane1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvThongTinDatPhong_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
