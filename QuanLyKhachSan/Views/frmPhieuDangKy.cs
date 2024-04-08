@@ -192,7 +192,7 @@ namespace QuanLyKhachSan.Views
            
             if (errorS != "")
             {
-                MessageBox.Show(errorS,"Error notification  ");
+                MessageBox.Show(errorS,"Error notification");
                 return;
             }          
             pdkDTO.NgayDen = Convert.ToDateTime(dtpNgayDen.Text);
@@ -269,7 +269,7 @@ namespace QuanLyKhachSan.Views
                     txtTienDatCoc_TTPDK.Text = pdkDTO.TienDatCoc + "";
 
                     //Truyền thuộc tính MaKH để truyền sang form khác
-                    MaKH = _row.Cells["MaKHH"].Value.ToString();
+                    MaKH = _row.Cells["MaKH"].Value.ToString();
 
                     txtMaNV_TTPDK.Text = _row.Cells["MaNV"].Value.ToString();
 
