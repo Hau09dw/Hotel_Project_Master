@@ -20,7 +20,7 @@ namespace DTO
 
         public int ThanhTien { get; set; }
 
-        public string SoLuong { get; set;  }
+        public int SoLuong { get; set;  }
 
 
 

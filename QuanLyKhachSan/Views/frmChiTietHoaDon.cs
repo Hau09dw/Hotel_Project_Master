@@ -22,7 +22,7 @@ namespace QuanLyKhachSan.Views
         public static int ThanhTien;
         private void frmChiTietHoaDon_Load(object sender, EventArgs e)
         {
-            HienThiDanhSachSDDichVu();
+            //HienThiDanhSachSDDichVu();
             HienThiMaPhongLenComboBox();
             HienThiGiaLoaiPhongLenTextBox();
             HienThiTongTienDichVuLenTextBox();

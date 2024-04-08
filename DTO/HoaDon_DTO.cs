@@ -10,13 +10,14 @@ namespace DTO
     {
         public string MaHoaDon { get; set; }
         public string TenHoaDon { get; set; }
-       public DateTime NgayThanhToan { get; set; }
+       public DateTime NgayBatDau { get; set; }
+       public DateTime NgayKetThuc { get; set; }
 
 
         public int TienPhong { get; set; }
         public int ChiPhiPhatSinh { get; set; }
         public int TongTienHoaDon { get; set; }
-        public int SoTienDaDatTruoc { get; set; }
+        public int TienCoc { get; set; }
         public string MaNV { get; set; }
         public string MaPhieuDK { get; set; }
         public string MaPhong { get; set; }

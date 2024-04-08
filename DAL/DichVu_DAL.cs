@@ -191,7 +191,7 @@ namespace DAL
             int count = 0;
             try
             {
-                string strTruyVan = string.Format("INSERT INTO ChiTietHoaDonDichVu(MaDichVu,MaPhong,Gia) VALUES('{0}','{1}','{2}')",dvDTO.MaDichVu,phgDTO.MaPhong,dvDTO.ThanhTien);
+                string strTruyVan = string.Format("INSERT INTO ChiTietHoaDonDichVu(MaDichVu,MaPhong,Gia,SoLuong) VALUES('{0}','{1}','{2}','{3}')", dvDTO.MaDichVu,phgDTO.MaPhong,dvDTO.ThanhTien, dvDTO.SoLuong);
 
                 count = DataProvider.ExecuteNonQuery(strTruyVan);
 

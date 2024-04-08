@@ -65,7 +65,7 @@ namespace QuanLyKhachSan.Views
 
             Phong_DTO maPhong = (Phong_DTO)cmbTenPhong_TTDV.SelectedItem;
             dgvThongTinPhongDaDatDV.DataSource = DichVu_BLL.HienThiThongTinPhongDaDangKyDichVu(maPhong);
-            dgvThongTinPhongDaDatDV.Columns["TongTien"].DefaultCellStyle.Format = "{0:0,0 VND}";
+            //dgvThongTinPhongDaDatDV.Columns["TongTienn"].DefaultCellStyle.Format = "{0:0,0 VND}";
         }
 
         private void HienThiTenLoaiDichVuLenComboBox()
@@ -172,7 +172,7 @@ namespace QuanLyKhachSan.Views
                     MessageBox.Show(errorS, "Thông báo lỗi");
                     return;
                 }
-                    
+                dvDTO.SoLuong = int.Parse(txtSoLuong.Text);
                 int check = DichVu_BLL.XacNhanDichVu(dvDTO, phgDTO);
                 if (check > 0)
                 {

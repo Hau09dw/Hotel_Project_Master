@@ -28,7 +28,8 @@ namespace BLL
 
         public static DataTable TimMaPhieuDK(string maPhieuDK) => PhieuDangKy_DAL.TimMaPhieuDK(maPhieuDK);
 
-
+        public static string TienCoc(string maPH ) => PhieuDangKy_DAL.TienCoc(maPH);
+        public static DateTime NgayDen(string maPhieuDK) => PhieuDangKy_DAL.NgayDen(maPhieuDK);
         public static DataTable LayMaPhieuDK() => PhieuDangKy_DAL.LayMaPhieuDK();
     }
 }

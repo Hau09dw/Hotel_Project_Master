@@ -85,7 +85,7 @@ namespace QuanLyKhachSan.Views
             {
                 dvDTO.MaSuDungDichVu = txtMaSDDichVu.Text;
                 dvDTO.MaDichVu = (string)cmbTenDichVu.SelectedValue;
-                dvDTO.SoLuong = txtSoLuong.Text;
+                dvDTO.SoLuong = int.Parse(txtSoLuong.Text);
                 dvDTO.ThanhTien = int.Parse(txtSoLuong.Text) * int.Parse(cmbGiaDichVu.Text);
 
                 int check = DichVu_BLL.CapNhatDichVu(dvDTO);

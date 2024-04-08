@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using DTO;
 using System.Data;
 using DevExpress.XtraEditors;
+using System.Net.NetworkInformation;
 
 namespace DAL
 {
@@ -313,7 +314,39 @@ namespace DAL
             }
         }
 
+        public static int ThanhTien(string maPhong)
+        {
+            int count = 0;
+            try
+            {
+                string strTruyVan = string.Format("Select lp.GiaLoaiPhong + sum(ct.SoLuong * dv.GiaDichVu) as ThanhTien from LoaiPhong lp join Phong p on p.MaLoaiPhong = lp.MaLoaiPhong join ChiTietHoaDonDichVu ct on ct.MaPhong = p.MaPhong join DichVu dv on ct.MaDichVu = dv.MaDichVu where p.MaPhong = '"+maPhong+"' group by lp.GiaLoaiPhong");
+                string tmp = DataProvider.ExecuteScalar(strTruyVan).ToString().Split('.')[0];
+                count = int.Parse(tmp);
+            }
+            catch (Exception ex)
+            {
 
+                throw ex;
+            }
+            return count;
+        }
+        
+        public static int TienPhong(string maPhong)
+        {
+            int count = 0;
+            try
+            {
+                string strTruyVan = string.Format("Select lp.GiaLoaiPhong from LoaiPhong lp join Phong p on p.MaLoaiPhong = lp.MaLoaiPhong where p.MaPhong = '"+maPhong+"'");
+                string tmp = DataProvider.ExecuteScalar(strTruyVan).ToString().Split('.')[0];
+                count = int.Parse(tmp);
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            return count;
+        }
 
     }
 }

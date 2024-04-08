@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using DTO;
+using System;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DTO;
 namespace DAL
 {
     public class HoaDon_DAL
@@ -40,7 +36,7 @@ namespace DAL
             }
             return dt;
         }
-            
+
 
         public static DataTable HienThiMaPhong(string maPhong)
         {
@@ -78,15 +74,11 @@ namespace DAL
             int count = 0;
             try
             {
-                string strTruyVan = string.Format("create view Tam as select  distinct p.MaPhong, p.TenPhong, k.TenKH,ldv.MaLoaiDichVu,ldv.TenLoaiDichVu,dv.MaDichVu,TenDichVu,count(TenDichVu) as [SoLuong],sum(ThanhTien)as [Tong Tien] from DanhSachSDDichVu d  join Phong p on p.MaPhong = d.MaPhong join ChiTietLoaiPhong c on p.MaPhong  = c.MaPhong join PhieuDangKy ph on ph.MaPhieuDK = c.MaPhieuDK  join KhachHang k on k.MaKH = ph.MaKH  join DichVu dv on dv.MaDichVu = d.MaDichVu  join LoaiDichVu ldv on dv.MaLoaiDichVu = ldv.MaLoaiDichVu where p.MaPhong = '" + maPhong + "' group by TenDichVu, k.TenKH, p.TenPhong, p.MaPhong, dv.MaDichVu, ldv.MaLoaiDichVu, ldv.TenLoaiDichVu");
-                DataProvider.fillDataSet(strTruyVan);
 
-                string strTruyVan2 = string.Format("select sum([Tong Tien]) from Tam");
+                string strTruyVan2 = string.Format("Select sum(ct.SoLuong * dv.GiaDichVu) as ChiPhiPhatSinh from LoaiPhong lp join Phong p on p.MaLoaiPhong = lp.MaLoaiPhong join ChiTietHoaDonDichVu ct on ct.MaPhong = p.MaPhong join DichVu dv on ct.MaDichVu = dv.MaDichVu where p.MaPhong = '"+maPhong+"' group by lp.MaLoaiPhong");
                 string tmp = DataProvider.ExecuteScalar(strTruyVan2).ToString().Split('.')[0];
                 count = int.Parse(tmp);
 
-                string strTruyVan3 = string.Format("drop view Tam");
-                DataProvider.ExecuteNonQuery(strTruyVan3);
 
             }
             catch (Exception ex)
@@ -105,7 +97,7 @@ namespace DAL
 
                 count = DataProvider.ExecuteNonQuery(strTruyVan);
 
-                string strTruyVan4 = string.Format("UPDATE ChiTietHoaDon SET DaThanhToan = 0 WHERE MaChiTietHoaDon = '"+hdDTO.MaChiTietHoaDon+"'");
+                string strTruyVan4 = string.Format("UPDATE ChiTietHoaDon SET DaThanhToan = 0 WHERE MaChiTietHoaDon = '" + hdDTO.MaChiTietHoaDon + "'");
 
                 count = DataProvider.ExecuteNonQuery(strTruyVan4);
 
@@ -129,17 +121,15 @@ namespace DAL
             try
             {
                 //Tự sửa lại mã nhân viên
-                string strTruyVan = string.Format("INSERT INTO HoaDon(MaHoaDon,NgayThanhToan,SoTienDaDatTruoc,TongTienHoaDon,MaNV,MaChiTietHoaDon) VALUES ('{0}','{1}',{2},{3},'{4}','{5}')",hdDTO.MaHoaDon,hdDTO.NgayThanhToan,hdDTO.SoTienDaDatTruoc,hdDTO.TongTienHoaDon,hdDTO.MaNV,hdDTO.MaChiTietHoaDon);
-                
+                string strTruyVan = string.Format("INSERT INTO HoaDon(MaHoaDon,NgayBatDau,NgayKetThuc, ChiPhiPhatSinh, TienCoc,TongTienHoaDon,MaNV,MaPhieuDK) VALUES ('{0}','{1}',{2},'{3}','{4}','{5}','{6}','{7}','{8}')", hdDTO.MaHoaDon, hdDTO.NgayBatDau, hdDTO.NgayKetThuc, hdDTO.ChiPhiPhatSinh, hdDTO.TienCoc, hdDTO.TongTienHoaDon, hdDTO.MaNV, hdDTO.MaPhieuDK);
+
                 count = DataProvider.ExecuteNonQuery(strTruyVan);
-
-                string strTruyVan2 = string.Format("UPDATE ChiTietHoaDon SET DaThanhToan = 1 WHERE MaChiTietHoaDon = '" + hdDTO.MaChiTietHoaDon + "'");
-
-                
-
+                //Cập nhật mã hóa đơn vào các phiếu dịch vụ
+                string strTruyVan2 = string.Format("UPDATE ChiTietHoaDonDichVu SET MaHoaDon = '"+hdDTO.MaHoaDon+ "' MaPhong = '" + hdDTO.MaPhong + "'");
                 count = DataProvider.ExecuteNonQuery(strTruyVan2);
-                
-                
+
+                string strTruyVan3 = string.Format("UPDATE Phong SET TinhTrangPhong = 0 WHERE MaPhong = '" + hdDTO.MaPhong + "'");
+                count = DataProvider.ExecuteNonQuery(strTruyVan2);
             }
             catch (Exception ex)
             {
@@ -147,7 +137,7 @@ namespace DAL
                 throw ex;
             }
             return count;
-             
+
         }
 
         public static int LayTienDatCoc(string maPhong)
@@ -155,7 +145,7 @@ namespace DAL
             int count = 0;
             try
             {
-                string strTruyVan = string.Format("select PDK.TienDatCoc,PDK.MaPhieuDK from PhieuDangKy as PDK inner join ChiTietLoaiPhong as CTLP on PDK.MaPhieuDK = CTLP.MaPhieuDK inner join ChiTietHoaDon as CTHD on CTHD.MaPhong = CTLP.MaPhong where CTLP.MaPhong = '"+ maPhong+"'");
+                string strTruyVan = string.Format("select PDK.TienDatCoc,PDK.MaPhieuDK from PhieuDangKy as PDK inner join ChiTietLoaiPhong as CTLP on PDK.MaPhieuDK = CTLP.MaPhieuDK inner join ChiTietHoaDon as CTHD on CTHD.MaPhong = CTLP.MaPhong where CTLP.MaPhong = '" + maPhong + "'");
                 string tmp = DataProvider.ExecuteScalar(strTruyVan).ToString().Split('.')[0];
                 count = int.Parse(tmp);
             }
@@ -167,12 +157,19 @@ namespace DAL
             return count;
         }
 
-        public static DataTable HienThiDanhSachChiTietHoaDon(string MaKH)
+        public static DataTable HienThiDanhSachChiTietHoaDon(string MaPH)
         {
             DataTable dt = new DataTable();
             try
             {
-                string strTruyVan = string.Format("SELECT DV.TenDichVu N'Tên Dịch vụ', DV.GiaDichVu as N'Đơn Giá', CT.SoLuong N'Số Lượng', DV.GiaDichVu * CT.SoLuong as N'Thành Tiền', P.TenPhong N'Tên Phòng', KH.TenKH N'Tên KH'\r\nFROM DichVu DV\r\nLEFT JOIN ChiTietHoaDonDichVu CT ON DV.MaDichVu = CT.MaDichVu\r\nLEFT JOIN Phong P ON P.MaPhong = CT.MaPhong\r\nLEFT JOIN HoaDon HD ON HD.MaHoaDon = CT.MaHoaDon\r\nLEFT JOIN PhieuDangKy DK ON HD.MaPhieuDK = DK.MaPhieuDK\r\nLEFT JOIN KhachHang KH ON DK.MaKH = KH.MaKH\r\nWHERE KH.MaKH = '"+MaKH+"'");
+                    string strTruyVan = string.Format("SELECT DV.TenDichVu , DV.GiaDichVu , CT.SoLuong , DV.GiaDichVu * CT.SoLuong as ThanhTien, P.TenPhong , KH.TenKH, CT.MaDichVu, CT.MaPhong " +
+                        "FROM ChiTietHoaDonDichVu CT " +
+                        "LEFT JOIN DichVu DV ON DV.MaDichVu = CT.MaDichVu " +
+                        "LEFT JOIN Phong P ON P.MaPhong = CT.MaPhong " +
+                        "LEFT JOIN HoaDon HD ON HD.MaHoaDon = CT.MaHoaDon " +
+                        "LEFT JOIN PhieuDangKy DK ON HD.MaPhieuDK = DK.MaPhieuDK " +
+                        "LEFT JOIN KhachHang KH ON DK.MaKH = KH.MaKH " +
+                    "WHERE P.MaPhong = '" + MaPH + "'");
                 dt = DataProvider.fillDataTable(strTruyVan);
             }
             catch (Exception ex)
@@ -188,7 +185,7 @@ namespace DAL
             DataTable dt = new DataTable();
             try
             {
-                string strTruyVan = string.Format("select * from HoaDon ");
+                string strTruyVan = string.Format("select MaHoaDon,NgayBatDau,NgayKetThuc, ChiPhiPhatSinh, TienCoc,TongTienHoaDon,MaNV,MaPhieuDK from HoaDon ");
                 dt = DataProvider.fillDataTable(strTruyVan);
             }
             catch (Exception ex)
@@ -220,7 +217,7 @@ namespace DAL
             DataTable dt = new DataTable();
             try
             {
-                string strTruyVan = string.Format("SELECT * FROM HoaDon WHERE MaHoaDon = '"+ maHoaDon+ "'");
+                string strTruyVan = string.Format("SELECT * FROM HoaDon WHERE MaHoaDon = '" + maHoaDon + "'");
                 dt = DataProvider.fillDataTable(strTruyVan);
             }
             catch (Exception ex)

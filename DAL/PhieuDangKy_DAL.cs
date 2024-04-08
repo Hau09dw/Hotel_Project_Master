@@ -351,5 +351,47 @@ namespace DAL
             return dt;
         }
 
+        public static string TienCoc(string maPhong)
+        {
+            string count = "";
+            try
+            {
+
+                string strTruyVan = string.Format("select DK.TienDatCoc from PhieuDangKy DK LEFT JOIN ChiTietLoaiPhong CT ON CT.MaPhieuDK = DK.MaPhieuDK LEFT JOIN Phong P ON CT.MaPhong = P.MaPhong where P.MaPhong = '" + maPhong + "'");
+
+                count = DataProvider.ExecuteScalar(strTruyVan);
+
+
+            }
+            catch (Exception ex)
+            {
+
+                XtraMessageBox.Show("Error : " + ex.Message);
+            }
+            return count;
+        }
+
+        public static DateTime NgayDen(string maPhieuDK)
+        { 
+            DateTime dt = DateTime.Now;
+
+            try
+            {
+
+                string strTruyVan = string.Format("select NgayDen from PhieuDangKy DK where P.MaPhieuDK = '" + maPhieuDK + "'");
+
+                dt = Convert.ToDateTime(DataProvider.ExecuteScalar(strTruyVan));
+
+
+            }
+            catch (Exception ex)
+            {
+
+                XtraMessageBox.Show("Error : " + ex.Message);
+            }
+            return dt; 
+        }
+
+
     }
 }

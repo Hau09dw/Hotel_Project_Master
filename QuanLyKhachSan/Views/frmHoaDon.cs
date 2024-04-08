@@ -30,7 +30,6 @@ namespace QuanLyKhachSan.Views
             HienThiDanhSachChiTietHoaDon("");
             HienThiDanhSachCacHoaDon();
             txtMaNV.Text = frmMain.MaNV;
-            btnXacNhanHD.Enabled = false;
         }
         private void HienThiDanhSachCacKhachHangDaCoPhong_KH()
         {
@@ -40,26 +39,14 @@ namespace QuanLyKhachSan.Views
         private void HienThiDanhSachCacHoaDon()
         {
             dgvXuLyHD.DataSource = HoaDon_BLL.HienThiDanhSachHoaDon();
-            dgvXuLyHD.Columns[0].HeaderText = "Mã Hóa Đơn";
-            dgvXuLyHD.Columns[1].HeaderText = "Tên Hóa Đơn";
-            dgvXuLyHD.Columns[2].HeaderText = "Ngày Bắt Đầu";
-            dgvXuLyHD.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy" ;
-            dgvXuLyHD.Columns[3].HeaderText = "Ngày Kết Thúc";
-            dgvXuLyHD.Columns[4].HeaderText = "Tiền Phòng";
-            dgvXuLyHD.Columns[5].HeaderText = "Chi phí phát sinh";
-            dgvXuLyHD.Columns[6].HeaderText = "Tổng tiền Hóa Đơn";
-            dgvXuLyHD.Columns[7].HeaderText = "Tiền Đặt Cọc";
-            dgvXuLyHD.Columns[8].HeaderText = "Mã NV";
-            dgvXuLyHD.Columns[9].HeaderText = "Mã Phiếu ĐK";
-            dgvXuLyHD.Columns[10].HeaderText = "Mã Phòng";
         }
 
 
-        private void HienThiDanhSachChiTietHoaDon(string MaKH)
+        private void HienThiDanhSachChiTietHoaDon(string MaPhong)
         {
-            if (string.IsNullOrEmpty(MaKH))
+            if (string.IsNullOrEmpty(MaPhong))
                 return;
-            dgvHoaDon.DataSource = HoaDon_BLL.HienThiDanhSachChiTietHoaDon(MaKH);
+            dgvHoaDon.DataSource = HoaDon_BLL.HienThiDanhSachChiTietHoaDon(MaPhong);
             //dgvHoaDon.Columns[6].Visible = false;
         }   
        
@@ -74,8 +61,12 @@ namespace QuanLyKhachSan.Views
                     DataGridViewRow row = dgvDanhSachKH.SelectedRows[0];
                     MaPhong = row.Cells["MaPhonggg"].Value.ToString();
                     MaPhieuDK = row.Cells["MaPhieuDKK"].Value.ToString();
-                    string MaKH = row.Cells[0].Value.ToString().Trim();
-                    HienThiDanhSachChiTietHoaDon(MaKH) ;
+                    float tienCoc = float.Parse(PhieuDangKy_BLL.TienCoc(MaPhong));
+                    txtSoTienDatTruoc.Text = tienCoc.ToString("##,#");
+                    //thanhtien = Tong DV + Tien Phong 
+                    ThanhTien = Phong_BLL.ThanhTien(MaPhong);
+                    HienThiDanhSachChiTietHoaDon(MaPhong) ;
+
 
                 }
             }
@@ -93,48 +84,33 @@ namespace QuanLyKhachSan.Views
 
         private void dgvHoaDon_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (dgvHoaDon.SelectedRows != null)
-                {
-                    btnXacNhanHD.Enabled = true;
-                    DataGridViewRow row = dgvHoaDon.SelectedRows[0];
-                    MaPhong = row.Cells["MaPhongg"].Value.ToString();
-                    ThanhTien = Convert.ToInt32(row.Cells["ThanhTienn"].Value);
-                    txtMaCTHD.Text = row.Cells["MaChiTietHoaDon"].Value.ToString();
-                    txtSoTienDatTruoc.Text = Convert.ToString(HoaDon_BLL.LayTienDatCoc(MaPhong));
 
-                }
-            }
-            catch (Exception)
-            {
-
-                return;
-            }
-           
         }
 
         private void btnThemHoaDon_Click(object sender, EventArgs e)
         {
+            //Tạo một hóa đơn mới và lưu vào cơ sở dữ liệu
 
-            frmChiTietHoaDon frmCTHD = new frmChiTietHoaDon();
-            frmCTHD.ShowDialog();
-            HienThiDanhSachChiTietHoaDon("");
-            HienThiDanhSachCacKhachHangDaCoPhong_KH();
-            
+            //Cập nhật mã hóa đơn vào các phiếu dịch vụ
+            //Cập nhật tình trạng phòng
+
         }
 
         private void btnXacNhanHD_Click(object sender, EventArgs e)
         {
             HoaDon_DTO hdDTO = new HoaDon_DTO();
+
             try
             {
                 hdDTO.MaHoaDon = txtMaHoaDon.Text;
-                hdDTO.NgayThanhToan = Convert.ToDateTime(dtpNgayThanhToan.Text);
-                hdDTO.SoTienDaDatTruoc = int.Parse(txtSoTienDatTruoc.Text);
-                hdDTO.TongTienHoaDon = ThanhTien - hdDTO.SoTienDaDatTruoc;
+                hdDTO.NgayBatDau = PhieuDangKy_BLL.NgayDen(MaPhieuDK);
+                hdDTO.NgayKetThuc = Convert.ToDateTime(dtpNgayThanhToan.Text);
+                hdDTO.TienCoc = int.Parse(txtSoTienDatTruoc.Text.Replace(",", string.Empty));
+                hdDTO.TongTienHoaDon = ThanhTien - hdDTO.TienCoc;
                 hdDTO.MaNV = txtMaNV.Text;
-                hdDTO.MaChiTietHoaDon = txtMaCTHD.Text;
+                hdDTO.MaPhong = MaPhong;
+                hdDTO.MaPhieuDK = MaPhieuDK;
+                hdDTO.ChiPhiPhatSinh = HoaDon_BLL.LayTienDichVu(MaPhong);
                 int check = HoaDon_BLL.XacNhanHoaDon(hdDTO);
                 if (check > 0)
                 {

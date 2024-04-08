@@ -37,6 +37,7 @@ namespace BLL
 
         public static string GetTenLoaiPhong(string maPhong) => Phong_DAL.GetTenLoaiPhong(maPhong);
 
-
+        public static int ThanhTien(string maPhong) => Phong_DAL.ThanhTien(maPhong);
+        public static int TienPhong(string maPhong) => Phong_DAL.TienPhong(maPhong);
     }
 }
