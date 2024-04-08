@@ -184,7 +184,7 @@ namespace DAL
             int count = 0;
             try
             {
-                string strTruyVan = string.Format("INSERT INTO DanhSachSDDichVu(MaSuDungDichVu,MaDichVu,MaPhong,ThanhTien) VALUES('{0}','{1}','{2}',{3})",dvDTO.MaSuDungDichVu,dvDTO.MaDichVu,phgDTO.MaPhong,dvDTO.ThanhTien);
+                string strTruyVan = string.Format("INSERT INTO ChiTietHoaDonDichVu(MaDichVu,MaPhong,Gia) VALUES('{0}','{1}','{2}')",dvDTO.MaDichVu,phgDTO.MaPhong,dvDTO.ThanhTien);
 
                 count = DataProvider.ExecuteNonQuery(strTruyVan);
 
@@ -202,7 +202,8 @@ namespace DAL
             int count = 0;
             try
             {
-                string strTruyVan = string.Format("UPDATE DanhSachSDDichVu SET MaDichVu = '{0}',ThanhTien ={1} WHERE MaSuDungDichVu = '{2}'", dvDTO.MaDichVu,dvDTO.ThanhTien,dvDTO.MaSuDungDichVu);
+               // string strTruyVan = string.Format("UPDATE ChiTietHoaDonDichVu SET MaDichVu = '{0}',ThanhTien ={1} WHERE MaSuDungDichVu = '{2}'", dvDTO.MaDichVu, dvDTO.ThanhTien, dvDTO.MaSuDungDichVu);
+                string strTruyVan = string.Format("UPDATE ChiTietHoaDonDichVu SET ThanhTien ={1} WHERE MaDichVu = '{0}'", dvDTO.MaDichVu, dvDTO.ThanhTien);
                 count = DataProvider.ExecuteNonQuery(strTruyVan);
             }
             catch (Exception ex)
@@ -218,7 +219,7 @@ namespace DAL
             int count = 0;
             try
             {
-                string strTruyVan = string.Format("DELETE FROM DanhSachSDDichVu where MaSuDungDichVu = '"+maSuDungDichVu+"'");
+                string strTruyVan = string.Format("DELETE FROM ChiTietHoaDonDichVu where MaDichVu = '" + maSuDungDichVu + "'");
                 count = DataProvider.ExecuteNonQuery(strTruyVan);
             }
             catch (Exception ex)
@@ -235,7 +236,7 @@ namespace DAL
             try
             {
 
-                string strTruyVan = string.Format("select sum(ThanhTien) from DanhSachSDDichVu where MaPhong = '"+ maPhong +"'");
+                string strTruyVan = string.Format("select sum(Gia) from ChiTietHoaDonDichVu where MaPhong = '" + maPhong +"'");
 
                 count = DataProvider.ExecuteScalar(strTruyVan);
 

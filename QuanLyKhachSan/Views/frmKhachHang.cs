@@ -70,7 +70,8 @@ namespace QuanLyKhachSan
                 {
                     if (KhachHang_BLL.KiemTraMa(txtMaKH.Text) == 1)
                     {
-                        errorS += "Mã khách hàng đã bị trùng. Xin kiểm tra lại mã khách hàng!!\n";
+                        //Mã khách hàng đã bị trùng. Xin kiểm tra lại mã khách hàng
+                        errorS += "The customer code is duplicated. Please re-check the customer code!!\n";
                     }
                     else
                     {
@@ -80,7 +81,8 @@ namespace QuanLyKhachSan
                 }
                 else
                 {
-                    errorS += "Chưa nhập thông tin cho khách hàng. Hãy nhập thông tin để tiếp tục!!\n";
+                    //Chưa nhập thông tin cho khách hàng. Hãy nhập thông tin để tiếp tục
+                    errorS += "Customer information has not been entered. Please enter the information to continue!!\n";
 
                 }
                 if (txtTenKH.Text.Trim() != "")
@@ -89,7 +91,8 @@ namespace QuanLyKhachSan
                 }
                 else
                 {
-                    errorS += "Chưa nhập tên khách hàng. Hãy nhập thông tin để tiếp tục!!\n";
+                    //Chưa nhập tên khách hàng. Hãy nhập thông tin để tiếp tục
+                    errorS += "The customer name has not been entered. Please enter the information to continue!!\n";
                 }
 
                 
@@ -99,7 +102,8 @@ namespace QuanLyKhachSan
                 }
                 else
                 {
-                    errorS += "Chưa nhập ngày sinh của khách hàng. Hãy nhập thông tin để tiếp tục!!\n";
+                    //Chưa nhập ngày sinh của khách hàng. Hãy nhập thông tin để tiếp tục
+                    errorS += "The customer's date of birth has not been entered. Please enter the information to continue.!!\n";
                 }
                
 
@@ -120,14 +124,14 @@ namespace QuanLyKhachSan
                     else
                     {
 
-                        errorS += "'"+txtCMND.Text +"' không hợp lệ. Dữ liệu phải là số!!!\n";
+                        errorS += "'"+txtCMND.Text + "' Invalid. The data must be numeric!!!\n";//không hợp lệ. Dữ liệu phải là số
 
                     }
                 }
                 else
                 {
 
-                    errorS += "Chưa nhập CMND của khách hàng. Hãy nhập CMND để tiếp tục!!\n";
+                    errorS += "The customer's ID card number has not been entered. Please enter the ID card number to continue!!\n";//Chưa nhập CMND của khách hàng. Hãy nhập CMND để tiếp tục
 
                 }
 
@@ -137,7 +141,7 @@ namespace QuanLyKhachSan
                 }
                 else
                 {
-                    errorS += "Chưa nhập địa chỉ của khách hàng. Hãy nhập địa chỉ để tiếp tục!!\n";
+                    errorS += "Customer address not entered. Please enter an address to proceed!!\n";//Chưa nhập địa chỉ của khách hàng. Hãy nhập địa chỉ để tiếp tục
                 }
 
                 if (txtDienThoai.Text.Trim() != "")
@@ -150,20 +154,20 @@ namespace QuanLyKhachSan
                     else
                     {
 
-                        errorS += "'"+txtDienThoai.Text+"' không hợp lệ. Dữ liệu phải là số!!!\n";
+                        errorS += "'"+txtDienThoai.Text+ "' Invalid. The data must be numeric!!!\n";
 
                     }
                 }
                 else
                 {
 
-                    errorS += "Chưa nhập số điện thoại của khách hàng. Hãy nhập số điện thoại để tiếp tục!!\n";
+                    errorS += "Customer phone number not entered. Please enter a phone number to proceed!!\n";//Chưa nhập số điện thoại của khách hàng. Hãy nhập số điện thoại để tiếp tục
 
                 }
 
                 if (errorS != "")
                 {
-                    MessageBox.Show(errorS, "Thông báo lỗi");
+                    MessageBox.Show(errorS, "Error notification");
                     return;
                 }
 
@@ -176,14 +180,14 @@ namespace QuanLyKhachSan
                 {
                     btnLuuKH.Enabled = true;
                     HienThiDuLieuKhachHang(pos);
-                    XtraMessageBox.Show("Lưu thành công!", "Thông báo");
+                    XtraMessageBox.Show("Save successful!", "Notifycation");
 
 
 
                 }
                 else
                 {
-                    XtraMessageBox.Show("Lưu thất bại!", "Thông báo");
+                    XtraMessageBox.Show("Save failed!", "Notifycation");
                     return;
                 }
             }
@@ -238,12 +242,12 @@ namespace QuanLyKhachSan
                         khDTOUpdate.SDT = khDTO.CMND;
                         khDTOUpdate.QuocTich = khDTO.QuocTich;
                         HienThiDuLieuKhachHang(pos);
-                        XtraMessageBox.Show("Sửa thành công", "Thông báo");
+                        XtraMessageBox.Show("Update successful", "Notifycation");
 
                     }
                     else
                     {
-                        XtraMessageBox.Show("Sửa thất bại", "Thông báo");
+                        XtraMessageBox.Show("Update failed!", "Notifycation");
                         return;
                     }
                 }
@@ -270,25 +274,25 @@ namespace QuanLyKhachSan
             string maKH = txtMaKH.Text;
             if(maKH == "")
             {
-                XtraMessageBox.Show("Chưa chọn dữ liệu để xóa", "Thông báo");
+                XtraMessageBox.Show("No data selected for deletion", "Notifycation");//Chưa chọn dữ liệu để xóa
             }
             if(KhachHang_BLL.XoaKhachHang(maKH) == 1)
             {
 
 
-                DialogResult dr = MessageBox.Show("Bạn có muốn xóa không", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                DialogResult dr = MessageBox.Show("Do you want to delete?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
                 if(dr == DialogResult.Yes)
                 {
                     KhachHang_DTO khDTODelete = lstKhachHangDTO.Single(n => n.MaKhachHang == maKH);
                     lstKhachHangDTO.Remove(khDTODelete);
                     HienThiDuLieuKhachHang(pos);
-                    XtraMessageBox.Show("Xóa thành công", "Thông báo");
+                    XtraMessageBox.Show("Delete successful", "Notifycation");
                 }              
    
             }
             else
             {
-                XtraMessageBox.Show("Xóa thất bại", "Thông báo");
+                XtraMessageBox.Show("Delete failed", "Notifycation");
             }   
 
         }

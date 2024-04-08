@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -52,7 +52,7 @@ namespace QuanLyKhachSan.Views
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult _dialogRes;
-            _dialogRes = XtraMessageBox.Show("Bạn có muốn thoát chương trình không ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            _dialogRes = XtraMessageBox.Show("Do you want to exit the program?", "Notification", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (_dialogRes == DialogResult.No)
             {
                 e.Cancel = true;
@@ -356,12 +356,12 @@ namespace QuanLyKhachSan.Views
             {
                 if (login.txtTaiKhoan.Text.Trim() == "")
                 {
-                    XtraMessageBox.Show("Bạn chưa nhập tài khoản. Xin thử lại");
+                    XtraMessageBox.Show("You have not entered an account. Please try again.");
                     return;
                 }
                 if (login.txtMatKhau.Text.Trim() == "")
                 {
-                    XtraMessageBox.Show("Bạn chưa nhập mật khẩu. Xin thử lại");
+                    XtraMessageBox.Show("You have not entered an password. Please try again.");
                     return;
                 }
             }
@@ -370,12 +370,12 @@ namespace QuanLyKhachSan.Views
 
             if (MaNV.Trim() != "")
             {
-                XtraMessageBox.Show("Xin chào User có ID là : " + MaNV, "Thông báo");
+                XtraMessageBox.Show("Hello User with ID : " + MaNV, "Notification");
                 btnLogin.Enabled = false;
             }
             if (MaNV.Trim() == "")
             {
-                XtraMessageBox.Show("Tài khoản và mật khẩu không đúng !", "Lỗi đăng nhập");
+                XtraMessageBox.Show("The account and password are incorrect!", "Login error");
                 return;
             }
             else
